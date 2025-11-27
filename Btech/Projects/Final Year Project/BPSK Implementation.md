@@ -15,6 +15,8 @@ dg-publish: true
 **BPSK** *Transmitter* Flow Graph Include mainly consist of the following
 1. **File Source** : for File processing processing 
 > it sends preamble first , then data, file name , `#EOF` 
+
+
 >[!NOTE] File Processing
 > File processing is in the sense that , it is a embedded python block, it reads data for example if you have a file 
 > ```message.txt
