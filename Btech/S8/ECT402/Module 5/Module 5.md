@@ -18,5 +18,7 @@ Radio waves are easy to generate and are widely used for
 both indoor and outdoor communications because of their 
 ability to pass through buildings and travel long distances.
 
+
+
 ## modes of propagation
 Ground Wave, Space Wave, and Sky Wave.A. Ground Wave Propagation (Surface Waves)
