@@ -12,10 +12,10 @@ dg-publish: true
 ## Module 1 Syllabus 
 
  - **Introduction to Wireless Communication Systems**
-- [x] Generations: 2G, 3G, 4G, 5G. ✅ 2025-04-18
-- [x] Wireless LAN, ✅ 2025-04-18
-- [x] Bluetooth and Personal Area networks, ✅ 2025-04-18
-- [x] Broadband Wireless Access -- WiMAX Technology. ✅ 2025-04-19
+- [ ] Generations: 2G, 3G, 4G, 5G.
+- [ ] Wireless LAN,
+- [x] Bluetooth and Personal Area networks, ✅ 2026-03-19
+- [ ] Broadband Wireless Access -- WiMAX Technology.
 - [ ] Wireless Spectrum allocation, Standards.
 - **Cellular System Design Fundamentals** 
 - [ ] Frequency Reuse, 
@@ -25,6 +25,22 @@ dg-publish: true
 - [ ] trunking and grade off service, 
 - [ ] improving coverage and capacity – cell splitting,
 - [ ] sectoring, microcells.
+
+
+
+- Need for Multi carrier system
+- Basics of Orthogonal Frequency Division Multiplexing (OFDM), Multiple access for OFDM 
+- Orthogonal Frequency Division Multiple Access (OFDMA)
+- Cellular concept, path loss and shadowing, doppler shift,
+- Multipath effect
+- Significance of diversity in wireless communication systems
+
+### Need for Multi Carrier Systems 
+The traditional Single carrier systems use only **single frequency to carry all data**. Multicarrier systems use **multicarrier modulation (MCM)** schemes by which the transmitted data stream is divided into **several parallel lower–bit rate subcarriers**^[https://www.sciencedirect.com/topics/engineering/multicarrier-system].
+
+[[MultiCarrier Modulation]]
+
+
 
 ## Introduction
 - At their core, these systems use electromagnetic waves—radio, microwave, sometimes even infrared or millimeter waves—to carry signals across space without needing a physical connection.
