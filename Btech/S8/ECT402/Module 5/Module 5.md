@@ -13,3 +13,5 @@
 - [ ] Maximum usable Frequency, 
 - [ ] Virtual height.
 
+## modes of propagation
+Ground Wave, Space Wave, and Sky Wave.A. Ground Wave Propagation (Surface Waves)
