@@ -12,7 +12,7 @@ dg-publish: true
 ## Module 1 Syllabus 
 
  - **Introduction to Wireless Communication Systems**
-- [ ] Generations: 2G, 3G, 4G, 5G.
+- [x] Generations: 2G, 3G, 4G, 5G. ✅ 2026-03-19
 - [ ] Wireless LAN,
 - [x] Bluetooth and Personal Area networks, ✅ 2026-03-19
 - [ ] Broadband Wireless Access -- WiMAX Technology.
@@ -132,11 +132,15 @@ mindmap
 
 ```dataview
 TABLE  
-Invented , max_speed as "Maximum Speed" , Frequency as "Band" , Tech , BandWidth
+Invented , max_speed as "Maximum Speed" , Latency, Frequency as "Band" , Tech , Multiple_Access, BandWidth
+
 from #generations 
+SORT file.name ASC
 ```
 
+
 ## WLAN
+
 - within an area of building/school etc
 - 2.4GHz Band
 - the `phy` and `MAC` layer is specified by the IEEE802.11 standard
