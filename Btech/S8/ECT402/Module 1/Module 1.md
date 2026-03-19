@@ -55,6 +55,14 @@ Transmitter --> Medium --> Receiver
 - That carrier rides through the wireless medium—air, vacuum, sometimes even water.
 - A receiver picks it up, demodulates it, and extracts the *original information*.
 
+### Carrier
+
+$$y = A \sin(2\pi f t)$$
+Where:
+* $A$ = amplitude
+* $f$ = frequency
+* $t$ = time
+
 ---
 
 ## Generations
@@ -121,11 +129,11 @@ mindmap
 - [[4G]]
 - [[5G]]
 
+
 ```dataview
 TABLE  
- Invented , max_speed as "Maximum Speed" , Frequency as "Band" , Tech , BandWidth
+Invented , max_speed as "Maximum Speed" , Frequency as "Band" , Tech , BandWidth
 from #generations 
-
 ```
 
 ## WLAN
