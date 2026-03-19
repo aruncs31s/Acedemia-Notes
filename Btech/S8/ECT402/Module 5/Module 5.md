@@ -12,3 +12,4 @@
 - [ ] Effects of earth’s magnetic field, Critical frequency,
 - [ ] Maximum usable Frequency, 
 - [ ] Virtual height.
+
