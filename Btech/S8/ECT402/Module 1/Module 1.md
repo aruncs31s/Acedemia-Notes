@@ -26,8 +26,7 @@ dg-publish: true
 - [ ] improving coverage and capacity – cell splitting,
 - [ ] sectoring, microcells.
 
-
-
+```
 - Need for Multi carrier system
 - Basics of Orthogonal Frequency Division Multiplexing (OFDM), Multiple access for OFDM 
 - Orthogonal Frequency Division Multiple Access (OFDMA)
@@ -39,10 +38,11 @@ dg-publish: true
 The traditional Single carrier systems use only **single frequency to carry all data**. Multicarrier systems use **multicarrier modulation (MCM)** schemes by which the transmitted data stream is divided into **several parallel lower–bit rate subcarriers**^[https://www.sciencedirect.com/topics/engineering/multicarrier-system].
 
 [[MultiCarrier Modulation]]
-
+```
 
 
 ## Introduction
+
 - At their core, these systems use electromagnetic waves—radio, microwave, sometimes even infrared or millimeter waves—to carry signals across space without needing a physical connection.
 
 ```mermaid
