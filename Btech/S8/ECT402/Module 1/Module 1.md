@@ -19,7 +19,7 @@ cssclasses:
 - [X] Generations: 2G, 3G, 4G, 5G. ✅ 2026-03-19
 - [ ] Wireless LAN,
 - [X] Bluetooth and Personal Area networks, ✅ 2026-03-19
-- [x] Broadband Wireless Access -- WiMAX Technology. ✅ 2026-03-19
+- [X] Broadband Wireless Access -- WiMAX Technology. ✅ 2026-03-19
 - [ ] Wireless Spectrum allocation, Standards.
 
 - **Cellular System Design Fundamentals**
@@ -121,15 +121,15 @@ mindmap
 			WiMax
 			MA
 				CDMA
-			
+		
 		5G
 			MIMO
 			mmWaves
 			3-30GHz
 			MA
 				OFDM/BDMA
+
 	
-		
 
 ```
 
@@ -170,9 +170,6 @@ SORT file.name ASC
 - **Scalability:** Adding a new device to the network is as simple as typing in a password, rather than running a new physical cable through the walls.
 - **Device Support:** Many modern devices (especially mobile phones and small electronics) don't even have ports for wired connections anymore
 
-
-
-
 ## Bluetooth
 
 - It also uses the 2.4GHz
@@ -210,7 +207,11 @@ A[Mobile] & AB[Mobile] & ABB[Mobile] --> B(Base Transceiver Station) --> C[MSC] 
 
 ### Frequency Reuse (Frequency Planning)
 
-The design process of selecting and allocating channel groups for all of the cellular base stations within a system is called frequency reuse or frequency planning. It involves dividing a geographical area into smaller regions, called  cells, and assigning the same set of frequencies to different cells that are spaced sufficiently apart.
+***The design process of selecting and allocating channel groups for all of the cellular base stations within a system is called frequency reuse or frequency planning. It involves dividing a geographical area into smaller regions, called  cells, and assigning the same set of frequencies to different cells that are spaced sufficiently apart***
+
+Radio spectrum is a scarce, expensive resource. A network provider might only own the rights to, say, 100 frequency channels. If a whole city used one giant antenna, only 100 people could talk at once.
+**Frequency Reuse** solves this. The provider divides those 100 channels among a cluster of cells (e.g., 7 cells). Once you move far enough away from a specific cell, the signal becomes weak enough that you can **reuse those exact same frequencies** in another cell without them interfering with each other. The minimum distance required to reuse a frequency safely is called the  **Reuse Distance (** $D$**)**
+
 
 ### Hand-Off
 
