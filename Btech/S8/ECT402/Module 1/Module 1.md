@@ -138,11 +138,11 @@ mindmap
 - [[3G]]
 - [[4G]]
 - [[5G]]
+- [[6G]]
 
 ```dataview
 TABLE  
 Invented , max_speed as "Maximum Speed" , Latency, Frequency as "Band" , Tech , Multiple_Access, BandWidth
-
 from #generations 
 SORT file.name ASC
 ```
