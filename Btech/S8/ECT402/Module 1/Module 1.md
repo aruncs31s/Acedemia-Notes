@@ -142,10 +142,11 @@ mindmap
 
 ```dataview
 TABLE  
-Invented , max_speed as "Maximum Speed" , Latency, Frequency as "Band" , Tech , Multiple_Access, BandWidth
+Invented , max_speed as "Maximum Speed" , Latency, Frequency as "Band" , Tech , Multiple_Access, BandWidth, Issue
 from #generations 
 SORT file.name ASC
 ```
+
 
 ## WLAN
 
