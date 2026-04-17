@@ -22,6 +22,8 @@ related:
   - "[[Effects of Earth's Magnetic Field]]"
   - "[[Critical Frequency]]"
   - "[[Ionosphere Layers]]"
+  - "[[Maximum Usable Frequency]]"
+  - "[[Virtual Height]]"
 ---
 
 # Module 5 Radio Wave Propagation
@@ -44,8 +46,8 @@ LIMIT 10
 - [x] [[Effects of Earth's Magnetic Field|Effects of earth's magnetic field]], ✅ 2026-04-17
 - [x] [[Critical Frequency|Critical frequency]], ✅ 2026-04-17
 - [x] [[Ionosphere Layers|Ionosphere layers]], ✅ 2026-04-17
-- [ ] Maximum usable Frequency, 
-- [ ] Virtual height.
+- [x] [[Maximum Usable Frequency|Maximum usable Frequency]], ✅ 2026-04-17
+- [x] [[Virtual Height|Virtual height]], ✅ 2026-04-17
 
 
 ```dataview 
