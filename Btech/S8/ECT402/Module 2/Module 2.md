@@ -12,12 +12,11 @@ dg-publish: true
 
 ## Module 2 Syllabus
 
-### 2.1 Path Loss and Shadowing
+> [[#2.1 Path Loss and Shadowing]]
 - [ ] Free space path loss
 - [ ] Two-Ray model
 - [ ] Shadowing
-
-### 2.2 Statistical Multipath Channel Models
+> [[#2.2 Statistical Multipath Channel Models]]
 - [ ] Time-varying channel impulse response
 - [ ] Narrowband fading
 - [ ] Wideband fading models
@@ -27,7 +26,7 @@ dg-publish: true
 - [ ] Slow fading vs fast fading
 - [ ] Discrete-time model
 
-### 2.3 Capacity of Wireless Channels
+> [[#2.3 Capacity of Wireless Channels]]
 - [ ] Review of capacity in AWGN
 - [ ] Capacity of flat fading channel – Ergodic capacity
 - [ ] Capacity with outage
@@ -79,3 +78,11 @@ Electromagnetic signals traveling through wireless channels experience fading du
 - If the medium on which the electromagnetic wave is incident is a dielectric, some energy is reflected back and some is transmitted.
 - If the medium is a perfect conductor, all energy is reflected back to the first medium.
 - The amount of energy reflected depends on the polarization of the electromagnetic wave.
+
+
+## 2.1 Path Loss and Shadowing
+
+*signal gets weaker the further it travels from the transmitter to the receiver*
+
+#### **Free Space Path Loss (FSPL)**
+describes the absolute best-case scenario for how a signal fades when it travels through a ***perfect vacuum with absolutely nothing in its way***—no buildings, no trees, and no air interference
