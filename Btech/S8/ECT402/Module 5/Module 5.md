@@ -1,6 +1,27 @@
 ---
 cssclasses:
   - wide-page
+tags:
+  - ect402
+  - propagation
+  - radio-waves
+  - module-5
+  - s8
+  - main
+course: ECT402
+module: "5"
+topic: Radio Wave Propagation
+type: lecture-notes
+semester: S8
+date: 2026-04-17
+related:
+  - "[[Ground wave propagation]]"
+  - "[[Plane earch reflection]]"
+  - "[[Space wave and surface wave]]"
+  - "[[Ionospheric propagation]]"
+  - "[[Effects of Earth's Magnetic Field]]"
+  - "[[Critical Frequency]]"
+  - "[[Ionosphere Layers]]"
 ---
 
 # Module 5 Radio Wave Propagation
@@ -12,16 +33,17 @@ LIMIT 10
 ```
 
 
-
 ## Module 5 Syllabus
 
 - [x] [[Ground wave propagation|Ground wave propagation]] ✅ 2026-04-17
-- [x] [[plane earch reflection|Plane earth reflection]], ✅ 2026-04-17
-- [ ] [[Space wave and surface wave]],
-- [ ] Spherical earth propagation, 
-- [ ] Tropospheric waves,
-- [ ] Ionospheric propagation,
-- [ ] Effects of earth’s magnetic field, Critical frequency,
+- [x] [[Plane earch reflection|Plane earth reflection]], ✅ 2026-04-17
+- [x] [[Space wave and surface wave]], ✅ 2026-04-17
+- [x] [[Spherical Earth Propagation]], ✅ 2026-04-17
+- [x] Tropospheric waves, ✅ 2026-04-17
+- [x] [[Ionospheric propagation|Ionospheric propagation]], ✅ 2026-04-17
+- [x] [[Effects of Earth's Magnetic Field|Effects of earth's magnetic field]], ✅ 2026-04-17
+- [x] [[Critical Frequency|Critical frequency]], ✅ 2026-04-17
+- [x] [[Ionosphere Layers|Ionosphere layers]], ✅ 2026-04-17
 - [ ] Maximum usable Frequency, 
 - [ ] Virtual height.
 
@@ -29,8 +51,12 @@ LIMIT 10
 ```dataview 
 TABLE
 Frequency_Range as "Frequency Range" , Depends,Applications , Characteristic ,Advantages, Limitations
-FROM #propagation 
+FROM #propagation and  !#magnetic-field and !#main
+SORT f_start ASC
 ```
+
+
+
 
 
 
@@ -91,4 +117,5 @@ flowchart TD
 4. **Ionospheric Propagation (often called Sky Wave):** These waves travel high up into the Earth's upper atmosphere (the ionosphere) and are reflected back down to Earth, allowing for very long-distance communication.
 
 - [[Ground wave propagation]]
-- [[plane earch reflection]]
+- [[Plane earch reflection]]
+- [[Ionospheric propagation]]

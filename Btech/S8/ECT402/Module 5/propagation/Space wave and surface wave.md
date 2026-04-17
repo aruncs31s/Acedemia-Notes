@@ -1,15 +1,23 @@
 ---
 tags:
-  - wireless_communication
+  - ect402
   - propagation
-  - files
-  - templates
-  - templater
-id: callout
-aliases: []
-dg-publish: true
-title: callout
+  - radio-waves
+  - module-5
+  - s8
+  - space-wave
+course: ECT402
+module: "5"
+topic: Space Wave Propagation
+type: lecture-notes
+semester: S8
+date: 2026-04-17
+alias:
+  - Space Wave
+  - Tropospheric Propagation
+f_start: "30000000"
 ---
+
 # **Space wave propagation**
 - [[Space Wave Ground]]
 ![[Space wave and surface wave.png|4444]]
@@ -70,5 +78,21 @@ Space wave propagation consists of:
 - [Limitations:: Limited by line-of-sight distance]
 - [Limitations:: Affected by Earth's curvature]
 - [Limitations:: Requires elevated antennas for long range]
+
+## Depends On
+- [Depends:: **Line-of-sight path**]
+  Requires unobstructed path between transmitter and receiver.
+- [Depends:: **Antenna height**]
+  Higher antennas extend the communication range.
+- [Depends:: **Tropospheric conditions**]
+  Refraction in troposphere affects signal path slightly.
+
+## Advantages
+- [Advantages:: **High bandwidth**]
+  Suitable for high-data-rate applications like TV and microwave links.
+- [Advantages:: **Clear channel with minimal interference**]
+  Line-of-sight path provides stable signal with less multipath.
+- [Advantages:: **Wide coverage for broadcasting**]
+  Ideal for FM radio and television broadcasting over large areas.
 
 ---
