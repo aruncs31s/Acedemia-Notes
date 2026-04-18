@@ -18,7 +18,7 @@ dg-publish: true
 - [ ] Shadowing
 
 > [[#2.2 Statistical Multipath Channel Models]]
-- [x] Time-varying channel impulse response ✅ 2026-04-19
+- [ ] Time-varying channel impulse response
 - [ ] Narrowband fading
 - [ ] Wideband fading models
 - [ ] Delay spread and coherence bandwidth
