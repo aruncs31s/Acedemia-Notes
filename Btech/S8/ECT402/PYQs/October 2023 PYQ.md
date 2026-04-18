@@ -648,7 +648,7 @@ Key inferences:
 
 **Short Answer:** Time-selective fading occurs when channel impulse response varies significantly over the symbol duration due to high Doppler spread (fast fading), causing time-varying amplitude/phase within a transmission.
 
-Definition: A fading process is time-selective (fast) if the coherence time $T_c$ is less than or on the order of the symbol duration $T_s$. Rapid motion (large Doppler shift $f_D$) yields Doppler spread \(B_D\) and \(T_c \approx 1/(2 B_D)\). Symbols then experience different channel gains, degrading coherent detection unless countered by diversity, channel estimation, or adaptive equalization.
+Definition: A fading process is time-selective (fast) if the coherence time $T_c$ is less than or on the order of the symbol duration $T_s$. Rapid motion (large Doppler shift $f_D$) yields Doppler spread $B_D$ and $T_c \approx 1/(2 B_D)$. Symbols then experience different channel gains, degrading coherent detection unless countered by diversity, channel estimation, or adaptive equalization.
 
 
 
