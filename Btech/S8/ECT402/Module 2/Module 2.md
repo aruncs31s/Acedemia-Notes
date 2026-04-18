@@ -16,8 +16,9 @@ dg-publish: true
 - [ ] Free space path loss
 - [ ] Two-Ray model
 - [ ] Shadowing
+
 > [[#2.2 Statistical Multipath Channel Models]]
-- [ ] Time-varying channel impulse response
+- [x] Time-varying channel impulse response ✅ 2026-04-19
 - [ ] Narrowband fading
 - [ ] Wideband fading models
 - [ ] Delay spread and coherence bandwidth
