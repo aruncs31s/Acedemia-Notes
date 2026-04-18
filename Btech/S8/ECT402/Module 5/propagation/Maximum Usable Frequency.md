@@ -28,7 +28,7 @@ alias: [MUF, Maximum Usable Frequency]
 - Frequencies **above MUF** will pass through the ionosphere into space (no reflection)
 - Frequencies **below MUF** will be reflected back to Earth
 - [Effect:: **Signal loss beyond MUF**]
-  If a signal is transmitted at a frequency higher than the MUF, it will not reflect back to Earth; instead, it will pass straight through the ionospheric layer into the next layer or out into outer space, resulting in a loss of communication.
+  If a signal is hitransmitted at a frequency higher than the MUF, it will not reflect back to Earth; instead, it will pass straight through the ionospheric layer into the next layer or out into outer space, resulting in a loss of communication.
 
 ## Relationship to Critical Frequency
 
