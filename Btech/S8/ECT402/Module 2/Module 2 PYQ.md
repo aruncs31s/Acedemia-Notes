@@ -407,28 +407,60 @@ graph TD
 
 ### Definition
 
-**Shadowing** is the **deviation** of a received electromagnetic signal's power from its expected average value. It is a **large-scale fading** effect caused by large obstacles (buildings, hills, trees) blocking the signal path between transmitter and receiver.
+**Shadowing** is the **deviation** of a received electromagnetic signal's power from its expected average value. It is a form of **large-scale fading** that occurs when large terrain features or obstacles—such as buildings, hills, mountains, or trees—block or obstruct the direct propagation path between the transmitter and the receiver.
 
-Unlike path loss which is deterministic with distance, shadowing is **random** due to varying obstacle positions.
+Unlike path loss which varies **predictably** with distance (following a dⁿ law), shadowing is **random** and depends on the specific obstacles in the environment.
 
-### Impact on Wireless Channel Performance
+---
 
-| Aspect | Impact |
-|--------|--------|
-| **Signal Strength Reduction** | Primary form of large-scale fading, significant reduction when blocked by terrain/obstacles |
-| **Power Fluctuations** | Large fluctuations depending on position and frequency |
-| **Slow Variations** | Lasts seconds/minutes - slower time-scale than multipath |
-| **Loss of SNR** | Degrades reliability of communication link |
-| **Coverage** | Creates coverage holes in shadowed regions |
-| **Handoff** | Can trigger unnecessary handoffs |
+### Detailed Impact on Wireless Channel Performance
+
+#### 1. Signal Strength Reduction
+- Acts as a primary form of **large-scale fading**
+- Causes significant reduction in overall signal strength when the direct path is blocked
+- Additional attenuation beyond what path loss models predict
+- Can cause 10-20+ dB of signal loss
+
+#### 2. Power Fluctuations
+- Received signal power experiences **large fluctuations** depending on:
+  - Geographical position of the receiver
+  - Radio frequency being used
+  - Size and density of obstructing obstacles
+- These fluctuations are experienced on **local-mean powers** (short-term averages used to separate shadowing from rapid multipath fading)
+
+#### 3. Slow Fading
+- Shadowing is the direct cause of **slow fading**
+- Unlike multipath fading which happens rapidly (fractions of a second), shadow fading **lasts for multiple seconds or minutes**
+- This is a much **slower time-scale phenomenon**
+
+#### 4. Loss of Signal-to-Noise Ratio (SNR)
+- The ultimate performance impact of slow fading induced by shadowing is a **loss of SNR**
+- This **degrades the reliability** of the communication link
+- Can lead to call drops, data errors, or connection loss
+
+#### 5. Coverage Issues
+- Creates **coverage holes** or dead zones in shadowed regions
+- Cell edges become unpredictable
+- Harder to plan cell boundaries
+
+#### 6. Impact on System Design
+- Must design **link budget margins** to combat shadowing (typically 10-20 dB)
+- Affects handoff decisions - may trigger unnecessary handoffs
+- Reduces effective cell capacity in shadowed areas
+
+---
 
 ### Statistical Modeling
 
-Because the mean envelope level becomes random, channel models must account for it:
+Because the mean envelope level of the signal becomes a **random variable** due to these shadow variations, channel performance models must account for it:
 
 $$P_{dB} \sim \mathcal{N}(\mu, \sigma^2)$$
 
-Distribution: **Log-normal** (empirically observed)
+Where:
+- $\mu$ = mean path loss (dB)
+- $\sigma$ = standard deviation (typically 4-12 dB for urban environments)
+
+**Distribution**: Log-normal (based on empirical observations)
 
 ### Visual Representation
 
