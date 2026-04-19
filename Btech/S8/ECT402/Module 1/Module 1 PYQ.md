@@ -5,6 +5,7 @@ tags:
   - ect402
 ---
 # Module 1 PYQ
+
 **1. Channel Assignment Strategies**
 
 The primary goal of channel assignment strategies is to optimize frequency reuse and minimize interference to increase overall channel capacity. They dictate how calls are managed when a user moves between cells:
