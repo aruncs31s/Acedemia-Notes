@@ -750,10 +750,25 @@ $$\boxed{f_d = \frac{v}{\lambda}\cos\theta = f_m\cos\theta}$$
 
 Where:
 - $v$ = velocity (m/s)
-- $\lambda$ = wavelength
+- $\lambda$ = **wavelength** (m)
 - $f_c$ = carrier frequency
 - $c$ = speed of light (3×10⁸ m/s)
 - $f_m$ = maximum Doppler shift
+
+> [!callout] **What is λ (Lambda)?**
+> **Wavelength** = distance traveled by wave in one cycle.
+> $$\lambda = \frac{c}{f_c}$$
+>
+> Where **f_c** = **carrier frequency** of the transmitted signal (WiFi, 4G, 5G, etc.)
+>
+> | Application | f_c (carrier) | λ |
+> |-------------|--------------|-----|
+> | WiFi | 2.4 GHz | 12.5 cm |
+> | 4G LTE | 1.8 GHz | 16.7 cm |
+> | 5G | 3.5 GHz | 8.6 cm |
+> | FM Radio | 100 MHz | 3 m |
+>
+> **Key:** Higher carrier frequency → shorter λ → larger Doppler shift for same velocity.
 
 ---
 
