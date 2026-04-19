@@ -15,33 +15,33 @@ dg-publish: true
 
 ---
 
-## Important Equations Quick Reference
+## *Important Equations Quick Reference*
 
 | # | Topic | Formula |
 |---|-------|---------|
 | **PATH LOSS** |||
-| 1 | Free Space Path Loss (dB) | $PL_{dB} = 20\log_{10}\left(\frac{4\pi d}{\lambda}\right)$ |
-| 2 | Friis Equation | $P_r = P_t G_t G_r \left(\frac{\lambda}{4\pi d}\right)^2$ |
+| 1 | **Free Space Path Loss (dB)** | $PL_{dB} = 20\log_{10}\left(\frac{4\pi d}{\lambda}\right)$ |
+| 2 | **Friis Equation** | $P_r = P_t G_t G_r \left(\frac{\lambda}{4\pi d}\right)^2$ |
 | 3 | Two-Ray (far) | $P_r \propto 1/d^4$ |
 | **DOPPLER** |||
-| 4 | Doppler Shift | $f_d = \frac{v}{\lambda}\cos\theta = f_m\cos\theta$ |
-| 5 | Max Doppler | $f_m = \frac{v}{\lambda} = \frac{v f_c}{c}$ |
-| 6 | Coherence Time | $T_c \approx \frac{0.423}{f_m}$ |
+| 4 | **Doppler Shift** | $f_d = \frac{v}{\lambda}\cos\theta = f_m\cos\theta$ |
+| 5 | **Max Doppler** | $f_m = \frac{v}{\lambda} = \frac{v f_c}{c}$ |
+| 6 | **Coherence Time** | $T_c \approx \frac{0.423}{f_m}$ |
 | **FADING** |||
-| 7 | Coherence Bandwidth | $B_c \approx \frac{1}{5\sigma_\tau}$ |
-| 8 | Flat Fading Condition | $B_s < B_c$ |
-| 9 | Freq-Selective Condition | $B_s > B_c$ |
-| 10 | Slow Fading Condition | $T_s < T_c$ |
-| 11 | Fast Fading Condition | $T_s > T_c$ |
-| 12 | Rayleigh PDF | $f_R(r) = \frac{r}{\sigma^2}e^{-r^2/2\sigma^2}$ |
+| 7 | **Coherence Bandwidth** | $B_c \approx \frac{1}{5\sigma_\tau}$ |
+| 8 | **Flat Fading Condition** | $B_s < B_c$ |
+| 9 | **Freq-Selective Condition** | $B_s > B_c$ |
+| 10 | **Slow Fading Condition** | $T_s < T_c$ |
+| 11 | **Fast Fading Condition** | $T_s > T_c$ |
+| 12 | **Rayleigh PDF** | $f_R(r) = \frac{r}{\sigma^2}e^{-r^2/2\sigma^2}$ |
 | **CAPACITY** |||
-| 13 | AWGN Capacity | $C = B\log_2(1+SNR)$ |
-| 14 | Ergodic (fading) | $C = E[\log_2(1+SNR\cdot|h|^2)]$ |
-| 15 | Outage Prob | $P_{outage} = P(SNR < \rho_{min})$ |
-| 16 | Capacity w/ Outage | $C_{outage} = (1-P_{outage})B\log_2(1+\rho_{min})$ |
+| 13 | **AWGN Capacity** | $C = B\log_2(1+SNR)$ |
+| 14 | **Ergodic (fading)** | $C = E[\log_2(1+SNR\cdot|h|^2)]$ |
+| 15 | **Outage Prob** | $P_{outage} = P(SNR < \rho_{min})$ |
+| 16 | **Capacity w/ Outage** | $C_{outage} = (1-P_{outage})B\log_2(1+\rho_{min})$ |
 | **CHANNEL MODEL** |||
-| 17 | CIR (continuous) | $h(\tau,t) = \sum_n \alpha_n(t)e^{j\phi_n(t)}\delta(\tau-\tau_n)$ |
-| 18 | CIR (discrete) | $y[m] = \sum_l h_l[m]x[m-l] + w[m]$ |
+| 17 | **CIR (continuous)** | $h(\tau,t) = \sum_n \alpha_n(t)e^{j\phi_n(t)}\delta(\tau-\tau_n)$ |
+| 18 | **CIR (discrete)** | $y[m] = \sum_l h_l[m]x[m-l] + w[m]$ |
 
 ---
 
@@ -89,22 +89,22 @@ dg-publish: true
 
 **Answer:** [[May 2024.md#13. (a) Small scale fading: definition, types, flat vs frequency-selective (6 Marks)]]
 
-### Quick Summary
+### *Quick Summary*
 
 | Aspect | Flat Fading | Frequency-Selective Fading |
 |--------|-------------|----------------------------|
 | **Condition** | $B_s \ll B_c$ | $B_s > B_c$ |
-| **Delay Spread** | Small relative to symbol period | Significant; multiple resolvable paths |
-| **Channel Model** | Single complex gain per symbol | FIR filter with multiple taps |
-| **ISI** | Absent (negligible) | Present unless equalized/CP used |
-| **Equalization** | One-tap (per subcarrier) | Multi-tap equalizer or OFDM needed |
-| **Spectrum Distortion** | Uniform scaling | Frequency-dependent amplitude/phase |
+| **Delay Spread** | Small relative to symbol period | **Significant; multiple resolvable paths** |
+| **Channel Model** | **Single complex gain per symbol** | **FIR filter with multiple taps** |
+| **ISI** | Absent (negligible) | **Present unless equalized/CP used** |
+| **Equalization** | One-tap (per subcarrier) | **Multi-tap equalizer or OFDM needed** |
+| **Spectrum Distortion** | **Uniform scaling** | **Frequency-dependent amplitude/phase** |
 
-### Key Points
+### *Key Points*
 
-- **Coherence Bandwidth ($B_c$):** $B_c \approx \frac{1}{5\tau_{rms}}$ to $\frac{1}{50\tau_{rms}}$
-- If $B_s < B_c$ → Flat fading (all frequencies affected equally)
-- If $B_s > B_c$ → Frequency-selective fading (different gains at different frequencies)
+- **Coherence Bandwidth ($B_c$):** $B_c \approx \frac{1}{5\tau_{rms}}$ **to** $\frac{1}{50\tau_{rms}}$
+- **If** $B_s < B_c$ **→ Flat fading** (all frequencies affected equally)
+- **If** $B_s > B_c$ **→ Frequency-selective fading** (different gains at different frequencies)
 
 ---
 
@@ -112,45 +112,45 @@ dg-publish: true
 
 **Answer:** [[October 2023 PYQ.md#14. (c) Time selective fading]] | [[Module 2/Fading Theory]]
 
-### Effect on Performance Parameters
+### *Effect on Performance Parameters*
 
-Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wireless communication in the following ways:
+*Doppler spread* $B_D$ *(or maximum Doppler frequency* $f_m$*) directly impacts wireless communication in the following ways:*
 
 | Parameter | Effect of Doppler | Formula |
 |-----------|-------------------|---------|
-| **Coherence Time ($T_c$)** | Inverse relationship - higher Doppler → smaller $T_c$ | $T_c \approx \frac{0.423}{f_m} = \frac{0.423\lambda}{v}$ |
-| **Channel Variability** | Faster fading with increased mobility | Rapid changes in amplitude/phase |
-| **Symbol Error Rate** | Degrades performance if channel varies within symbol | Requires faster tracking |
-| **Channel Estimation** | Needs more frequent estimation updates | Estimation overhead increases |
-| **Equalization** | Time-varying channel causes residual ISI | Adaptive equalizers needed |
-| **Interleaving Depth** | Requires longer interleaving for diversity | Trade-off with latency |
-| **Modulation** | Lower-order modulations more robust | High Doppler limits adaptive modulation |
+| **Coherence Time ($T_c$)** | *Inverse relationship - higher Doppler → smaller* $T_c$ | $T_c \approx \frac{0.423}{f_m} = \frac{0.423\lambda}{v}$ |
+| **Channel Variability** | *Faster fading with increased mobility* | Rapid changes in amplitude/phase |
+| **Symbol Error Rate** | *Degrades performance if channel varies within symbol* | Requires faster tracking |
+| **Channel Estimation** | *Needs more frequent estimation updates* | Estimation overhead increases |
+| **Equalization** | *Time-varying channel causes residual ISI* | Adaptive equalizers needed |
+| **Interleaving Depth** | *Requires longer interleaving for diversity* | Trade-off with latency |
+| **Modulation** | *Lower-order modulations more robust* | High Doppler limits adaptive modulation |
 
-### Key Relationships
+### *Key Relationships*
 
-1. **Fast Fading Condition:** $T_s > T_c$
-   - Symbol duration exceeds coherence time
-   - Channel changes during symbol transmission
-   - Causes inter-symbol interference and detection errors
+1. ***Fast Fading Condition:*** $T_s > T_c$
+   - *Symbol duration exceeds coherence time*
+   - *Channel changes during symbol transmission*
+   - *Causes inter-symbol interference and detection errors*
 
-2. **Slow Fading Condition:** $T_s < T_c$
-   - Channel appears constant during symbol
-   - Easier to equalize and demodulate
+2. ***Slow Fading Condition:*** $T_s < T_c$
+   - *Channel appears constant during symbol*
+   - *Easier to equalize and demodulate*
 
-### Practical Examples
+### *Practical Examples*
 
 | Scenario | Velocity | $f_m$ @ 2 GHz | $T_c$ | Effect |
 |----------|----------|---------------|-------|--------|
-| Pedestrian | 3 km/h | 5.5 Hz | 77 ms | Slow fading |
-| Vehicle | 60 km/h | 111 Hz | 3.8 ms | Moderate |
-| High-speed train | 300 km/h | 556 Hz | 0.76 ms | Fast fading |
+| **Pedestrian** | 3 km/h | 5.5 Hz | 77 ms | Slow fading |
+| **Vehicle** | 60 km/h | 111 Hz | 3.8 ms | Moderate |
+| **High-speed train** | 300 km/h | 556 Hz | 0.76 ms | Fast fading |
 
-### Mitigation Techniques
+### *Mitigation Techniques*
 
-- **Diversity:** Time diversity via interleaving and coding
-- **Adaptive equalization:** Track time-varying channels
-- **Pilot symbols:** Frequent channel estimation
-- **Lower symbol rates:** Increase $T_s$ relative to $T_c$
+- ***Diversity:*** *Time diversity via interleaving and coding*
+- ***Adaptive equalization:*** *Track time-varying channels*
+- ***Pilot symbols:*** *Frequent channel estimation*
+- ***Lower symbol rates:*** *Increase* $T_s$ *relative to* $T_c$
 
 ---
 
@@ -158,14 +158,14 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 **Answer:** [[May 2024.md#13. (a) Small scale fading: definition, types, flat vs frequency-selective (6 Marks)]]
 
-### What is Fading?
+### *What is Fading?*
 
 See: [[Fading Theory]]
 
-**Fading** is the time variation of received signal power caused by changes in the transmission medium or propagation paths. In wireless systems, fading is broadly categorized into:
+***Fading*** *is the time variation of received signal power caused by changes in the transmission medium or propagation paths.* *In wireless systems, fading is broadly categorized into:*
 
-1. **Large-Scale Fading**
-2. **Small-Scale Fading**
+1. ***Large-Scale Fading***
+2. ***Small-Scale Fading***
 
 ### Multipath Propagation ( Causes of Fading)
 
@@ -196,21 +196,21 @@ graph TD
 
 ---
 
-### 1. Large-Scale Fading
+### *1. Large-Scale Fading*
 
-Represents the variation of signal strength over **large distances** (typically on the order of a cell size) and is generally frequency-independent.
+***Represents the variation of signal strength over large distances (typically on the order of a cell size) and is generally frequency-independent.***
 
 | Type | Cause | Impact |
 |------|-------|--------|
-| **Path Loss** | Signal spreads over larger area with distance | Continuous, predictable drop in average received power |
+| **Path Loss** | *Signal spreads over larger area with distance* | *Continuous, predictable drop in average received power* |
 
 See: [[Path Loss]]
 
-| **Shadowing Effect** | Obstructed by buildings, hills, mountains | Long-term fluctuations depending on position |
+| **Shadowing Effect** | *Obstructed by buildings, hills, mountains* | *Long-term fluctuations depending on position* |
 
-**Distribution:** Log-normal
+***Distribution:*** **Log-normal**
 
-**Impact:** Determines cell coverage and range planning. Requires link budget margin.
+***Impact:*** *Determines cell coverage and range planning. Requires link budget margin.*
 
 ### Large-Scale Fading (Visual)
 
@@ -235,9 +235,9 @@ graph LR
 
 ---
 
-### 2. Small-Scale Fading
+### *2. Small-Scale Fading*
 
-Involves rapid fluctuations in received signal strength over **very short distances** (on the order of carrier wavelength) and short time periods. Primarily driven by **multipath interference**.
+***Involves rapid fluctuations in received signal strength over very short distances (on the order of carrier wavelength) and short time periods. Primarily driven by multipath interference.***
 
 ### Small-Scale Fading (Multipath)
 
@@ -256,15 +256,15 @@ graph LR
     style FADE fill:#ff6b6b,color:#fff
 ```
 
-#### A. Based on Multipath Time Delay Spread (Frequency Domain Effects)
+#### *A. Based on Multipath Time Delay Spread (Frequency Domain Effects)*
 
 | Type | Condition | Impact |
 |------|----------|--------|
-| **Flat Fading** | $B_s < B_c$ | All frequency components fluctuate simultaneously. Preserves spectral characteristics but causes SNR drop. |
-| **Frequency-Selective Fading** | $B_s > B_c$ | Different spectral components affected by different amplitudes. Causes **ISI** (Inter-Symbol Interference). Much more difficult to decode. |
+| **Flat Fading** | $B_s < B_c$ | *All frequency components fluctuate simultaneously. Preserves spectral characteristics but causes SNR drop.* |
+| **Frequency-Selective Fading** | $B_s > B_c$ | *Different spectral components affected by different amplitudes. Causes **ISI** (Inter-Symbol Interference). Much more difficult to decode.* |
 
-- **Flat Fading**: Channel has constant gain over signal bandwidth. Signal strength drops but shape preserved.
-- **Frequency-Selective**: Multipath delay spread > symbol period. Multiple delayed versions cause time dispersion and ISI.
+- ***Flat Fading**:* *Channel has constant gain over signal bandwidth. Signal strength drops but shape preserved.*
+- ***Frequency-Selective**:* *Multipath delay spread > symbol period. Multiple delayed versions cause time dispersion and ISI.*
 
 ### Flat vs Frequency-Selective
 
@@ -285,15 +285,15 @@ graph TD
     style FSF fill:#f0932b,color:#fff
 ```
 
-#### B. Based on Doppler Spread (Time Domain Effects)
+#### *B. Based on Doppler Spread (Time Domain Effects)*
 
 | Type | Condition | Impact |
 |------|----------|--------|
-| **Fast Fading** | $T_s > T_c$ | Channel impulse response changes rapidly within symbol. Creates ISI. Destructive interference from reflected signals. |
-| **Slow Fading** | $T_s < T_c$ | Channel variations slower than modulation. Attenuation constant over symbol. Results in SNR loss overcome by error correction or diversity. |
+| **Fast Fading** | $T_s > T_c$ | *Channel impulse response changes rapidly within symbol. Creates ISI. Destructive interference from reflected signals.* |
+| **Slow Fading** | $T_s < T_c$ | *Channel variations slower than modulation. Attenuation constant over symbol. Results in SNR loss overcome by error correction or diversity.* |
 
-- **Fast Fading**: High Doppler spread → rapid channel variations → linear distortion of baseband pulse
-- **Slow Fading**: Low Doppler spread → channel nearly constant during symbol
+- ***Fast Fading**:* *High Doppler spread → rapid channel variations → linear distortion of baseband pulse*
+- ***Slow Fading**:* *Low Doppler spread → channel nearly constant during symbol*
 
 ### Slow vs Fast Fading
 
@@ -316,26 +316,26 @@ graph TD
 
 ---
 
-### Impact Summary
+### *Impact Summary*
 
 | Fading Type | Effect | Solution |
 |------------|--------|------------|
-| Large-Scale | Coverage/range planning | Link budget margin |
-| Flat Fading | SNR drop | Fade margin, diversity |
-| Freq-Selective | ISI | OFDM, equalization |
-| Fast Fading | ISI, phase errors | Diversity, tracking |
-| Slow Fading | SNR loss | Error correction coding |
+| **Large-Scale** | *Coverage/range planning* | *Link budget margin* |
+| **Flat Fading** | *SNR drop* | *Fade margin, diversity* |
+| **Freq-Selective** | *ISI* | *OFDM, equalization* |
+| **Fast Fading** | *ISI, phase errors* | *Diversity, tracking* |
+| **Slow Fading** | *SNR loss* | *Error correction coding* |
 
 ---
 
-### Classification Matrix
+### *Classification Matrix*
 
 | | Flat Fading | Frequency-Selective |
 |---|-------------|---------------------|
 | **Slow** | Slow + Flat | Slow + Freq-Selective |
 | **Fast** | Fast + Flat | Fast + Freq-Selective |
 
-**Best Case**: Slow + Flat | **Worst Case**: Fast + Frequency-Selective
+***Best Case**:* Slow + Flat | ***Worst Case**:* Fast + Frequency-Selective
 
 ---
 
@@ -579,20 +579,20 @@ See: [[Path Loss]]
 - Doppler shift: $f_d = 150$ Hz
 - Velocity: $v = 60$ km/h
 
-### Formula
+### *Formula*
 
-Doppler shift:
+*Doppler shift:*
   $$f_d = \frac{v}{\lambda} \cos\theta = f_m \cos\theta$$
-For maximum Doppler (θ = 0°):
+*For maximum Doppler (θ = 0°):*
   $$f_d = f_m = \frac{v}{\lambda} = \frac{vf_c}{c}$$
 
 $$\boxed{f_c = \frac{f_d \cdot c}{v}}$$
 
-Where:
+*Where:*
 - $c = 3 \times 10^8$ m/s (speed of light)
 - $v = 60$ km/h = $16.67$ m/s
 
-### Calculation
+### *Calculation*
 
 $$f_c = \frac{150 \times 3 \times 10^8}{16.67}$$
 
@@ -600,9 +600,9 @@ $$f_c = \frac{150 \times 3\times 10^8}{16.67} = \frac{4.5 \times 10^{10}}{16.67}
 
 $$f_c = 2.7 \times 10^9 \text{ Hz} = 2.7 \text{ GHz}$$
 
-### Answer
+### *Answer*
 
-The original carrier frequency is **2.7 GHz**.
+*The original carrier frequency is* **2.7 GHz**.
 
 ---
 
@@ -675,19 +675,19 @@ See: [[Module 2/Shannon Capacity|Shannon Capacity Note]]
 
 **Answer:** [[October 2023 PYQ.md#14. (b) Inference of AWGN channel capacity]]
 
-### Definition
+### *Definition*
 
-**Shannon's capacity theorem** characterizes the **fundamental limits** of reliable communication over a noisy channel.
+***Shannon's capacity theorem characterizes the fundamental limits of reliable communication over a noisy channel.***
 
-**Historical Context:** Before Shannon formulated information theory in 1948, it was widely believed that the only way to achieve reliable communication (making error probability as small as desired) was to drastically reduce data rate (e.g., repeating the same message over and over). **Shannon proved this incorrect** - through intelligent coding, a system can communicate at a strictly positive data rate while maintaining an arbitrarily small error probability.
+***Historical Context:*** *Before Shannon formulated information theory in 1948, it was widely believed that the only way to achieve reliable communication (making error probability as small as desired) was to drastically reduce data rate (e.g., repeating the same message over and over). **Shannon proved this incorrect** - through intelligent coding, a system can communicate at a strictly positive data rate while maintaining an arbitrarily small error probability.*
 
-### The Channel Capacity Limit
+### *The Channel Capacity Limit*
 
-The theorem establishes a **maximal rate**, known as the **channel capacity (C)**, at which highly reliable communication can occur:
+*The theorem establishes a **maximal rate**, known as the **channel capacity (C)**, at which highly reliable communication can occur:*
 
 $$\boxed{C = B \log_2(1 + \text{SNR})}$$
 
-**Key Principle:** If a system attempts to transmit data at a rate **exceeding** channel capacity, it becomes **fundamentally impossible** to drive error probability to zero. The channel capacity serves as the **absolute upper limit** for reliable data transmission.
+***Key Principle:*** *If a system attempts to transmit data at a rate **exceeding** channel capacity, it becomes **fundamentally impossible** to drive error probability to zero. The channel capacity serves as the **absolute upper limit** for reliable data transmission.*
 
 ### Relationship to Bandwidth and Power
 
@@ -763,14 +763,14 @@ In practice, real systems operate **below** this limit due to:
 - Implementation complexity
 - Other interference
 
-### Key Takeaways
+### *Key Takeaways*
 
-1. **Fundamental limit** - no system can exceed without errors
-2. **Bandwidth-limited**: Capacity grows linearly with B
-3. **Power-limited**: Capacity grows logarithmically with SNR
-4. **Guides design**: Determines tradeoff between B, power, and rate
-5. **Practical goal**: Get as close as possible to Shannon limit
-6. **Coding enables** reliable communication at rates approaching limit
+1. *** Fundamental limit** - no system can exceed without errors*
+2. ***Bandwidth-limited**:* *Capacity grows linearly with B*
+3. ***Power-limited**:* *Capacity grows logarithmically with SNR*
+4. ***Guides design**:* *Determines tradeoff between B, power, and rate*
+5. ***Practical goal**:* *Get as close as possible to Shannon limit*
+6. ***Coding enables** reliable communication at rates approaching limit*
 
 ---
 
@@ -900,31 +900,31 @@ Where:
 
 ---
 
-## How is the outage probability computed for a wireless channel?
+## *How is the outage probability computed for a wireless channel?*
 
 See: [[Module 2/Outage Probability|Outage Probability Note]]
 
-**Outage** = Event when channel quality drops below threshold ($\rho_{min}$), making reliable communication impossible.
+***Outage** = Event when channel quality drops below threshold ($\rho_{min}$), making reliable communication impossible.*
 
 $$P_{outage} = P(SNR < \rho_{min})$$
 
-### For Rayleigh Fading
+### *For Rayleigh Fading*
 
 $$P_{outage} = 1 - \exp\left(-\frac{\rho_{min}}{\bar{\rho}}\right)$$
 
-### For Rician Fading
+### *For Rician Fading*
 
 $$P_{outage} = 1 - Q_1\left(\frac{A}{\sigma}, \sqrt{\frac{2\rho_{min}}{1+K}}\right)$$
 
-### Capacity with Outage
+### *Capacity with Outage*
 
 $$C_{outage} = (1 - P_{outage}) W \log_2(1 + \rho_{min})$$
 
-Rate reliably supported in $(1-P_{outage})$% of time.
+*Rate reliably supported in* $(1-P_{outage})$% *of time.*
 
-### Example
+### *Example*
 
-Given: ${\bar{\rho}} = 10$, $\rho_{min} = 1$ (Rayleigh)
+*Given:* ${\bar{\rho}} = 10$, $\rho_{min} = 1$ *(Rayleigh)*
 
 $$P_{outage} = 1 - \exp(-1/10) = 1 - 0.905 = \boxed{9.5\%}$$
 
@@ -1202,30 +1202,30 @@ See: [[Module 2/Outage Probability]] for detailed formulas (Rayleigh, Rician).
 
 ---
 
-## Explain the effect of multipath propagation using 2-ray model. (7 Marks)
+## *Explain the effect of multipath propagation using 2-ray model. (7 Marks)*
 
-### 2-Ray Model
+### *2-Ray Model*
 
-The 2-ray model considers **two paths**:
-1. Direct LOS path
-2. Ground-reflected path
+*The 2-ray model considers **two paths**:*
+1. *Direct LOS path*
+2. *Ground-reflected path*
 
-### Received Power
+### *Received Power*
 
 $$P_r = P_t G_t G_r \frac{h_t^2 h_r^2}{d^4}$$
 
-Where:
+*Where:*
 - $h_t, h_r$ = antenna heights
 - $d$ = distance
 
-### Path Loss Exponent
+### *Path Loss Exponent*
 
 | Region | Formula | Exponent |
 |--------|---------|----------|
-| Free space (d < d_bp) | $P_r \propto 1/d^2$ | 2 |
-| Two-ray (d > d_bp) | $P_r \propto 1/d^4$ | 4 |
+| **Free space (d < d_bp)** | $P_r \propto 1/d^2$ | 2 |
+| **Two-ray (d > d_bp)** | $P_r \propto 1/d^4$ | 4 |
 
-### Breakpoint Distance
+### *Breakpoint Distance*
 
 $$d_{bp} = \frac{4h_t h_r}{\lambda}$$
 
