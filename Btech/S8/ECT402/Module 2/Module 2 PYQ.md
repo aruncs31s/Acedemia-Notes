@@ -13,6 +13,36 @@ dg-publish: true
 
 ---
 
+## Important Equations Quick Reference
+
+| # | Topic | Formula |
+|---|-------|---------|
+| **PATH LOSS** |||
+| 1 | Free Space Path Loss (dB) | $PL_{dB} = 20\log_{10}\left(\frac{4\pi d}{\lambda}\right)$ |
+| 2 | Friis Equation | $P_r = P_t G_t G_r \left(\frac{\lambda}{4\pi d}\right)^2$ |
+| 3 | Two-Ray (far) | $P_r \propto 1/d^4$ |
+| **DOPPLER** |||
+| 4 | Doppler Shift | $f_d = \frac{v}{\lambda}\cos\theta = f_m\cos\theta$ |
+| 5 | Max Doppler | $f_m = \frac{v}{\lambda} = \frac{v f_c}{c}$ |
+| 6 | Coherence Time | $T_c \approx \frac{0.423}{f_m}$ |
+| **FADING** |||
+| 7 | Coherence Bandwidth | $B_c \approx \frac{1}{5\sigma_\tau}$ |
+| 8 | Flat Fading Condition | $B_s < B_c$ |
+| 9 | Freq-Selective Condition | $B_s > B_c$ |
+| 10 | Slow Fading Condition | $T_s < T_c$ |
+| 11 | Fast Fading Condition | $T_s > T_c$ |
+| 12 | Rayleigh PDF | $f_R(r) = \frac{r}{\sigma^2}e^{-r^2/2\sigma^2}$ |
+| **CAPACITY** |||
+| 13 | AWGN Capacity | $C = B\log_2(1+SNR)$ |
+| 14 | Ergodic (fading) | $C = E[\log_2(1+SNR\cdot|h|^2)]$ |
+| 15 | Outage Prob | $P_{outage} = P(SNR < \rho_{min})$ |
+| 16 | Capacity w/ Outage | $C_{outage} = (1-P_{outage})B\log_2(1+\rho_{min})$ |
+| **CHANNEL MODEL** |||
+| 17 | CIR (continuous) | $h(\tau,t) = \sum_n \alpha_n(t)e^{j\phi_n(t)}\delta(\tau-\tau_n)$ |
+| 18 | CIR (discrete) | $y[m] = \sum_l h_l[m]x[m-l] + w[m]$ |
+
+---
+
 ## Table of Contents
 
 1. [Differentiate between flat fading and frequency selective fading](#differentiate-between-flat-fading-and-frequency-selective-fading-1)
@@ -34,6 +64,19 @@ dg-publish: true
 10. [How is the outage probability computed for a wireless channel?](#how-is-the-outage-probability-computed-for-a-wireless-channel) → [[Module 2/Outage Probability|Outage]]
 11. [Capacity with custom path loss model](#capacity-with-custom-path-loss-model-7-marks)
 12. [Derive the expression for the impulse response model of a multipath channel. (7 Marks)](#derive-the-expression-for-the-impulse-response-model-of-a-multipath-channel-07-marks)
+
+---
+### Additional Questions
+
+- [Define outage probability]
+- [Explain 2-ray model (7 Marks)](#explain-the-effect-of-multipath-propagation-using-2-ray-model-07-marks)
+- [Narrowband fading: I/Q components (7 Marks)](#narrowband-fading-statistical-characterisation-of-in-phase-and-quadrature-components-of-a-received-signal-when-an-unmodulated-carrier-is-transmitted-07-marks)
+- [Time-varying impulse response (7 Marks)](#derive-time-varying-impulse-response-of-multipath-wireless-channel-07-marks)
+- [Q14: Free space path loss (7 Marks)](#q14-a-free-space-path-loss--received-power-in-dbm-07-marks)
+- [AWGN capacity inference (4 Marks)](#what-is-inferred-by-the-channel-capacity-of-awgn-channel-04-marks)
+- [Time selective fading (4 Marks)](#what-is-meant-by-time-selective-fading-4-marks)
+- [Delay spread & coherence bandwidth (6 Marks)](#explain-delay-spread-and-coherence-bandwidth-6-marks)
+- [Capacity with CSIR (6 Marks)](#capacity-of-flat-fading-awgn-channel-with-csir-6-marks)
 9. [How does fading occur? Derive the expression for Doppler shift.](#how-does-fading-occur-derive-the-expression-for-doppler-shift)
    - [Multipath Propagation](#multipath-propagation-1)
    - [Derivation of the Doppler Shift Expression](#derivation-of-the-doppler-shift-expression)
@@ -950,3 +993,333 @@ $$C = 50000 \times 2.59 = \boxed{129,500 \text{ bits/s}}$$
 - The cubic path loss ($d^3$) causes faster attenuation than free space ($d^2$)
 - At 1km, channel can still support ~130 kbps reliably
 - Adaptive techniques needed to maintain QoS over distance
+
+---
+
+## Derive the expression for the impulse response model of a multipath channel. (7 Marks)
+
+### Concept
+
+A multipath channel can be modeled as a **linear time-varying filter**. The impulse response $h(t, \tau)$ describes how the channel spreads an impulse in time.
+
+### Derivation
+
+**Step 1: Received Signal from Multiple Paths**
+
+The transmitted signal $x(t)$ arrives via $N$ paths, each with:
+- Delay $\tau_n$ (time of arrival)
+- Amplitude $\alpha_n$ (attenuation)
+- Phase $\phi_n$ (phase shift)
+
+$$y(t) = \sum_{n=0}^{N-1} \alpha_n e^{j\phi_n} x(t - \tau_n)$$
+
+**Step 2: Convolution Form**
+
+This is equivalent to convolution with channel impulse response:
+
+$$y(t) = x(t) * h(t)$$
+
+Where $h(t)$ is the time-varying channel impulse response.
+
+**Step 3: Continuous-Time Impulse Response**
+
+$$h(\tau, t) = \sum_{n=0}^{N-1} \alpha_n(t) e^{j\phi_n(t)} \delta(\tau - \tau_n(t))$$
+
+Where:
+- $\alpha_n(t)$ = time-varying amplitude of n-th path
+- $\phi_n(t)$ = time-varying phase of n-th path
+- $\tau_n(t)$ = time-varying delay of n-th path
+- $\delta()$ = Dirac delta function
+
+**Step 4: Discrete-Time Model**
+
+For practical digital systems, sample at bandwidth $W$:
+
+$$y[m] = \sum_l h_l[m] \cdot x[m-l] + w[m]$$
+
+Where:
+- $h_l[m]$ = $l$-th tap of discrete-time channel
+- $x[m]$ = transmitted symbol
+- $y[m]$ = received symbol
+- $w[m]$ = noise sample
+
+### Physical Interpretation
+
+```mermaid
+graph LR
+    TX[TX] -->|"Path 0<br/>τ₀, α₀"| P0[ ]
+    TX -->|"Path 1<br/>τ₁, α₁"| P1[ ]
+    TX -->|"Path N-1<br/>τₙ₋₁, αₙ₋₁"| PN[ ]
+    
+    P0 -.->|"Add"| SUM[Σ]
+    P1 -.->|"Add"| SUM
+    PN -.->|"Add"| SUM
+    
+    SUM --> RX[RX]
+    
+    style TX fill:#4ecdc4,color:#fff
+    style SUM fill:#ff6b6b,color:#fff
+    style RX fill:#4ecdc4,color:#fff
+```
+
+### Summary
+
+| Model | Formula | Description |
+|------|---------|-------------|
+| Continuous | $h(\tau, t) = \sum_n \alpha_n(t) e^{j\phi_n(t)} \delta(\tau - \tau_n(t))$ | Time-varying multipath |
+| Discrete | $y[m] = \sum_l h_l[m] x[m-l] + w[m]$ | Tapped-delay-line |
+| Frequency | $Y(f) = H(f, t) X(f)$ | Convolution in freq domain |
+
+**Key:** Multipath causes time dispersion → channel acts as filter with multiple taps.
+
+---
+
+## Q14 a) Free Space Path Loss & Received Power (7 Marks)
+
+### Given
+
+- Transmit power: $P_t = 1$ W
+- Carrier frequency: $f_c = 2.4$ GHz
+- Distance: $d = 1.6$ km = 1600 m
+
+### Step 1: Calculate Wavelength
+
+$$\lambda = \frac{c}{f_c} = \frac{3 \times 10^8}{2.4 \times 10^9} = 0.125 \text{ m}$$
+
+### Step 2: Free Space Path Loss (dB)
+
+$$PL_{dB} = 20\log_{10}\left(\frac{4\pi d}{\lambda}\right) = 20\log_{10}\left(\frac{4\pi \times 1600}{0.125}\right)$$
+
+$$\frac{4\pi \times 1600}{0.125} = 4\pi \times 12800 = 160850$$
+
+$$PL_{dB} = 20\log_{10}(160850) = 20 \times 5.206 = \boxed{104.12 \text{ dB}}$$
+
+### Step 3: Received Power (dBm)
+
+$$P_r(dBm) = P_t(dBm) - PL_{dB}$$
+
+$$P_t(dBm) = 10\log_{10}(1/0.001) = 30 \text{ dBm}$$
+
+$$P_r = 30 - 104.12 = \boxed{-74.12 \text{ dBm}}$$
+
+---
+
+## What is inferred by the channel capacity of AWGN channel? (4 Marks)
+
+**Answer:** [[October 2023 PYQ.md#14. (b) Inference of AWGN channel capacity]]
+
+The AWGN channel capacity $C = B \log_2(1 + SNR)$ infers:
+
+1. **Maximum reliable data rate** — above this rate, errors become unavoidable
+2. **Bandwidth-SNR tradeoff** — can increase capacity by increasing either
+3. **Fundamental limit** — no practical system can exceed without errors
+4. **Spectral efficiency** — $\eta = \log_2(1+SNR)$ bits/s/Hz
+
+In simple terms: It tells us the **maximum bits per second** we can transmit **reliably** given our bandwidth and signal strength.
+
+---
+
+## What is meant by time selective fading? (4 Marks)
+
+**Time selective fading** = When channel changes **within** a symbol duration.
+
+- Occurs when: $T_s > T_c$ (symbol period > coherence time)
+- Caused by: Doppler spread (relative motion)
+- Effect: Channel gain varies during transmission → causes ISI
+- Also called: **Fast fading**
+
+See: [[Module 2/Fading#classification-matrix|Fading Types]]
+
+---
+
+## Explain delay spread and coherence bandwidth. (6 Marks)
+
+### Delay Spread
+
+**Delay spread** ($\tau_{rms}$) = Measure of time dispersion caused by multipath.
+
+- RMS delay spread: $$\sigma_\tau = \sqrt{\bar{\tau^2} - \bar{\tau}^2}$$
+- Mean excess delay: $$\bar{\tau} = \frac{\sum P(\tau_i)\tau_i}{\sum P(\tau_i)}$$
+
+### Coherence Bandwidth
+
+**Coherence bandwidth** ($B_c$) = Frequency range where channel is "flat" (correlated).
+
+- $$B_c \approx \frac{1}{5\sigma_\tau}$$ (varies: 1/5 to 1/50)
+
+| Relationship | Meaning |
+|--------------|---------|
+| $B_s < B_c$ | Flat fading — all frequencies affected equally |
+| $B_s > B_c$ | Frequency-selective — different gains at different frequencies |
+
+See: [[Module 2/Coherence|Delay Spread & Coherence BW]]
+
+---
+
+## Capacity of flat fading AWGN channel with CSIR (6 Marks)
+
+### Given
+
+Channel State Information at Receiver (CSIR) only — transmitter doesn't know channel.
+
+### Expression
+
+$$C_{CSIR} = E_{|h|^2}[\log_2(1 + SNR \cdot |h|^2)]$$
+
+### Derivation (from AWGN)
+
+1. **AWGN capacity:** $C = B \log_2(1 + \rho)$ where $\rho$ = SNR
+
+2. **For fading channel:** SNR becomes random: $\rho_{fading} = SNR \cdot |h|^2$
+
+3. **With CSIR only:** Average over fading distribution:
+$$C_{CSIR} = \int_0^\infty \log_2(1 + SNR \cdot \rho) f_{\rho}(\rho) d\rho$$
+
+4. **For Rayleigh fading:**
+$$C_{CSIR} = \frac{1}{\bar{\rho}} e^{1/\bar{\rho}} E_1\left(\frac{1}{\bar{\rho}}\right) \cdot B$$
+where $E_1$ = exponential integral
+
+### Physical Meaning
+
+- Receiver knows channel gain $h$, transmitter doesn't
+- Cannot adapt power/rate (waterfilling not possible)
+- Capacity is the **average** across all channel states
+- Lower than perfect CSI (transmitter knows channel)
+
+---
+
+## Define outage probability
+
+**Outage probability** = Probability that the channel quality falls below a threshold, making reliable communication impossible.
+
+$$P_{outage} = P(SNR < \rho_{min})$$
+
+Where $\rho_{min}$ is the minimum SNR required for reliable communication.
+
+See: [[Module 2/Outage Probability]] for detailed formulas (Rayleigh, Rician).
+
+---
+
+## Explain the effect of multipath propagation using 2-ray model. (7 Marks)
+
+### 2-Ray Model
+
+The 2-ray model considers **two paths**:
+1. Direct LOS path
+2. Ground-reflected path
+
+### Received Power
+
+$$P_r = P_t G_t G_r \frac{h_t^2 h_r^2}{d^4}$$
+
+Where:
+- $h_t, h_r$ = antenna heights
+- $d$ = distance
+
+### Path Loss Exponent
+
+| Region | Formula | Exponent |
+|--------|---------|----------|
+| Free space (d < d_bp) | $P_r \propto 1/d^2$ | 2 |
+| Two-ray (d > d_bp) | $P_r \propto 1/d^4$ | 4 |
+
+### Breakpoint Distance
+
+$$d_{bp} = \frac{4h_t h_r}{\lambda}$$
+
+### Effect Summary
+
+- **Near distance (d < d_bp):** Constructive/destructive interference → ripples
+- **Far distance (d > d_bp):** Fast power falloff (d⁴) — worse than free space
+- The ground reflection causes additional phase cancellation
+
+See: [[Module 2/Path Loss#two-ray-model|Two-Ray Model]]
+
+---
+
+## Narrowband fading: Statistical characterisation of in-phase and quadrature components (7 Marks)
+
+### Narrowband Signal Model
+
+For narrowband fading, the received signal envelope follows **Rayleigh distribution**.
+
+If transmitted is an unmodulated carrier $A\cos(2\pi f_c t)$:
+
+### Received Signal
+
+$$r(t) = I(t)\cos(2\pi f_c t) - Q(t)\sin(2\pi f_c t)$$
+
+Where:
+- $I(t)$ = **In-phase component**
+- $Q(t)$ = **Quadrature component**
+
+### Statistical Properties (Rayleigh)
+
+Assuming NLOS (no dominant LOS):
+
+1. **$I$ and $Q$ are independent Gaussian random variables**
+
+2. **Mean:** $E[I] = E[Q] = 0$
+
+3. **Variance:** $\sigma^2 = \frac{E[|r|^2]}{2}$
+
+$$f_I(i) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-i^2/2\sigma^2}$$
+
+$$f_Q(q) = \frac{1}{\sqrt{2\pi\sigma^2}} e^{-q^2/2\sigma^2}$$
+
+### Envelope Distribution
+
+The envelope $R = \sqrt{I^2 + Q^2}$ follows **Rayleigh distribution**:
+
+$$f_R(r) = \frac{r}{\sigma^2} e^{-r^2/2\sigma^2}, \quad r \geq 0$$
+
+### With LOS (Rician)
+
+If dominant LOS exists: envelope follows **Rician distribution** with parameter $K$ (ratio of LOS to scatter power).
+
+See: [[Module 2/Fading#statistical-models|Rayleigh/Rician]]
+
+---
+
+## Derive time-varying impulse response of multipath wireless channel. (7 Marks)
+
+### Time-Varying Multipath Channel
+
+The channel impulse response $h(\tau, t)$ varies with time due to relative motion.
+
+### Derivation
+
+**Step 1: Baseband representation**
+
+$$h(\tau, t) = \sum_{n=0}^{N-1} \alpha_n(t) e^{j\phi_n(t)} \delta(\tau - \tau_n(t))$$
+
+Where:
+- $\alpha_n(t)$ = time-varying amplitude of n-th path
+- $\phi_n(t)$ = time-varying phase of n-th path
+- $\tau_n(t)$ = time-varying delay of n-th path
+
+**Step 2: With Doppler**
+
+For path $n$ with Doppler shift $f_n$:
+
+$$\phi_n(t) = 2\pi f_n t + \phi_0$$
+
+$$\alpha_n(t) = \alpha_n e^{-j(2\pi f_n t)}$$
+
+**Step 3: Expanded form**
+
+$$h(\tau, t) = \sum_n \alpha_n e^{j(\omega_n t + \phi_{n0})} \delta(\tau - \tau_n(t))$$
+
+**Step 4: Discrete-time model**
+
+For digital systems sampled at $T_s$:
+
+$$h[m] = \sum_n \alpha_n[m] e^{j\phi_n[m]} \delta[l-n]$$
+
+### Key Parameters
+
+- **Coherence time** $T_c$: Time channel appears constant
+- **Doppler spread** $B_D$: Spread in Doppler frequencies
+- Relationship: $T_c \approx \frac{0.423}{f_m}$
+
+See: [[Module 2/Statistical Multipath Channel Models#time-varying|Time-Varying Channel]]

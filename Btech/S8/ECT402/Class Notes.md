@@ -15,14 +15,15 @@ dg-publish: true
 ```tasks
 not done
 path includes ECT402/Class Notes
-
+LIMIT 5
 ```
 
 ```tasks
 not done
 path includes ECT402
-
+LIMIT 5
 ```
+
 
 ### 2024-12-17
 
