@@ -70,7 +70,7 @@ The performance of OFDM systems is affected by:
 
 ---
 
-### 2. Discuss the advantages and disadvantages of multicarrier modulation? (3 Marks) {#2-discuss-the-advantages}
+### 2. Discuss the advantages and disadvantages of multicarrier modulation? (3 Marks)
 
 **Answer:**
 
@@ -92,7 +92,7 @@ The performance of OFDM systems is affected by:
 
 ---
 
-### 3. How does the cyclic prefix mitigate inter-symbol interference (ISI) in frequency-selective fading channels? (7 Marks) {#3-how-does-the-cyclic-prefix}
+### 3. How does the cyclic prefix mitigate inter-symbol interference (ISI) in frequency-selective fading channels? (7 Marks)
 
 **Answer:**
 
@@ -124,7 +124,7 @@ Thus, the cyclic prefix converts the dispersive channel (causing ISI) into non-d
 
 ---
 
-### 4. Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel. (7 Marks) {#4-derive-an-equation-to-calculate-the-average-error-probability} 
+### 4. Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel. (7 Marks) 
 
 **Answer:**
 
@@ -169,7 +169,7 @@ This is the **average error probability of BPSK in Rayleigh flat fading channel*
 
 ---
 
-### 5. Explain the different interferences in OFDM systems. How does it affect data transmission and what techniques are used to mitigate it? (7 Marks) {#5-explain-the-different-interferences}
+### 5. Explain the different interferences in OFDM systems. How does it affect data transmission and what techniques are used to mitigate it? (7 Marks)
 
 **Answer:**
 
@@ -210,7 +210,7 @@ This is the **average error probability of BPSK in Rayleigh flat fading channel*
 
 ---
 
-### 6. For an OFDM system with a cyclic prefix length of 2 μs and a maximum channel delay spread of 15 μs, determine the maximum subcarrier spacing to avoid ISI. (7 Marks) {#6-for-an-ofdm-system}
+### 6. For an OFDM system with a cyclic prefix length of 2 μs and a maximum channel delay spread of 15 μs, determine the maximum subcarrier spacing to avoid ISI. (7 Marks)
 
 **Answer:**
 
@@ -248,7 +248,7 @@ $$\Delta f_{max} = \frac{1}{13 \mu s} = \frac{1}{13 \times 10^{-6}} = 76.92 kHz 
 
 ## QP 2: October 2023
 
-### 1. Explain the significance of using cyclic prefix in an OFDM system. (3 Marks) {#1-explain-the-significance-of-using-cyclic-prefix}
+### 1. Explain the significance of using cyclic prefix in an OFDM system. (3 Marks)
 
 **Answer:**
 
@@ -266,7 +266,7 @@ The cyclic prefix in OFDM systems serves several critical purposes:
 
 ---
 
-### 2. With the help of mathematical equations show how linear convolution is converted to circular convolution in OFDM using Cyclic prefix. (7 Marks) {#2-with-the-help-of-mathematical}
+### 2. With the help of mathematical equations show how linear convolution is converted to circular convolution in OFDM using Cyclic prefix. (7 Marks)
 
 **Answer:**
 
@@ -327,7 +327,7 @@ This proves that cyclic prefix successfully converts linear convolution to circu
 
 ---
 
-### 3. Determine the average SNR per bit of BPSK modulation in Rayleigh slow fading channel such that 90% of the times, the average probability of bit error is less than 10^{-4}. (7 Marks) {#3-determine-the-average-snr-per-bit}
+### 3. Determine the average SNR per bit of BPSK modulation in Rayleigh slow fading channel such that 90% of the times, the average probability of bit error is less than 10^{-4}. (7 Marks)
 
 **Answer:**
 
@@ -373,7 +373,7 @@ $$\bar{\gamma}_b(dB) = 10 \log_{10}(66) = 18.2 dB$$
 
 ---
 
-### 4. How can the subcarrier fading be mitigated in multicarrier modulation system? (7 Marks) {#4-how-can-the-subcarrier-fading-be-mitigated}
+### 4. How can the subcarrier fading be mitigated in multicarrier modulation system? (7 Marks)
 
 **Answer:**
 
@@ -411,7 +411,7 @@ $$\bar{\gamma}_b(dB) = 10 \log_{10}(66) = 18.2 dB$$
 
 ---
 
-### 5. Explain the techniques employed to reduce PAPR in OFDM. (7 Marks) {#5-explain-the-techniques-employed-to-reduce-papr}
+### 5. Explain the techniques employed to reduce PAPR in OFDM. (7 Marks)
 
 **Answer:**
 

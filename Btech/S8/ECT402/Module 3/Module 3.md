@@ -14,19 +14,19 @@ dg-publish: true
 
 | Question | Answer Link |
 |----------|------------|
-| Analyse the different factors that affect the performance of OFDM systems? (3M) | [[Module 3 PYQ#1-analyse-the-different-factors]] |
-| Discuss the advantages and disadvantages of multicarrier modulation? (3M) | [[Module 3 PYQ#2-discuss-the-advantages]] |
-| How does the cyclic prefix mitigate ISI in frequency-selective fading channels? (7M) | [[Module 3 PYQ#3-how-does-the-cyclic-prefix]] |
+| Analyse the different factors that affect the performance of OFDM systems? (3M) | [[Module 3 PYQ]] |
+| Discuss the advantages and disadvantages of multicarrier modulation? (3M) | [[Module 3 PYQ]] |
+| How does the cyclic prefix mitigate ISI in frequency-selective fading channels? (7M) | [[Module 3 PYQ]] |
 | Derive average error probability of BPSK in flat fading channel (7M) | [[Analysis of Average Error Probability]] |
-| Explain the different interferences in OFDM systems & mitigation techniques? (7M) | [[Module 3 PYQ#5-explain-the-different-interferences]] |
-| Max subcarrier spacing for CP=2μs, τ_max=15μs to avoid ISI (7M) | [[Module 3 PYQ#6-for-an-ofdm-system]] |
+| Explain the different interferences in OFDM systems & mitigation techniques? (7M) | [[Module 3 PYQ]] |
+| Max subcarrier spacing for CP=2μs, τ_max=15μs to avoid ISI (7M) | [[Module 3 PYQ]] |
 
 ### QP 2: October 2023
 
 | Question | Answer Link |
 |----------|------------|
 | Explain the significance of using cyclic prefix in an OFDM system? (3M) | [[Cyclic Prefix and Peak-to-Average-Power-Ratio]] |
-| Show how linear convolution is converted to circular convolution using CP (7M) | [[Module 3 PYQ#2-with-the-help-of-mathematical]] |
+| Show how linear convolution is converted to circular convolution using CP (7M) | [[Module 3 PYQ]] |
 | Average SNR for BPSK in Rayleigh fading: 90% of time BER < 10⁻⁴ (7M) | [[Analysis of Average Error Probability]] |
 | How can subcarrier fading be mitigated in multicarrier system? (7M) | [[Overlapping Subchannels and Mitigation of Subcarrier Fading]] |
 | Explain the techniques employed to reduce PAPR in OFDM (7M) | [[Cyclic Prefix and Peak-to-Average-Power-Ratio]] |
@@ -44,8 +44,3 @@ dg-publish: true
 - [[Overlapping Subchannels and Mitigation of Subcarrier Fading]] - Overlapping subchannels and mitigation techniques
 - [[Discrete Implementation of Multicarrier OFDM]] - Discrete implementation of multicarrier OFDM
 - [[Cyclic Prefix and Peak-to-Average-Power-Ratio]] - Cyclic prefix and PAPR
-
-
-## TODO
-- [ ] [[Module 3 PYQ#4. Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel. (7 Marks)]]
-- [ ]
