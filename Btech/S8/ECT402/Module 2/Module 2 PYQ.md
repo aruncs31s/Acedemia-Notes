@@ -93,6 +93,45 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 1. **Large-Scale Fading**
 2. **Small-Scale Fading**
 
+### Multipath Propagation ( Causes of Fading)
+
+```mermaid
+graph LR
+    TX[TX] -->|Path 1 Direct| RX
+    TX -->|Path 2 Building| RX
+    TX -->|Path 3 Ground| RX
+    TX -->|Path 4 Trees| RX
+    
+    RX -->|Signal Sum| FADE[Fading]
+    
+    style FADE fill:#ff6b6b,color:#fff
+```
+
+Multiple signal paths arrive at receiver with different delays and phases → constructive/destructive interference → fading.
+
+### Classification of Fading Types
+
+```mermaid
+graph TD
+    FADING[Fading] --> LS[Large-Scale]
+    FADING --> SS[Small-Scale]
+    
+    LS --> PL[Path Loss]
+    LS --> SH[Shadowing]
+    
+    SS --> FREQ[Frequency Domain]
+    SS --> TIME[Time Domain]
+    
+    FREQ --> FF[Flat Fading]
+    FREQ --> FSF[Frequency-Selective]
+    
+    TIME --> SF[Slow Fading]
+    TIME --> FASTF[Fast Fading]
+    
+    style LS fill:#4ecdc4,color:#fff
+    style SS fill:#ff6b6b,color:#fff
+```
+
 ---
 
 ### 1. Large-Scale Fading
@@ -108,13 +147,49 @@ Represents the variation of signal strength over **large distances** (typically 
 
 **Impact:** Determines cell coverage and range planning. Requires link budget margin.
 
+### Large-Scale Fading (Visual)
+
+```mermaid
+graph LR
+    subgraph "Distance"
+    A[Near TX] --> B[100m] --> C[500m] --> D[1km] --> E[2km]
+    end
+    
+    A -->|"Strong"| A1[Signal]
+    B -->|"Medium"| B1[Signal]
+    C -->|"Weak"| C1[Signal]
+    D -->|"Very Weak"| D1[Signal]
+    E -->|"Barely"| E1[Signal]
+    
+    style A1 fill:#4ecdc4
+    style B1 fill:#4ecdc4
+    style C1 fill:#f9ca24
+    style D1 fill:#f0932b
+    style E1 fill:#eb4d4b
+```
+
 ---
 
 ### 2. Small-Scale Fading
 
 Involves rapid fluctuations in received signal strength over **very short distances** (on the order of carrier wavelength) and short time periods. Primarily driven by **multipath interference**.
 
----
+### Small-Scale Fading (Multipath)
+
+```mermaid
+graph LR
+    TX[TX] --> P1[Path 1<br/>Direct]
+    TX --> P2[Path 2<br/>Bounce]
+    TX --> P3[Path 3<br/>Ground]
+    
+    P1 -->|"τ₁"| ADD1[Σ]
+    P2 -->|"τ₂"| ADD1
+    P3 -->|"τ₃"| ADD1
+    
+    ADD1 --> R[RX]<-->|Interference| FADE[Fading]
+    
+    style FADE fill:#ff6b6b,color:#fff
+```
 
 #### A. Based on Multipath Time Delay Spread (Frequency Domain Effects)
 
@@ -126,7 +201,24 @@ Involves rapid fluctuations in received signal strength over **very short distan
 - **Flat Fading**: Channel has constant gain over signal bandwidth. Signal strength drops but shape preserved.
 - **Frequency-Selective**: Multipath delay spread > symbol period. Multiple delayed versions cause time dispersion and ISI.
 
----
+### Flat vs Frequency-Selective
+
+```mermaid
+graph TD
+    subgraph "Signal Bandwidth vs Coherence Bandwidth"
+    Bc[Bc = Coherence<br/>Bandwidth]
+    Bs[Bs = Signal<br/>Bandwidth]
+    end
+    
+    Bs -->|Bs < Bc| FLAT[Flat Fading]
+    Bs -->|Bs > Bc| FSF[Frequency<br/>Selective]
+    
+    FLAT -->|"Effect"| EQ1[All freq.<br/>affected equally]
+    FSF -->|"Effect"| EQ2[Different freq.<br/>different gains]
+    
+    style FLAT fill:#4ecdc4,color:#fff
+    style FSF fill:#f0932b,color:#fff
+```
 
 #### B. Based on Doppler Spread (Time Domain Effects)
 
@@ -137,6 +229,25 @@ Involves rapid fluctuations in received signal strength over **very short distan
 
 - **Fast Fading**: High Doppler spread → rapid channel variations → linear distortion of baseband pulse
 - **Slow Fading**: Low Doppler spread → channel nearly constant during symbol
+
+### Slow vs Fast Fading
+
+```mermaid
+graph TD
+    subgraph "Symbol Duration vs Coherence Time"
+    Tc[Tc = Coherence<br/>Time]
+    Ts[Ts = Symbol<br/>Duration]
+    end
+    
+    Ts -->|Ts < Tc| SLOW[Slow Fading]
+    Ts -->|Ts > Tc| FAST[Fast Fading]
+    
+    SLOW -->|"Effect"| E1[Channel<br/>constant]
+    FAST -->|"Effect"| E2[Channel<br/>varies]
+    
+    style SLOW fill:#4ecdc4,color:#fff
+    style FAST fill:#f0932b,color:#fff
+```
 
 ---
 
