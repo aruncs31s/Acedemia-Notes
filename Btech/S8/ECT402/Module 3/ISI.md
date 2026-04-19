@@ -50,14 +50,38 @@ ISI occurs due to **multipath propagation**[^1]:
 
 ### Visual Representation
 
+```mermaid
+graph LR
+    subgraph "Without Multipath"
+    S1[Symbol 1] -->|clean| R1[Receiver]
+    end
+
+    subgraph "With Multipath - ISI"
+    S2[Symbol 1] --> P1[Path 1<br/>Direct]
+    S2 --> P2[Path 2<br/>Delayed]
+    S2 --> P3[Path 3<br/>More Delayed]
+    P1 --> R2[Receiver]
+    P2 --> R2
+    P3 --> R2
+    end
+
+    style P2 fill:#f0932b,color:#fff
+    style P3 fill:#eb4d4b,color:#fff
 ```
-Time →
-Symbol 1    Symbol 2    Symbol 3
-|----|       |----|       |----|
-|    |       |    |       |    |
-|    |=======|    |=======|    |
-    |       |    |       |    |
-    ↑ Delay spread causes overlap
+
+```mermaid
+graph LR
+    subgraph "Time Domain"
+    T1[t] --> T2[t+Ts]
+    T1 -->|"ISI overlap"| T2
+    style T1 fill:#4ecdc4
+    style T2 fill:#ff6b6b
+    end
+
+    subgraph "Condition"
+    C[No ISI if] --> Cond[Ts > τmax]
+    style C fill:#f7dc6f
+    end
 ```
 
 ---

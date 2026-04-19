@@ -506,3 +506,8 @@ where $x[n]$ is the OFDM signal after IFFT.
 - For 25% CP overhead: $\eta = 80%$
 - Typical subcarrier spacing: 10-100 kHz
 - Typical CP duration: 1-4 μs
+
+
+
+
+
