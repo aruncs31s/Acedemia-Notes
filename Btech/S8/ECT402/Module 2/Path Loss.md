@@ -17,9 +17,22 @@ dg-publish: true
 
 ## Free Space Path Loss (FSPL)
 
+This model predicts the received signal strength when there is a **clear,** **unobstructed line-of-sight path between the transmitter and receiver**, such as in satellite communications.
+- It describes the absolute best-case scenario for how a signal travels through a perfect vacuum without any obstacles like buildings or trees.
+
+In this model, the signal's power decreases proportionally to the square of the distance ($d^2$) and the square of the frequency ($f^2$). The standard Friis transmission formula for calculating received power ($P_r$) is:
+
+$$P_r = \frac{P_t G_t G_r \lambda^2}{(4\pi d)^2 L}$$
+
+_(Where $P_t$ is transmit power, $G_t$ and $G_r$ are the antenna gains, $\lambda$ is the wavelength, $d$ is distance, and $L$ is the system loss factor)_.
+
+---
+Calculating path loss in decibels (dB):
+
 $$PL_{dB} = 20\log_{10}\left(\frac{4\pi d}{\lambda}\right)$$
 
 Or in terms of frequency:
+
 $$PL_{dB} = 20\log_{10}(d) + 20\log_{10}(f) - 147.55$$
 
 ---
