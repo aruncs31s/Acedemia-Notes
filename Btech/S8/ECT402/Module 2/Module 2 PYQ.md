@@ -82,6 +82,57 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 ---
 
+## Describe the different types of fading in a wireless system. How do they impact signal reception?
+
+**Answer:** [[May 2024.md#13. (a) Small scale fading: definition, types, flat vs frequency-selective (6 Marks)]]
+
+### Types of Fading
+
+#### 1. Large-Scale Fading
+- Occurs over **hundreds of wavelengths**
+- **Causes**: Path loss + Shadowing (buildings, hills)
+- **Distribution**: Log-normal
+- **Impact**: Determines cell coverage and range planning
+
+#### 2. Small-Scale Fading
+- Occurs over **few wavelengths**
+- **Causes**: Multipath interference + Doppler
+- **Distribution**: Rayleigh (no LOS), Rician (with LOS)
+- **Impact**: Causes bit errors, requires mitigation
+
+#### Based on Time (Coherence Time):
+| Type | Condition | Impact |
+|------|----------|--------|
+| **Slow Fading** | $T_s < T_c$ | Channel constant during symbol, easier equalization |
+| **Fast Fading** | $T_s > T_c$ | Channel changes mid-symbol, tracking needed |
+
+#### Based on Frequency (Coherence Bandwidth):
+| Type | Condition | Impact |
+|------|----------|--------|
+| **Flat Fading** | $B_s < B_c$ | All frequencies equally affected, one-tap equalization |
+| **Frequency-Selective** | $B_s > B_c$ | Different gains, causes ISI, needs OFDM/multi-tap |
+
+### Impact Summary Table
+
+| Fading Type | Detection | Equalization | Error Rate |
+|------------|-----------|--------------|------------|
+| Large-scale | Easy | Not needed | Low |
+| Slow + Flat | Moderate | One-tap | Moderate |
+| Fast + Flat | Hard | Tracking | High |
+| Slow + Freq-Select | Moderate | Multi-tap | High |
+| Fast + Freq-Select | Very hard | Adaptive | Very High |
+
+### Classification Matrix
+
+| | Flat Fading | Frequency-Selective |
+|---|-------------|---------------------|
+| **Slow** | Slow + Flat | Slow + Freq-Selective |
+| **Fast** | Fast + Flat | Fast + Freq-Selective |
+
+**Best Case**: Slow + Flat | **Worst Case**: Fast + Frequency-Selective
+
+---
+
 ## Related Questions
 
 - [[May 2024.md#3. Multipath causing small-scale fading (3 Marks)]]
