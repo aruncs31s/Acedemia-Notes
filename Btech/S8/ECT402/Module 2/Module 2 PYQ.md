@@ -405,9 +405,9 @@ graph TD
 
 ## Discuss the impact of shadowing on wireless channel performance. (7 Marks)
 
-### What is Shadowing?
+### Definition
 
-**Shadowing** is a **large-scale fading** effect caused by large obstacles (buildings, hills, trees) blocking the signal path between transmitter and receiver.
+**Shadowing** is the **deviation** of a received electromagnetic signal's power from its expected average value. It is a **large-scale fading** effect caused by large obstacles (buildings, hills, trees) blocking the signal path between transmitter and receiver.
 
 Unlike path loss which is deterministic with distance, shadowing is **random** due to varying obstacle positions.
 
@@ -415,18 +415,20 @@ Unlike path loss which is deterministic with distance, shadowing is **random** d
 
 | Aspect | Impact |
 |--------|--------|
-| **Signal Strength** | Random attenuation beyond path loss predictions |
-| **Coverage** | Cell edges experience unpredictable coverage holes |
-| **SINR** | Reduced signal-to-interference-plus-noise ratio |
-| **Capacity** | Reduced in shadowed areas |
-| **Handoff** | Triggers unnecessary handoffs |
+| **Signal Strength Reduction** | Primary form of large-scale fading, significant reduction when blocked by terrain/obstacles |
+| **Power Fluctuations** | Large fluctuations depending on position and frequency |
+| **Slow Variations** | Lasts seconds/minutes - slower time-scale than multipath |
+| **Loss of SNR** | Degrades reliability of communication link |
+| **Coverage** | Creates coverage holes in shadowed regions |
+| **Handoff** | Can trigger unnecessary handoffs |
 
-### Distribution
+### Statistical Modeling
 
-Shadowing follows **log-normal distribution**:
+Because the mean envelope level becomes random, channel models must account for it:
+
 $$P_{dB} \sim \mathcal{N}(\mu, \sigma^2)$$
 
-In dB scale, signal power = mean path loss + Gaussian random variable.
+Distribution: **Log-normal** (empirically observed)
 
 ### Visual Representation
 
