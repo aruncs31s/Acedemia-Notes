@@ -90,5 +90,5 @@ More diversity branches → lower outage probability.
 ## Related Notes
 
 - [[Module 2/Shannon Capacity]] - Capacity with outage formula
-- [[Module 2/Fading]] - Rayleigh/Rician distributions
+- [[Fading Theory]] - Rayleigh/Rician distributions
 - [[Module 4/4.1 Diversity]] - Diversity reduces outage

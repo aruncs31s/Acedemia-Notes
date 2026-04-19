@@ -68,16 +68,15 @@ $$d_{bp} = \frac{4 h_t h_r}{\lambda}$$
 - **Distribution:** Log-normal
 - **σ (typical):** 4-12 dB (urban)
 
-See: [[Fading]] - Large-scale fading
+See: [[Fading Theory]] - Large-scale fading
 
 ---
 
 ## Related Notes
 
 - [[Module 2/Module 2]] - Syllabus
-- [[Module 2/Fading]] - Large-scale fading (shadowing)
+- [[Fading Theory]] - Large-scale fading (shadowing)
 - [[Important Topics/Path loss and Shadowing]] - Brief overview
 - [[Module 2 PYQ]] - PYQs on path loss
-- [[Fading]] - Large-scale fading
 - [[Doppler Shift]] - Time variation
 - [[Shannon Capacity]] - Capacity theorem

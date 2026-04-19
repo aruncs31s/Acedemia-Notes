@@ -215,7 +215,7 @@ Where $T_s$ = symbol duration
 
 | | Flat Fading | Frequency-Selective |
 
-See also: [[Fading]]
+See also: [[Fading Theory]]
 
 ---
 

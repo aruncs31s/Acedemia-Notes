@@ -11,8 +11,6 @@ dg-publish: true
 
 # Fading in Wireless Communications - Theory
 
-See: [[Fading]]
-
 ---
 
 ## What is Fading?
@@ -298,16 +296,30 @@ Signal Bandwidth (Bs)
 
 ### 1. Diversity
 
-Send multiple copies via different:
-- **Time** (interleaving, coding)
-- **Frequency** (OFDM, frequency hopping)
-- **Space** (MIMO, antenna switching)
+Send multiple copies via different paths. When one path fades, others likely have strong signal.
+
+| Type | How It Works |
+|------|-------------|
+| **Selection Combining** | Monitor all branches, select highest SNR |
+| **Maximal Ratio Combining (MRC)** | Weight & combine all branches (optimal) |
+| **Alamouti (Space-Time Coding)** | 2x2 MIMO with orthogonal encoding |
+| **Frequency Diversity** | Transmit on multiple frequencies (OFDM, FH) |
+| **Time Diversity** | Interleaving, ARQ |
+
+See [[Module 4/4.1 Diversity]] for detailed explanation.
 
 ### 2. Equalization
 
-Compensate for ISI in frequency-selective channels:
-- Linear: Zero-Forcing, MMSE
-- Nonlinear: DFE, MLSE
+Compensate for ISI (caused by multipath) via inverse filtering:
+
+| Type | Description |
+|------|-------------|
+| **Zero Forcing (ZF)** | Inverts channel response (amplifies noise) |
+| **MMSE** | Balances noise & ISI removal |
+| **DFE** | Decision feedback equalizer |
+| **MLSE** | Maximum likelihood sequence estimation (Viterbi) |
+
+See [[Module 4/4.2 Equalization]] for details.
 
 ### 3. Adaptive Techniques
 

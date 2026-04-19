@@ -158,7 +158,7 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 ### What is Fading?
 
-See: [[Fading]]
+See: [[Fading Theory]]
 
 **Fading** is the time variation of received signal power caused by changes in the transmission medium or propagation paths. In wireless systems, fading is broadly categorized into:
 
