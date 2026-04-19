@@ -11,6 +11,8 @@ dg-publish: true
 
 # Module 2 PYQ
 
+> See: [[PYQ Index]] | [[most_asked_questions]]
+
 ---
 
 ## Important Equations Quick Reference

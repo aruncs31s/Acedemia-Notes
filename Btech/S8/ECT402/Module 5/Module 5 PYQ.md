@@ -17,6 +17,8 @@ date: 2026-04-17
 
 # Module 5 - Previous Year Questions
 
+> See: [[PYQ Index]] | [[most_asked_questions]]
+
 > 📚 Related: [[Ionospheric propagation|Ionospheric Propagation]] | [[Space wave and surface wave|Space Wave]] | [[Ground wave propagation|Ground Wave]] | [[Critical Frequency|Critical Frequency]] | [[Maximum Usable Frequency|MUF]]
 
 ---

@@ -12,6 +12,8 @@ dg-publish: true
 
 # Module 4 PYQ - Diversity, Equalization, and Multiple Access
 
+> See: [[PYQ Index]] | [[most_asked_questions]]
+
 ---
 
 ## 1. Differentiate between Microdiversity and Macrodiversity.
