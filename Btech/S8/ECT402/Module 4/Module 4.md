@@ -1,3 +1,16 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+id: Module_2
+aliases: []
+tags:
+  - academics
+  - btech
+  - s8
+  - ect402
+  - module
+dg-publish: true
+---
 # Module 4: Diversity, Equalization, and Multiple Access
 
 ## Syllabus
@@ -28,4 +41,3 @@
 - Frequency-Division Multiple Access (FDMA)
 - Time-Division Multiple Access (TDMA)
 - Code-Division Multiple Access (CDMA)
-- Orthogonal Frequency-Division Multiple Access (OFDMA)

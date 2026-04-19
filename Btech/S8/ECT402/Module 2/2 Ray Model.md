@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Path Loss
 tags:
   - academics
@@ -119,4 +121,3 @@ The Two-Ray model is significant at **VHF and above (30 MHz - 3 GHz)** where:
 - [[Module 2/Path Loss|Path Loss]] — Free Space Path Loss, Friis Equation
 - [[Module 2/Module 2 PYQ]] — PYQs on Two-Ray Model
 - [[Module 5/propagation/Plane earch reflection|Plane Earth Reflection]] — More detailed ground reflection theory
-- [[PYQs/most_asked_questions]] — Two-Ray crossover distance formula

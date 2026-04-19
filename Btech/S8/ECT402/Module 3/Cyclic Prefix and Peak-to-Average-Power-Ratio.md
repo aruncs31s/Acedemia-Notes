@@ -1,6 +1,12 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 # Cyclic Prefix and Peak-to-Average-Power-Ratio
 
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 
 ## Cyclic Prefix
 
@@ -142,4 +148,3 @@ if |x[n]| > threshold:
 | Key requirement | $T_{cp} \geq \tau_{max}$ | Minimize without distortion |
 
 > [!KEY POINT]
-> Both CP and PAPR are fundamental design parameters in OFDM systems. CP affects spectral efficiency while PAPR affects power efficiency.

@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 tags:
   - wireless_communication
   - interference
@@ -56,4 +58,3 @@ The Grade of Service is the standard benchmark used to measure the performance a
 
 - It is defined as the probability that a call will be blocked or delayed beyond an acceptable time limit because all channels are currently in use.
 - For example, if a cellular system is designed with a GoS of 2% blocking status, it guarantees that only 2 out of every 100 calls attempted during the busiest hour will be blocked.
-- Estimating the required maximum capacity to meet a target GoS is a critical step in allocating the right number of radio channels during system design.

@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Module 2 PYQ
 aliases: []
 tags:
@@ -1325,3 +1327,21 @@ $$h[m] = \sum_n \alpha_n[m] e^{j\phi_n[m]} \delta[l-n]$$
 - Relationship: $T_c \approx \frac{0.423}{f_m}$
 
 See: [[Module 2/Statistical Multipath Channel Models#time-varying|Time-Varying Channel]]
+
+
+## Diversity and Combining Techniques (Selection vs. MRC)?
+
+**Diversity** is a technique that combats fading by transmitting the same information over multiple independent channels, such as time, frequency, or space.
+
+Here is the comparison between the two combining techniques for your 7-mark answer:
+
+**Selection Combining (SC)**
+
+- **How it works:** It simply selects the single antenna branch that has the highest instantaneous SNR.
+- **Pros & Cons:** It is very simple and low-cost because it only needs one active RF chain. However, it is suboptimal because it completely discards the signal energy from all the other branches.
+
+**Maximal Ratio Combining (MRC)**
+
+- **How it works:** It weights each branch by its channel gain and constructively combines the signals from all branches together.
+- **Pros & Cons:** It provides the maximum possible diversity gain and optimal performance. The downside is high complexity, as all RF chains must remain active to process the signals.
+

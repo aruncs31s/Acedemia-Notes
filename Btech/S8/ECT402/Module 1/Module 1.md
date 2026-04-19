@@ -6,9 +6,12 @@ tags:
   - btech
   - s8
   - ect402
+  - module
 dg-publish: true
 cssclasses:
   - wide-page
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 ---
 
 # Module 1 - Wireless Communication (ECT402)
@@ -195,4 +198,3 @@ flowchart LR
 - [x] Multipath effect ✅
 - [x] Significance of diversity ✅
 
-> 🎯 **All topics complete!** Module 1 is fully covered.

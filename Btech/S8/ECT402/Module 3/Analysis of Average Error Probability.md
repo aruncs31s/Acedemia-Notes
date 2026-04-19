@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: callout
 aliases: []
 tags:
@@ -155,4 +157,3 @@ Diversity order $M$ provides significant improvement in error rate.
 > - Fading causes linear (not exponential) decrease in error rate with SNR
 > - 3 dB additional power needed compared to AWGN
 > - Diversity techniques essential for reliable communication
-> - Outage probability is critical metric for fading channels

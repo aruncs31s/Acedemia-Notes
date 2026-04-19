@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Shannon Capacity
 tags:
   - academics
@@ -103,4 +105,3 @@ $$C = E[\log_2(1 + \text{SNR} \cdot |h|^2)]$$
 
 - [[Module 2/Module 2 PYQ]] - PYQs on capacity
 - [[Module 2/Path Loss]] - Path loss affects SNR
-- [[Module 2/Outage Probability]] - Capacity with outage

@@ -1,3 +1,7 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 # Module 3 PYQ - OFDM Systems
 
 > See: [[PYQ Index]] | [[most_asked_questions]]
@@ -47,6 +51,8 @@ Here are the Module 3 questions from both of your previous year's question paper
 | | OFDM Subcarrier | $C = \sum_{i=0}^{N-1} \log_2(1 + \gamma_i)$ | Total capacity |
 
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 
 ## QP 1: September 2025
 
@@ -500,4 +506,3 @@ where $x[n]$ is the OFDM signal after IFFT.
 - For 25% CP overhead: $\eta = 80%$
 - Typical subcarrier spacing: 10-100 kHz
 - Typical CP duration: 1-4 μs
-- Maximum throughput when $\bar{\gamma}_b \gg 1$: Diversity order dominates performance

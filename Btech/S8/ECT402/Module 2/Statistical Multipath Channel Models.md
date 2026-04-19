@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Statistical Multipath Channel Models
 aliases: []
 tags:
@@ -251,4 +253,3 @@ Signal Bandwidth (Bs)
 
 - [[October 2023 PYQ#3. How does fading occur? Derive the expression for doppler shift.]]
 - [[May 2024.md#3. Multipath causing small-scale fading (3 Marks)]]
-- [[October 2023 PYQ#14. (c) Time selective fading]]

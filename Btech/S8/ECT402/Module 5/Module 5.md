@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 cssclasses:
   - wide-page
 tags:
@@ -8,6 +10,7 @@ tags:
   - module-5
   - s8
   - main
+  - module
 course: ECT402
 module: "5"
 topic: Radio Wave Propagation
@@ -120,4 +123,3 @@ flowchart TD
 
 - [[Ground wave propagation]]
 - [[Plane earch reflection]]
-- [[Ionospheric propagation]]

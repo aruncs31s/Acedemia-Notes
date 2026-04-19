@@ -1,3 +1,7 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 # Discrete Implementation of Multicarrier – OFDM
 
 ## Overview
@@ -6,6 +10,8 @@
 > OFDM can be efficiently implemented using **IFFT** (Inverse Fast Fourier Transform) at the transmitter and **FFT** (Fast Fourier Transform) at the receiver, reducing complexity from $O(N^2)$ to $O(N \log N)$.
 
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 
 ## Discrete-Time OFDM System
 
@@ -170,4 +176,3 @@ CFO causes ICI. Estimate and correct using:
 | 5 | P/S → Channel | QAM Demap → P/S → Data |
 
 > [!KEY POINT]
-> The cyclic prefix is the key enabler that converts complex time-domain equalization into simple one-tap frequency-domain equalization.

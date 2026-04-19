@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Outage Probability
 tags:
   - academics
@@ -91,4 +93,3 @@ More diversity branches → lower outage probability.
 
 - [[Module 2/Shannon Capacity]] - Capacity with outage formula
 - [[Fading Theory]] - Rayleigh/Rician distributions
-- [[Module 4/4.1 Diversity]] - Diversity reduces outage

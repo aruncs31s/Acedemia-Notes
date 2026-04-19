@@ -1,6 +1,12 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 # Data Transmission using Multicarrier Modulation for Frequency-Selective Fading Channels
 
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 
 ## Problem: Frequency-Selective Fading
 
@@ -162,4 +168,3 @@ $$\eta = \frac{N}{N + N_{cp}} = \frac{T_u}{T_u + T_{cp}}$$
 5. **Easy to implement** - Efficient FFT/IFFT algorithm
 
 > [!KEY POINT]
-> Multicarrier modulation transforms a challenging frequency-selective fading problem into $N$ simple flat fading problems, each requiring only one-tap equalization.

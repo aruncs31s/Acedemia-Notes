@@ -1,3 +1,7 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 # Overlapping Subchannels and Mitigation of Subcarrier Fading
 
 ## Overlapping Subchannels
@@ -39,6 +43,8 @@ The nulls of each subcarrier occur at:
 $$f = f_k \pm \frac{n}{T_u}, \quad n = 1, 2, 3, ...$$
 
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 
 ## Mitigation of Subcarrier Fading
 
@@ -135,4 +141,3 @@ In multi-user OFDMA systems:
 | Tone Interleaving | Low | Low | None |
 
 > [!KEY POINT]
-> The key to mitigating subcarrier fading is **exploiting channel state information (CSI)** at the transmitter and/or receiver to adapt transmission parameters.

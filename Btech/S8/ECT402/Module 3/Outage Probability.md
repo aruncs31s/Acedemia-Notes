@@ -1,3 +1,7 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 # Outage Probability Analysis of BPSK in Flat-Fading Channels
 
 ## Definition
@@ -66,4 +70,3 @@ $$\bar{\gamma}_b(dB) = 10\log_{10}(65.66) = 18.2 \text{ dB}$$
 1. **Outage occurs** when instantaneous SNR drops below threshold due to deep fades
 2. **Higher threshold** required → more outages
 3. **Higher average SNR** → lower outage probability
-4. **Diversity techniques** reduce outage probability by combating fading
