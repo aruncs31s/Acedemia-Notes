@@ -471,6 +471,8 @@ graph LR
 
 ---
 
+## A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)
+
 ### Given
 
 - Doppler shift: $f_d = 150$ Hz
