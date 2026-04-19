@@ -706,6 +706,8 @@ graph TD
 
 ### Derivation of the Doppler Shift Expression
 
+See: [[Doppler Shift]]
+
 The Doppler shift arises because the relative motion between the transmitter and receiver changes the apparent frequency of the signal over time.
 
 **Step 1:** Assume a fixed transmit antenna sends a sinusoidal signal with frequency $f$:

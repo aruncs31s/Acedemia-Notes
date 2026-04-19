@@ -29,6 +29,8 @@ See: [[Multipath Propagation]]
 
 ### 2. Relative Motion (Doppler Effect)
 
+See: [[Doppler Shift]]
+
 When transmitter/receiver moves, each multipath component experiences different Doppler shifts based on the angle of arrival.
 
 ### 3. Environmental Changes

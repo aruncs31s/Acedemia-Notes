@@ -242,6 +242,8 @@ x[n] -->|h0|---> + ---> y[n]
 | Coherence Bandwidth | $B_c$ | $\approx \frac{1}{5\sigma_\tau}$ | Delay Spread |
 | Coherence Time | $T_c$ | $\approx \frac{0.423}{f_m}$ | Doppler Spread |
 | Max Doppler | $f_m$ | $\frac{v}{\lambda}$ | Velocity/Wavelength |
+
+See also: [[Doppler Shift]]
 | RMS Delay | $\sigma_\tau$ | $\sqrt{\bar{\tau^2} - \bar{\tau}^2}$ | Coherence BW |
 
 ### Fading Classification Summary
