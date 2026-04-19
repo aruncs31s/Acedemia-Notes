@@ -86,41 +86,71 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 **Answer:** [[May 2024.md#13. (a) Small scale fading: definition, types, flat vs frequency-selective (6 Marks)]]
 
-### Types of Fading
+### What is Fading?
 
-#### 1. Large-Scale Fading
-- Occurs over **hundreds of wavelengths**
-- **Causes**: Path loss + Shadowing (buildings, hills)
-- **Distribution**: Log-normal
-- **Impact**: Determines cell coverage and range planning
+**Fading** is the time variation of received signal power caused by changes in the transmission medium or propagation paths. In wireless systems, fading is broadly categorized into:
 
-#### 2. Small-Scale Fading
-- Occurs over **few wavelengths**
-- **Causes**: Multipath interference + Doppler
-- **Distribution**: Rayleigh (no LOS), Rician (with LOS)
-- **Impact**: Causes bit errors, requires mitigation
+1. **Large-Scale Fading**
+2. **Small-Scale Fading**
 
-#### Based on Time (Coherence Time):
+---
+
+### 1. Large-Scale Fading
+
+Represents the variation of signal strength over **large distances** (typically on the order of a cell size) and is generally frequency-independent.
+
+| Type | Cause | Impact |
+|------|-------|--------|
+| **Path Loss** | Signal spreads over larger area with distance | Continuous, predictable drop in average received power |
+| **Shadowing Effect** | Obstructed by buildings, hills, mountains | Long-term fluctuations depending on position |
+
+**Distribution:** Log-normal
+
+**Impact:** Determines cell coverage and range planning. Requires link budget margin.
+
+---
+
+### 2. Small-Scale Fading
+
+Involves rapid fluctuations in received signal strength over **very short distances** (on the order of carrier wavelength) and short time periods. Primarily driven by **multipath interference**.
+
+---
+
+#### A. Based on Multipath Time Delay Spread (Frequency Domain Effects)
+
 | Type | Condition | Impact |
 |------|----------|--------|
-| **Slow Fading** | $T_s < T_c$ | Channel constant during symbol, easier equalization |
-| **Fast Fading** | $T_s > T_c$ | Channel changes mid-symbol, tracking needed |
+| **Flat Fading** | $B_s < B_c$ | All frequency components fluctuate simultaneously. Preserves spectral characteristics but causes SNR drop. |
+| **Frequency-Selective Fading** | $B_s > B_c$ | Different spectral components affected by different amplitudes. Causes **ISI** (Inter-Symbol Interference). Much more difficult to decode. |
 
-#### Based on Frequency (Coherence Bandwidth):
+- **Flat Fading**: Channel has constant gain over signal bandwidth. Signal strength drops but shape preserved.
+- **Frequency-Selective**: Multipath delay spread > symbol period. Multiple delayed versions cause time dispersion and ISI.
+
+---
+
+#### B. Based on Doppler Spread (Time Domain Effects)
+
 | Type | Condition | Impact |
 |------|----------|--------|
-| **Flat Fading** | $B_s < B_c$ | All frequencies equally affected, one-tap equalization |
-| **Frequency-Selective** | $B_s > B_c$ | Different gains, causes ISI, needs OFDM/multi-tap |
+| **Fast Fading** | $T_s > T_c$ | Channel impulse response changes rapidly within symbol. Creates ISI. Destructive interference from reflected signals. |
+| **Slow Fading** | $T_s < T_c$ | Channel variations slower than modulation. Attenuation constant over symbol. Results in SNR loss overcome by error correction or diversity. |
 
-### Impact Summary Table
+- **Fast Fading**: High Doppler spread → rapid channel variations → linear distortion of baseband pulse
+- **Slow Fading**: Low Doppler spread → channel nearly constant during symbol
 
-| Fading Type | Detection | Equalization | Error Rate |
-|------------|-----------|--------------|------------|
-| Large-scale | Easy | Not needed | Low |
-| Slow + Flat | Moderate | One-tap | Moderate |
-| Fast + Flat | Hard | Tracking | High |
-| Slow + Freq-Select | Moderate | Multi-tap | High |
-| Fast + Freq-Select | Very hard | Adaptive | Very High |
+---
+
+### Impact Summary
+
+| Fading Type | Effect | Solution |
+|------------|--------|------------|
+| Large-Scale | Coverage/range planning | Link budget margin |
+| Flat Fading | SNR drop | Fade margin, diversity |
+| Freq-Selective | ISI | OFDM, equalization |
+| Fast Fading | ISI, phase errors | Diversity, tracking |
+| Slow Fading | SNR loss | Error correction coding |
+
+---
 
 ### Classification Matrix
 
@@ -133,7 +163,62 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 ---
 
-## Related Questions
+## What is diversity and how does it reduce fading?
+
+**Diversity** is a technique that transmits the same information over **multiple independent channels** (in time, frequency, or space) to combat fading.
+
+### How It Reduces Fading
+
+- If one path is in fade, another may have good signal
+- Statistical averaging reduces overall outage probability
+- Provides **diversity gain** without increasing power
+
+### Types of Diversity
+
+| Type | Description |
+|------|-------------|
+| **Time Diversity** | Interleaving + coding across time slots |
+| **Frequency Diversity** | Multiple carriers, spread spectrum |
+| **Space Diversity** | Multiple antennas (MIMO) |
+| **Polarization Diversity** | Different antenna polarizations |
+
+---
+
+## Compare selection combining and maximal ratio combining techniques.
+
+| Aspect | Selection Combining (SC) | Maximal Ratio Combining (MRC) |
+|--------|---------------------------|-------------------------------|
+| **Principle** | Pick the branch with highest SNR | Weight and combine all branches |
+| **Complexity** | Low (one RF chain) | High (all branches) |
+| **Performance** | Moderate | Optimal |
+| **SNR Output** | $\gamma = \max(\gamma_1, \gamma_2, ...)$ | $\gamma = \sum \gamma_i$ |
+| **Gain** | Lower diversity gain | Highest diversity gain |
+| **Implementation** | Simpler switches | Complex weighting |
+
+### Selection Combining (SC)
+- Selects the antenna branch with **highest instantaneous SNR**
+- Uses only one branch for detection
+- **Simple, low cost**, but **suboptimal** (discard other branch energy)
+
+### Maximal Ratio Combining (MRC)
+- Weights each branch by its channel gain
+- **Combines all branches** constructively
+- **Optimal performance** but **higher complexity**
+- Provides maximum diversity gain
+
+### Comparison Table
+
+| Feature | SC | MRC |
+|---------|-----|------|
+| SNR Improvement | Moderate | Maximum |
+| Complexity | Lowest | Highest |
+| RF Chains | 1 (switched) | All active |
+| Diversity Order | N (but suboptimal) | N (optimal) |
+| Use Case | Simple receivers | Advanced systems |
+
+---
+
+### Related Questions
 
 - [[May 2024.md#3. Multipath causing small-scale fading (3 Marks)]]
 - [[October 2023 PYQ.md#3. How does fading occur? Derive the expression for doppler shift.]]
