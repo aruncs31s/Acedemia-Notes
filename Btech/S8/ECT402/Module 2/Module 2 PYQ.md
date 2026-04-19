@@ -655,17 +655,17 @@ $$V_{rms} = \sqrt{P_r \times R} = \sqrt{7.02 \times 10^{-10} \times 50}$$
 
 $$V_{rms} = \sqrt{3.51 \times 10^{-8}}$$
 
-$$\boxed{V_{rms} = 5.93 \times 10^{-4} \text{ V} = 0.593 \text{ mV}}$$
+$$\boxed{V_{rms} =1.87\times 10^{-4} \text{ V} = 0.1870.187 \text{ mV}}$$
 
 ---
 
 ### Summary
 
-| Parameter | Value |
-|-----------|-------|
-| Received Power | 0.702 nW |
+| Parameter            | Value      |
+| -------------------- | ---------- |
+| Received Power       | 0.702 nW   |
 | Received Power (dBm) | -61.54 dBm |
-| RMS Voltage | 0.593 mV |
+| RMS Voltage          | 0.187 mV   |
 
 ---
 
