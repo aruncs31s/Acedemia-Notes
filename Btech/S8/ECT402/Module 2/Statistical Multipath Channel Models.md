@@ -84,6 +84,24 @@ Where:
 
 ---
 
+---
+
+## Discrete-Time Model
+
+For digital communication, convert continuous-time channel to discrete-time tapped-delay-line:
+
+$$y[m] = \sum_l h_l[m] \cdot x[m-l] + w[m]$$
+
+Where:
+- $h_l[m]$ = discrete channel filter tap
+- $x[m]$ = transmitted symbol
+- $y[m]$ = received symbol
+- $w[m]$ = noise
+
+By sampling at bandwidth W, physical paths are grouped into resolvable bins.
+
+---
+
 ## Wideband Fading Models
 
 When signal bandwidth > coherence bandwidth, different frequency components experience different gains → **frequency-selective fading**.

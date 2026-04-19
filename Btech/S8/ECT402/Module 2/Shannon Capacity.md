@@ -61,6 +61,44 @@ $$C = 1 \times 10^6 \times \log_2(101) \approx 6.66 \text{ Mbps}$$
 
 ---
 
+## Capacity of Flat Fading Channel
+
+### Ergodic Capacity
+
+Average capacity over all fading states:
+
+$$C_{ergodic} = E_{|h|^2}[\log_2(1 + \text{SNR} \cdot |h|^2)]$$
+
+Data is encoded across multiple channel states to average out randomness.
+
+---
+
+## Capacity with Outage
+
+In slow fading, channel stays constant over long bursts. If SNR < threshold → outage.
+
+**Outage probability:**
+$$P_{outage} = P(SNR < \rho_{min})$$
+
+**Capacity with outage:**
+$$C_{outage} = (1 - P_{outage}) W \log_2(1 + \rho_{min})$$
+
+Rate reliably supported in (1-P_outage)% of time.
+
+---
+
+## Capacity with CSI-R (Receiver Only)
+
+- Receiver knows channel (h), transmitter does not
+- Transmitter cannot adapt power/rate
+- Uses constant transmission power
+
+$$C = E[\log_2(1 + \text{SNR} \cdot |h|^2)]$$
+
+**Significance:** If transmitter had CSI, could use "waterfilling" — transmit more power when channel is good.
+
+---
+
 ## Related Notes
 
 - [[Module 2/Module 2 PYQ]] - PYQs on capacity
