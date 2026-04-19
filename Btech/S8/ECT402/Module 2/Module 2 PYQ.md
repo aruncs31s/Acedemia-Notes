@@ -56,8 +56,8 @@ dg-publish: true
      - [B. Based on Doppler Spread (Time Domain Effects)](#b-based-on-doppler-spread-time-domain-effects)
      - [Impact Summary](#impact-summary)
      - [Classification Matrix](#classification-matrix)
-4. [What is diversity and how does it reduce fading?](#what-is-diversity-and-how-does-it-reduce-fading) → [[Module 2/Diversity|Diversity]]
-5. [Compare selection combining and maximal ratio combining techniques.](#compare-selection-combining-and-maximal-ratio-combining-techniques) → [[Module 2/Diversity|SC/MRC]]
+4. [What is diversity and how does it reduce fading?](#what-is-diversity-and-how-does-it-reduce-fading) → [[Module 4/4.1 Diversity|Diversity]]
+5. [Compare selection combining and maximal ratio combining techniques.](#compare-selection-combining-and-maximal-ratio-combining-techniques) → [[Module 4/4.1 Diversity|SC/MRC]]
 6. [Discuss the impact of shadowing on wireless channel performance. (7 Marks)](#discuss-the-impact-of-shadowing-on-wireless-channel-performance-7-marks) → [[Module 2/Path Loss|Shadowing]]
 7. [A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)](#a-wireless-signal-has-a-doppler-shift-of-150-hz-when-moving-at-60-kmh-determine-the-original-frequency-of-the-signal-7-marks) → [[Module 2/Doppler Shift|Doppler Calc]]
 8. [Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)](#define-the-shannon-capacity-theorem-in-the-context-of-wireless-communication-how-does-it-set-the-upper-limit-for-data-transmission-in-a-given-channel-7-marks) → [[Module 2/Shannon Capacity| capacity]]

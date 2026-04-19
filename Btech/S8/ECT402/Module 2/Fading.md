@@ -79,11 +79,47 @@ graph TD
 
 ---
 
+## How to Reduce Fading
+
+Diversity techniques combat fading by transmitting the same information over **multiple independent paths**. When one path is in a deep fade, other paths likely have strong signal.
+
+### Key Concepts
+
+| Concept | Description |
+|---------|-------------|
+| **Diversity Gain** | P_e ∝ (SNR)^(-G_d), where G_d = diversity order |
+| **Outage Reduction** | Probability that ALL paths fade simultaneously is very low |
+| **No Extra Power** | Doesn't require more transmit power |
+
+### Diversity Techniques
+
+| Type | How It Works |
+|------|-------------|
+| **Selection Combining** | Monitor all branches, select highest SNR |
+| **Maximal Ratio Combining (MRC)** | Weight & combine all branches (optimal) |
+| **Alamouti (Space-Time Coding)** | 2x2 MIMO with orthogonal encoding |
+| **Frequency Diversity** | Transmit on multiple frequencies |
+| **Time Diversity** | Interleaving, ARQ |
+
+See [[Module 4/4.1 Diversity]] for detailed explanation.
+
+### Equalization
+
+Equalizers combat **ISI** (caused by multipath) via inverse filtering:
+- **ZF** - inverts channel response
+- **MMSE** - balances noise & ISI
+- **DFE/MLSE** - for severe ISI
+
+See [[Module 4/4.2 Equalization]] for details.
+
+---
+
 ## Related Notes
 
 - [[Fading Theory]] - Detailed theory
 - [[Multipath Propagation]] - Cause of fading
-- [[Diversity]] - Diversity techniques
+- [[Module 4/4.1 Diversity]] - Diversity techniques
+- [[Module 4/4.2 Equalization]] - Equalization techniques
 - [[Path Loss]] - Large-scale fading
 - [[Shannon Capacity]] - Capacity theorem
 - [[Multipath Propagation]] - Cause of fading
