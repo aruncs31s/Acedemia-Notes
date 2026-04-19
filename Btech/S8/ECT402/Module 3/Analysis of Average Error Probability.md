@@ -10,6 +10,8 @@ title: callout
 ---
 # Analysis of Average Error Probability in Flat Fading Channels
 - [[Derivation of Average Error Probability in Flat Fading Channel]]
+- [[Module 3 PYQ#4. Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel. (7 Marks)]]
+
 ---
 
 > [!important]+ Derivation Summary

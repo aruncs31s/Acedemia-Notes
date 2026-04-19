@@ -6,42 +6,43 @@ Here are the Module 3 questions from both of your previous year's question paper
 
 **From QP 1 (September 2025)**
 
-- Analyse the different factors that affect the performance of OFDM systems? (3 Marks)
-- Discuss the advantages and disadvantages of multicarrier modulation? (3 Marks)
-- How does the cyclic prefix mitigate inter-symbol interference (ISI) in frequency-selective fading channels? (7 Marks)
-- Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel. (7 Marks)
-- Explain the different interferences in OFDM systems. How does it affect data transmission and what techniques are used to mitigate it? (7 Marks)
-- For an OFDM system with a cyclic prefix length of 2 $\mu$s and a maximum channel delay spread of 15 $\mu$s, determine the maximum subcarrier spacing to avoid ISI. (7 Marks)
+| #   | Question                                                                                                                                                   | Marks | Answer                                                                                                                          |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | Analyse the different factors that affect the performance of OFDM systems?                                                                                 | 3     | [[#1. Analyse the different factors that affect the performance of OFDM systems? (3 Marks) { 1-analyse-the-different-factors}]] |
+| 2   | Discuss the advantages and disadvantages of multicarrier modulation?                                                                                       | 3     | [[#2-discuss-the-advantages]]                                                                                                   |
+| 3   | How does the cyclic prefix mitigate inter-symbol interference (ISI) in frequency-selective fading channels?                                                | 7     | [[#3-how-does-the-cyclic-prefix]]                                                                                               |
+| 4   | Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel.                                         | 7     | [[#4-derive-an-equation-to-calculate-the-average-error-probability]]                                                            |
+| 5   | Explain the different interferences in OFDM systems. How does it affect data transmission and what techniques are used to mitigate it?                     | 7     | [[#5-explain-the-different-interferences]]                                                                                      |
+| 6   | For an OFDM system with a cyclic prefix length of 2 μs and a maximum channel delay spread of 15 μs, determine the maximum subcarrier spacing to avoid ISI. | 7     | [[#6-for-an-ofdm-system]]                                                                                                       |
 
 **From QP 2 (October 2023)**
 
-- Explain the significance of using cyclic prefix in an OFDM system. (3 Marks)
-- With the help of mathematical equations show how linear convolution is converted to circular convolution in OFDM using Cyclic prefix. (7 Marks)
-- Determine the average SNR per bit of BPSK modulation in Rayleigh slow fading channel in such that 90% of the times, the average probability of bit error is less than $10^{-4}$. (7 Marks)
-- How can the subcarrier fading be mitigated in multicarrier modulation system? (7 Marks)
-- Explain the techniques employed to reduce PAPR in OFDM. (7 Marks)
+| # | Question | Marks | Answer |
+|---|----------|-------|--------|
+| 1 | Explain the significance of using cyclic prefix in an OFDM system. | 3 | [[#1-explain-the-significance-of-using-cyclic-prefix]] |
+| 2 | With the help of mathematical equations show how linear convolution is converted to circular convolution in OFDM using Cyclic prefix. | 7 | [[#2-with-the-help-of-mathematical]] |
+| 3 | Determine the average SNR per bit of BPSK modulation in Rayleigh slow fading channel in such that 90% of the times, the average probability of bit error is less than 10⁻⁴. | 7 | [[#3-determine-the-average-snr-per-bit]] |
+| 4 | How can the subcarrier fading be mitigated in multicarrier modulation system? | 7 | [[#4-how-can-the-subcarrier-fading-be-mitigated]] |
+| 5 | Explain the techniques employed to reduce PAPR in OFDM. | 7 | [[#5-explain-the-techniques-employed-to-reduce-papr]] |
 
 
 ## Important Equations
 
-### OFDM System Parameters
-- **Subcarrier Spacing**: $\Delta f = \frac{1}{T_u}$ where $T_u$ is the useful symbol duration
-- **OFDM Symbol Duration**: $T_s = T_u + T_{cp}$ where $T_{cp}$ is cyclic prefix duration
-- **Number of Subcarriers**: $N = frac{1}{\Delta f \cdot T_s}$
-- **ISI-free Condition**: $T_{cp} \geq \tau_{max}$ where $\tau_{max}$ is maximum channel delay spread
-
-### Bit Error Rate - BPSK
-- **AWGN Channel**: $P_b = Q\left(\sqrt{\frac{2E_b}{N_0}}\right)$
-- **Flat Fading (Rayleigh)**: $P_b = \frac{1}{2}\left(1 - \sqrt{\frac{\bar{\gamma}_b}{1 + \bar{\gamma}_b}}\right)$ where $\bar{\gamma}_b = \frac{E_b}{N_0}$ is average SNR per bit
-- ** outage Probability**: $P_{out} = P(\gamma_b < \gamma_{th}) = 1 - e^{-\gamma_{th}/\bar{\gamma}_b}$
-
-### PAPR
-- **PAPR**: $PAPR = \frac{max |x_n|^2}{E[|x_n|^2]}$ for OFDM signal $x_n$
-- **CCDF (Clipping Probability)**: $P(PAPR > \lambda) \approx 1 - (1 - e^{-\lambda})^{N}$ for N subcarriers
-
-### Channel Capacity
-- **Shannon Capacity**: $C = B \log_2(1 + SNR)$ bps/Hz
-- **OFDM Subcarrier Capacity**: $C = \sum_{i=0}^{N-1} \log_2(1 + \gamma_i)$ where $\gamma_i$ is SNR for subcarrier i
+| Category | Parameter | Formula | Description |
+|----------|-----------|---------|------------|
+| **OFDM** | Subcarrier Spacing | $\Delta f = \frac{1}{T_u}$ | $T_u$ = useful symbol duration |
+| | OFDM Symbol Duration | $T_s = T_u + T_{cp}$ | $T_{cp}$ = cyclic prefix duration |
+| | Number of Subcarriers | $N = \frac{1}{\Delta f \cdot T_s}$ | Total subcarriers |
+| | ISI-free Condition | $T_{cp} \geq \tau_{max}$ | $\tau_{max}$ = max channel delay spread |
+| | Spectral Efficiency | $\eta = \frac{N}{N+N_{cp}} = \frac{T_u}{T_u+T_{cp}}$ | With CP overhead |
+| **BPSK BER** | AWGN | $P_b = Q\left(\sqrt{\frac{2E_b}{N_0}}\right)$ | No fading |
+| | Flat Fading (Rayleigh) | $P_b = \frac{1}{2}\left(1 - \sqrt{\frac{\bar{\gamma}_b}{1 + \bar{\gamma}_b}}\right)$ | $\bar{\gamma}_b = E_b/N_0$ avg SNR |
+| | High SNR Approx | $P_b \approx \frac{1}{4\bar{\gamma}_b}$ | For $\bar{\gamma}_b \gg 1$ (3 dB penalty) |
+| | Outage Probability | $P_{out} = 1 - e^{-\gamma_{th}/\bar{\gamma}_b}$ | $\gamma_{th}$ = threshold SNR |
+| **PAPR** | Definition | $PAPR = \frac{\max \|x_n\|^2}{E[\|x_n\|^2]}$ | OFDM signal peak/avg power |
+| | CCDF | $P(PAPR > \lambda) \approx 1 - (1 - e^{-\lambda})^{N}$ | N subcarriers |
+| **Capacity** | Shannon | $C = B\log_2(1 + SNR)$ | Single channel bps/Hz |
+| | OFDM Subcarrier | $C = \sum_{i=0}^{N-1} \log_2(1 + \gamma_i)$ | Total capacity |
 
 ---
 
@@ -69,7 +70,7 @@ The performance of OFDM systems is affected by:
 
 ---
 
-### 2. Discuss the advantages and disadvantages of multicarrier modulation? (3 Marks)
+### 2. Discuss the advantages and disadvantages of multicarrier modulation? (3 Marks) {#2-discuss-the-advantages}
 
 **Answer:**
 
@@ -91,7 +92,7 @@ The performance of OFDM systems is affected by:
 
 ---
 
-### 3. How does the cyclic prefix mitigate inter-symbol interference (ISI) in frequency-selective fading channels? (7 Marks)
+### 3. How does the cyclic prefix mitigate inter-symbol interference (ISI) in frequency-selective fading channels? (7 Marks) {#3-how-does-the-cyclic-prefix}
 
 **Answer:**
 
@@ -123,7 +124,7 @@ Thus, the cyclic prefix converts the dispersive channel (causing ISI) into non-d
 
 ---
 
-### 4. Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel. (7 Marks)
+### 4. Derive an equation to calculate the average error probability of a BPSK based signalling in a flat fading channel. (7 Marks) {#4-derive-an-equation-to-calculate-the-average-error-probability} 
 
 **Answer:**
 
@@ -168,7 +169,7 @@ This is the **average error probability of BPSK in Rayleigh flat fading channel*
 
 ---
 
-### 5. Explain the different interferences in OFDM systems. How does it affect data transmission and what techniques are used to mitigate it? (7 Marks)
+### 5. Explain the different interferences in OFDM systems. How does it affect data transmission and what techniques are used to mitigate it? (7 Marks) {#5-explain-the-different-interferences}
 
 **Answer:**
 
@@ -209,7 +210,7 @@ This is the **average error probability of BPSK in Rayleigh flat fading channel*
 
 ---
 
-### 6. For an OFDM system with a cyclic prefix length of 2 μs and a maximum channel delay spread of 15 μs, determine the maximum subcarrier spacing to avoid ISI. (7 Marks)
+### 6. For an OFDM system with a cyclic prefix length of 2 μs and a maximum channel delay spread of 15 μs, determine the maximum subcarrier spacing to avoid ISI. (7 Marks) {#6-for-an-ofdm-system}
 
 **Answer:**
 
@@ -247,7 +248,7 @@ $$\Delta f_{max} = \frac{1}{13 \mu s} = \frac{1}{13 \times 10^{-6}} = 76.92 kHz 
 
 ## QP 2: October 2023
 
-### 1. Explain the significance of using cyclic prefix in an OFDM system. (3 Marks)
+### 1. Explain the significance of using cyclic prefix in an OFDM system. (3 Marks) {#1-explain-the-significance-of-using-cyclic-prefix}
 
 **Answer:**
 
@@ -265,7 +266,7 @@ The cyclic prefix in OFDM systems serves several critical purposes:
 
 ---
 
-### 2. With the help of mathematical equations show how linear convolution is converted to circular convolution in OFDM using Cyclic prefix. (7 Marks)
+### 2. With the help of mathematical equations show how linear convolution is converted to circular convolution in OFDM using Cyclic prefix. (7 Marks) {#2-with-the-help-of-mathematical}
 
 **Answer:**
 
@@ -326,7 +327,7 @@ This proves that cyclic prefix successfully converts linear convolution to circu
 
 ---
 
-### 3. Determine the average SNR per bit of BPSK modulation in Rayleigh slow fading channel such that 90% of the times, the average probability of bit error is less than 10^{-4}. (7 Marks)
+### 3. Determine the average SNR per bit of BPSK modulation in Rayleigh slow fading channel such that 90% of the times, the average probability of bit error is less than 10^{-4}. (7 Marks) {#3-determine-the-average-snr-per-bit}
 
 **Answer:**
 
@@ -372,7 +373,7 @@ $$\bar{\gamma}_b(dB) = 10 \log_{10}(66) = 18.2 dB$$
 
 ---
 
-### 4. How can the subcarrier fading be mitigated in multicarrier modulation system? (7 Marks)
+### 4. How can the subcarrier fading be mitigated in multicarrier modulation system? (7 Marks) {#4-how-can-the-subcarrier-fading-be-mitigated}
 
 **Answer:**
 
@@ -410,7 +411,7 @@ $$\bar{\gamma}_b(dB) = 10 \log_{10}(66) = 18.2 dB$$
 
 ---
 
-### 5. Explain the techniques employed to reduce PAPR in OFDM. (7 Marks)
+### 5. Explain the techniques employed to reduce PAPR in OFDM. (7 Marks) {#5-explain-the-techniques-employed-to-reduce-papr}
 
 **Answer:**
 
