@@ -13,6 +13,35 @@ dg-publish: true
 
 ---
 
+## Table of Contents
+
+1. [Differentiate between flat fading and frequency selective fading](#differentiate-between-flat-fading-and-frequency-selective-fading-1)
+2. [Explain how Doppler spread affects wireless communication performance parameters](#explain-how-doppler-spread-affects-wireless-communication-performance-parameters)
+3. [Describe the different types of fading in a wireless system. How do they impact signal reception?](#describe-the-different-types-of-fading-in-a-wireless-system-how-do-they-impact-signal-reception)
+   - [What is Fading?](#what-is-fading)
+   - [Classification of Fading Types](#classification-of-fading-types)
+   - [1. Large-Scale Fading](#1-large-scale-fading)
+   - [2. Small-Scale Fading](#2-small-scale-fading)
+     - [A. Based on Multipath Time Delay Spread (Frequency Domain Effects)](#a-based-on-multipath-time-delay-spread-frequency-domain-effects)
+     - [B. Based on Doppler Spread (Time Domain Effects)](#b-based-on-doppler-spread-time-domain-effects)
+     - [Impact Summary](#impact-summary)
+     - [Classification Matrix](#classification-matrix)
+4. [What is diversity and how does it reduce fading?](#what-is-diversity-and-how-does-it-reduce-fading)
+   - [Types of Diversity](#types-of-diversity)
+5. [Compare selection combining and maximal ratio combining techniques.](#compare-selection-combining-and-maximal-ratio-combining-techniques)
+6. [Discuss the impact of shadowing on wireless channel performance. (7 Marks)](#discuss-the-impact-of-shadowing-on-wireless-channel-performance-7-marks)
+   - [Detailed Impact on Wireless Channel Performance](#detailed-impact-on-wireless-channel-performance)
+   - [Statistical Modeling](#statistical-modeling)
+   - [Mitigation Techniques](#mitigation-techniques)
+7. [A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)](#a-wireless-signal-has-a-doppler-shift-of-150-hz-when-moving-at-60-kmh-determine-the-original-frequency-of-the-signal-7-marks)
+8. [Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)](#define-the-shannon-capacity-theorem-in-the-context-of-wireless-communication-how-does-it-set-the-upper-limit-for-data-transmission-in-a-given-channel-7-marks)
+   - [The Channel Capacity Limit](#the-channel-capacity-limit)
+   - [Key Implications](#key-implications)
+9. [How does fading occur? Derive the expression for Doppler shift.](#how-does-fading-occur-derive-the-expression-for-doppler-shift)
+   - [Derivation of the Doppler Shift Expression](#derivation-of-the-doppler-shift-expression)
+
+---
+
 ## Differentiate between flat fading and frequency selective fading
 
 **Answer:** [[May 2024.md#13. (a) Small scale fading: definition, types, flat vs frequency-selective (6 Marks)]]
@@ -639,6 +668,62 @@ In practice, real systems operate **below** this limit due to:
 4. **Guides design**: Determines tradeoff between B, power, and rate
 5. **Practical goal**: Get as close as possible to Shannon limit
 6. **Coding enables** reliable communication at rates approaching limit
+
+---
+
+---
+
+## How does fading occur? Derive the expression for Doppler shift.
+
+**Fading** is the random variation in a signal's amplitude, phase, or angle of arrival as it travels through a wireless communication channel. It occurs primarily due to two physical phenomena:
+
+### 1. Multipath Propagation
+
+Unlike signals in a wired channel, wireless signals bounce off various obstacles such as buildings, trees, and the ground. This scattering creates multiple "copies" of the transmitted signal that reach the receiver via different paths, each with a different length, time delay, and phase. When these multiple copies arrive at the receiver, their electromagnetic waves interact:
+
+| Condition | Result |
+|-----------|--------|
+| In-phase (constructive) | Signal strength boosted |
+| Out-of-phase (destructive) | Signal fades |
+
+### 2. Relative Motion and Environmental Changes
+
+When the transmitter, receiver, or surrounding objects are in motion, the relative phases of the arriving multipath components change constantly. This continuous shifting causes the received signal's amplitude to fluctuate rapidly over short distances or time periods — **small-scale fading**. Large terrain features can physically block radio waves, causing slower fluctuations known as **shadowing** or **large-scale fading**.
+
+---
+
+### Derivation of the Doppler Shift Expression
+
+The Doppler shift arises because the relative motion between the transmitter and receiver changes the apparent frequency of the signal over time.
+
+**Step 1:** Assume a fixed transmit antenna sends a sinusoidal signal with frequency $f$:
+$$x(t) = \cos(2\pi ft)$$
+
+**Step 2:** A receive antenna moves away from the transmitter at velocity $v$. The distance is $r(t) = r_0 + vt$.
+
+**Step 3:** The signal experiences time-varying propagation delay $r(t)/c$:
+$$y(t) \propto \cos\left(2\pi f\left(t - \frac{r_0 + vt}{c}\right)\right)$$
+
+**Step 4:** Expand:
+$$y(t) \propto \cos\left(2\pi f\left(1 - \frac{v}{c}\right)t - \frac{2\pi fr_0}{c}\right)$$
+
+The new apparent frequency is $f\left(1 - \frac{v}{c}\right)$.
+
+**Step 5:** The Doppler shift is:
+$$f_d = -f\frac{v}{c}$$
+
+Using $c = f\lambda$:
+$$\boxed{f_m = \frac{v}{\lambda}}$$
+
+**Step 6:** For a signal path at angle $\theta$ relative to direction of motion:
+$$\boxed{f_d = \frac{v}{\lambda}\cos\theta = f_m\cos\theta}$$
+
+Where:
+- $v$ = velocity (m/s)
+- $\lambda$ = wavelength
+- $f_c$ = carrier frequency
+- $c$ = speed of light (3×10⁸ m/s)
+- $f_m$ = maximum Doppler shift
 
 ---
 
