@@ -723,6 +723,17 @@ $$x(t) = \cos(2\pi ft)$$
 **Step 3:** The signal experiences time-varying propagation delay $r(t)/c$:
 $$y(t) \propto \cos\left(2\pi f\left(t - \frac{r_0 + vt}{c}\right)\right)$$
 
+> [!callout] **Step 3→4 Expansion Explained**
+> $$= \cos\left(2\pi f t - \frac{2\pi f r_0}{c} - \frac{2\pi f v t}{c}\right)$$
+> $$= \cos\left(2\pi f \left(1 - \frac{v}{c}\right)t - \frac{2\pi f r_0}{c}\right)$$
+>
+> | Term | Meaning |
+> |-----|---------|
+> | $2\pi f t$ | Original signal component |
+> | $2\pi f r_0/c$ | Fixed phase offset (initial distance) |
+> | $2\pi f (v/c)t$ | **New term** from relative motion |
+> | $(1 - v/c)$ | Frequency scaling factor |
+
 **Step 4:** Expand:
 $$y(t) \propto \cos\left(2\pi f\left(1 - \frac{v}{c}\right)t - \frac{2\pi fr_0}{c}\right)$$
 
