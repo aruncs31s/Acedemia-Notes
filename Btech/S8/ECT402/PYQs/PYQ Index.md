@@ -47,39 +47,39 @@ tags:
 
 ### Module 2: Fading & Channel
 
-| # | Question | Marks | Source | Related |
-|---|----------|-------|--------|---------|
-| 2.1 | [[Module 2 PYQ#Differentiate between flat fading and frequency selective fading|Flat vs Freq-Selective Fading]] | - | [[Module 2 PYQ]] | [[May 2024#13. (a)]] |
-| 2.2 | [[Module 2 PYQ#Explain how Doppler spread affects wireless communication performance parameters|Doppler Spread Effects]] | - | [[Module 2 PYQ]] | [[October 2023#14. (c)]] |
-| 2.3 | [[Module 2 PYQ#Describe the different types of fading in a wireless system|Fading Types]] | - | [[Module 2 PYQ]] | [[May 2024#13. (a)]] |
-| 2.4 | [[Module 2 PYQ#What is diversity and how does it reduce fading|Diversity]] | - | [[Module 2 PYQ]] | [[Module 4 PYQ]] |
-| 2.5 | [[Module 2 PYQ#Compare selection combining and maximal ratio combining techniques|SC vs MRC]] | - | [[Module 2 PYQ]] | [[Module 4 PYQ]] |
-| 2.6 | [[Module 2 PYQ#Discuss the impact of shadowing on wireless channel performance|Shadowing]] | 7 | [[Module 2 PYQ]] | |
-| 2.7 | [[Module 2 PYQ#A wireless signal has a Doppler shift of 150 Hz|Doppler Calculation]] | 7 | [[Module 2 PYQ]] | [[October 2023#3]] |
-| 2.8 | [[Module 2 PYQ#Define the Shannon capacity theorem|Shannon Capacity]] | 7 | [[Module 2 PYQ]] | [[October 2023#14. (b)]] |
-| 2.9 | [[Module 2 PYQ#How is the outage probability computed|Outage Probability]] | - | [[Module 2 PYQ]] | [[October 2023#5]] |
-| 2.10 | [[Module 2 PYQ#Explain the effect of multipath propagation using 2-ray model|2-Ray Model]] | 7 | [[Module 2 PYQ]] | |
-| 2.11 | [[Module 2 PYQ#Narrowband fading statistical characterisation|I/Q Rayleigh]] | 7 | [[Module 2 PYQ]] | |
-| 2.12 | [[Module 2 PYQ#Derive time-varying impulse response|Time-Varying CIR]] | 7 | [[Module 2 PYQ]] | |
-| 2.13 | [[Module 2 PYQ#Free Space Path Loss|Path Loss]] | 7 | [[Module 2 PYQ]] | [[October 2023#14. (a)]] |
-| 2.14 | [[Module 2 PYQ#AWGN channel capacity capacity inference|AWGN Capacity]] | 4 | [[Module 2 PYQ]] | [[October 2023#14. (b)]] |
-| 2.15 | [[Module 2 PYQ#Time selective fading|Time Selective Fading]] | 4 | [[Module 2 PYQ]] | [[October 2023#14. (c)]] |
+| #    | Question                                                                                        | Marks                           | Source | Related          |                          |
+| ---- | ----------------------------------------------------------------------------------------------- | ------------------------------- | ------ | ---------------- | ------------------------ |
+| 2.1  | [[Module 2 PYQ#Differentiate between flat fading and frequency selective fading                 | Flat vs Freq-Selective Fading]] | -      | [[Module 2 PYQ]] | [[May 2024#13. (a)]]     |
+| 2.2  | [[Module 2 PYQ#Explain how Doppler spread affects wireless communication performance parameters | Doppler Spread Effects]]        | -      | [[Module 2 PYQ]] | [[October 2023#14. (c)]] |
+| 2.3  | [[Module 2 PYQ#Describe the different types of fading in a wireless system                      | Fading Types]]                  | -      | [[Module 2 PYQ]] | [[May 2024#13. (a)]]     |
+| 2.4  | [[Module 2 PYQ#What is diversity and how does it reduce fading                                  | Diversity]]                     | -      | [[Module 2 PYQ]] | [[Module 4 PYQ]]         |
+| 2.5  | [[Module 2 PYQ#Compare selection combining and maximal ratio combining techniques               | SC vs MRC]]                     | -      | [[Module 2 PYQ]] | [[Module 4 PYQ]]         |
+| 2.6  | [[Module 2 PYQ#Discuss the impact of shadowing on wireless channel performance                  | Shadowing]]                     | 7      | [[Module 2 PYQ]] |                          |
+| 2.7  | [[Module 2 PYQ#A wireless signal has a Doppler shift of 150 Hz                                  | Doppler Calculation]]           | 7      | [[Module 2 PYQ]] | [[October 2023#3]]       |
+| 2.8  | [[Module 2 PYQ#Define the Shannon capacity theorem]]                                            | Shannon Capacity]]              | 7      | [[Module 2 PYQ]] | [[October 2023#14. (b)]] |
+| 2.9  | [[Module 2 PYQ#How is the outage probability computed                                           | Outage Probability]]            | -      | [[Module 2 PYQ]] | [[October 2023#5]]       |
+| 2.10 | [[Module 2 PYQ#Explain the effect of multipath propagation using 2-ray model                    | 2-Ray Model]]                   | 7      | [[Module 2 PYQ]] |                          |
+| 2.11 | [[Module 2 PYQ#Narrowband fading statistical characterisation                                   | I/Q Rayleigh]]                  | 7      | [[Module 2 PYQ]] |                          |
+| 2.12 | [[Module 2 PYQ#Derive time-varying impulse response                                             | Time-Varying CIR]]              | 7      | [[Module 2 PYQ]] |                          |
+| 2.13 | [[Module 2 PYQ#Free Space Path Loss                                                             | Path Loss]]                     | 7      | [[Module 2 PYQ]] | [[October 2023#14. (a)]] |
+| 2.14 | [[Module 2 PYQ#AWGN channel capacity capacity inference                                         | AWGN Capacity]]                 | 4      | [[Module 2 PYQ]] | [[October 2023#14. (b)]] |
+| 2.15 | [[Module 2 PYQ#Time selective fading                                                            | Time Selective Fading]]         | 4      | [[Module 2 PYQ]] | [[October 2023#14. (c)]] |
 
 ### Module 3: OFDM Systems
 
-| # | Question | Marks | Source | Related |
-|---|----------|-------|--------|---------|
-| 3.1 | [[Module 3 PYQ#1. Analyse the different factors that affect the performance of OFDM systems|OFDM Performance Factors]] | 3 | [[Module 3 PYQ]] | |
-| 3.2 | [[Module 3 PYQ#2. Discuss the advantages and disadvantages of multicarrier modulation|MC Modulation Pros/Cons]] | 3 | [[Module 3 PYQ]] | |
-| 3.3 | [[Module 3 PYQ#3. How does the cyclic prefix mitigate ISI|CP & ISI]] | 7 | [[Module 3 PYQ]] | [[October 2023#6]] |
-| 3.4 | [[Module 3 PYQ#4. Derive BPSK average error probability|BPSK Error Prob]] | 7 | [[Module 3 PYQ]] | [[May 2024#16. (a)]] |
-| 3.5 | [[Module 3 PYQ#5. Explain interferences in OFDM|OFDM Interference]] | 7 | [[Module 3 PYQ]] | |
-| 3.6 | [[Module 3 PYQ#6. Subcarrier spacing for ISI-free|Subcarrier Spacing]] | 7 | [[Module 3 PYQ]] | |
-| 3.7 | [[Module 3 PYQ#1. Explain the significance of using cyclic prefix|CP Significance]] | 3 | [[Module 3 PYQ]] | [[October 2023#6]] |
-| 3.8 | [[Module 3 PYQ#2. Linear to circular convolution|Convolution]] | 7 | [[Module 3 PYQ]] | |
-| 3.9 | [[Module 3 PYQ#3. SNR for 90% reliability|SNR Calculation]] | 7 | [[Module 3 PYQ]] | [[May 2024#16. (a)]] |
-| 3.10 | [[Module 3 PYQ#4. Subcarrier fading mitigation|Subcarrier Fading]] | 7 | [[Module 3 PYQ]] | |
-| 3.11 | [[Module 3 PYQ#5. PAPR reduction|PAPR Reduction]] | 7 | [[Module 3 PYQ]] | [[May 2024#16. (b)]] |
+| #    | Question                                                                                      | Marks                      | Source | Related          |                      |
+| ---- | --------------------------------------------------------------------------------------------- | -------------------------- | ------ | ---------------- | -------------------- |
+| 3.1  | [[Module 3 PYQ#1. Analyse the different factors that affect the performance of OFDM systems]] | OFDM Performance Factors]] | 3      | [[Module 3 PYQ]] |                      |
+| 3.2  | [[Module 3 PYQ#2. Discuss the advantages and disadvantages of multicarrier modulation         | MC Modulation Pros/Cons]]  | 3      | [[Module 3 PYQ]] |                      |
+| 3.3  | [[Module 3 PYQ#3. How does the cyclic prefix mitigate ISI                                     | CP & ISI]]                 | 7      | [[Module 3 PYQ]] | [[October 2023#6]]   |
+| 3.4  | [[Module 3 PYQ#4. Derive BPSK average error probability                                       | BPSK Error Prob]]          | 7      | [[Module 3 PYQ]] | [[May 2024#16. (a)]] |
+| 3.5  | [[Module 3 PYQ#5. Explain interferences in OFDM                                               | OFDM Interference]]        | 7      | [[Module 3 PYQ]] |                      |
+| 3.6  | [[Module 3 PYQ#6. Subcarrier spacing for ISI-free                                             | Subcarrier Spacing]]       | 7      | [[Module 3 PYQ]] |                      |
+| 3.7  | [[Module 3 PYQ#1. Explain the significance of using cyclic prefix                             | CP Significance]]          | 3      | [[Module 3 PYQ]] | [[October 2023#6]]   |
+| 3.8  | [[Module 3 PYQ#2. Linear to circular convolution                                              | Convolution]]              | 7      | [[Module 3 PYQ]] |                      |
+| 3.9  | [[Module 3 PYQ#3. SNR for 90% reliability                                                     | SNR Calculation]]          | 7      | [[Module 3 PYQ]] | [[May 2024#16. (a)]] |
+| 3.10 | [[Module 3 PYQ#4. Subcarrier fading mitigation                                                | Subcarrier Fading]]        | 7      | [[Module 3 PYQ]] |                      |
+| 3.11 | [[Module 3 PYQ#5. PAPR reduction                                                              | PAPR Reduction]]           | 7      | [[Module 3 PYQ]] | [[May 2024#16. (b)]] |
 
 ### Module 4: Diversity & Equalization
 
