@@ -539,6 +539,91 @@ The original carrier frequency is **2.7 GHz**.
 
 ---
 
+## Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)
+
+**Answer:** [[October 2023 PYQ.md#14. (b) Inference of AWGN channel capacity]]
+
+### Definition
+
+The **Shannon Capacity Theorem** (also called the Shannon-Hartley theorem) defines the **theoretical maximum data rate** at which information can be transmitted **reliably** over a communication channel with arbitrarily small error probability, given certain constraints.
+
+### The Theorem (AWGN Channel)
+
+$$\boxed{C = B \log_2(1 + \text{SNR})}$$
+
+Where:
+- $C$ = Channel capacity (bits per second)
+- $B$ = Channel bandwidth (Hz)
+- $\text{SNR}$ = Signal-to-Noise Power Ratio
+
+### Interpretation in Wireless Context
+
+| Parameter | Physical Meaning |
+|-----------|--------------|
+| $B$ | Available spectrum for transmission |
+| $\text{SNR}$ | Signal strength relative to noise floor |
+| $C$ | Maximum achievable data rate |
+
+### Key Implications
+
+#### 1. Bandwidth Tradeoff
+- **Doubling bandwidth** roughly **doubles capacity** (linear relationship with B)
+- Each additional 3 dB SNR adds approximately $B$ bits/s at high SNR
+
+#### 2. Power Tradeoff
+- Capacity **grows logarithmically** with power (diminishing returns)
+- At high SNR: need 3 dB more power to increase capacity by $B$ bits/s
+- At low SNR: $\text{SNR} \ll 1$, so $C \approx \frac{B}{\ln 2}\text{SNR}$ (nearly linear!)
+
+#### 3. Sets Upper Bound
+- $C$ is the **absolute theoretical limit**
+- No practical system can exceed this without errors
+- Guides modulation/coding design
+
+### Visual Representation
+
+```mermaid
+graph LR
+    subgraph "Shannon Capacity"
+    B[Bandwidth<br/>B] -->|"Input"| CAP[Capacity Formula]
+    SNR[SNR] --> CAP
+    CAP -->|"Output"| C[Max Data Rate<br/>C bits/s]
+    end
+    
+    style CAP fill:#4ecdc4,color:#fff
+```
+
+### Practical Example
+
+For a channel with $B = 1$ MHz and $\text{SNR} = 100$ (20 dB):
+
+$$C = 1 \times 10^6 \times \log_2(1 + 100)$$
+$$C = 1 \times 10^6 \times \log_2(101)$$
+$$C = 1 \times 10^6 \times 6.658$$
+$$C \approx 6.66 \text{ Mbps}$$
+
+### Limitations
+
+The Shannon capacity assumes:
+- Perfect channel coding (optimal codes)
+- AWGN (only white Gaussian noise)
+- Perfect knowledge of channel at transmitter/receiver
+
+In practice, real systems operate **below** this limit due to:
+- Practical coding limitations
+- Implementation complexity
+- Other interference
+
+### Key Takeaways
+
+1. **Fundamental limit** - no system can exceed without errors
+2. **Bandwidth-limited**: Capacity grows linearly with B
+3. **Power-limited**: Capacity grows logarithmically with SNR
+4. **Guides design**: Determines tradeoff between B, power, and rate
+5. **Practical goal**: Get as close as possible to Shannon limit
+
+---
+
 ### Related Questions
 
 - [[May 2024.md#3. Multipath causing small-scale fading (3 Marks)]]
