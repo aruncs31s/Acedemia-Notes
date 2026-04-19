@@ -38,6 +38,7 @@ dg-publish: true
    - [The Channel Capacity Limit](#the-channel-capacity-limit)
    - [Key Implications](#key-implications)
 9. [How does fading occur? Derive the expression for Doppler shift.](#how-does-fading-occur-derive-the-expression-for-doppler-shift)
+   - [Multipath Propagation](#multipath-propagation-1)
    - [Derivation of the Doppler Shift Expression](#derivation-of-the-doppler-shift-expression)
 
 ---
@@ -124,19 +125,7 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 ### Multipath Propagation ( Causes of Fading)
 
-```mermaid
-graph LR
-    TX[TX] -->|Path 1 Direct| RX
-    TX -->|Path 2 Building| RX
-    TX -->|Path 3 Ground| RX
-    TX -->|Path 4 Trees| RX
-    
-    RX -->|Signal Sum| FADE[Fading]
-    
-    style FADE fill:#ff6b6b,color:#fff
-```
-
-Multiple signal paths arrive at receiver with different delays and phases → constructive/destructive interference → fading.
+See: [[Multipath Propagation]]
 
 ### Classification of Fading Types
 
@@ -679,33 +668,7 @@ In practice, real systems operate **below** this limit due to:
 
 ### 1. Multipath Propagation
 
-Unlike signals in a wired channel, wireless signals bounce off various obstacles such as buildings, trees, and the ground. This scattering creates multiple "copies" of the transmitted signal that reach the receiver via different paths, each with a different length, time delay, and phase. When these multiple copies arrive at the receiver, their electromagnetic waves interact:
-
-| Condition | Result |
-|-----------|--------|
-| In-phase (constructive) | Signal strength boosted |
-| Out-of-phase (destructive) | Signal fades |
-
-```mermaid
-graph LR
-    TX[TX] -->|"Path 1<br/>Direct"| P1[ ]
-    TX -->|"Path 2<br/>Building"| P2[ ]
-    TX -->|"Path 3<br/>Ground"| P3[ ]
-    
-    P1 -.->|"τ₁"| S[Σ]
-    P2 -.->|"τ₂"| S
-    S -.->|"Signal Sum"| RX[RX]
-    
-    P3 -.->|"τ₃"| S
-    
-    RX -->|"Constructive"| V1[Strong]
-    RX -->|"Destructive"| V2[Weak]
-    
-    style TX fill:#4ecdc4,color:#fff
-    style RX fill:#4ecdc4,color:#fff
-    style V1 fill:#4ecdc4,color:#fff
-    style V2 fill:#eb4d4b,color:#fff
-``` |
+See: [[Multipath Propagation]]
 
 ### 2. Relative Motion and Environmental Changes
 
@@ -713,11 +676,9 @@ When the transmitter, receiver, or surrounding objects are in motion, the relati
 
 ```mermaid
 graph LR
-    subgraph "Moving Receiver"
-    TX[TX] -->|"Signal"| A(( ))
-    A -->|"r(t) = r₀ + vt"| RX[RX<br/>Moving]
+    TX[TX] -->|"Signal"| A
+    A -->|"r(t) = r0 + vt"| RX[RX<br/>Moving]
     RX -->|"Phase shifts"| P[Signal<br/>Amplitude<br/>Fluctuates]
-    end
     
     P -->|"Rapid"| F[Fading]
     P -->|"Slow"| S[Shadowing]
@@ -730,12 +691,11 @@ graph LR
 
 ```mermaid
 graph TD
-    subgraph "Doppler Derivation"
-    A1["x(t) = cos(2πft)"] -->|"r(t) = r₀ + vt"| A2["y(t) ~ cos(2πf(t - r(t)/c))"]
+    A1["x(t) = cos(2πft)"] -->|"r(t) = r0 + vt"| A2["y(t) ~ cos(2πf(t - r/c))"]
     A2 -->|"Expand"| A3["y(t) ~ cos(2πf(1 - v/c)t)"]
-    A3 -->|"Frequency shift"| A4["f_d = -f(v/c)"]
-    A4 -->|"Using c = fλ"| A5["f_d = v/λ"]
-    A5 -->|"Angle θ"| A6["f_d = f_m cosθ"]
+    A3 -->|"Frequency shift"| A4["fd = -f(v/c)"]
+    A4 -->|"Using c = fλ"| A5["fd = v/λ"]
+    A5 -->|"Angle θ"| A6["fd = fmax cosθ"]
     
     style A1 fill:#4ecdc4,color:#fff
     style A4 fill:#f0932b,color:#fff
