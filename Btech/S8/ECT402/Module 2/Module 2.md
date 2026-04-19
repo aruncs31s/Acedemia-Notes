@@ -14,7 +14,7 @@ dg-publish: true
 
 > [[#2.1 Path Loss and Shadowing]] → [[Module 2/Path Loss|Path Loss Note]]
 - [ ] Free space path loss → [[Module 2/Path Loss#free-space-path-loss-fspl|FSPL]]
-- [ ] Two-Ray model → [[Module 2/Path Loss#two-ray-model|Two-Ray]]
+- [ ] Two-Ray model → [[Module 2/2 Ray Model|Two-Ray]]
 - [ ] Shadowing → [[Module 2/Path Loss#shadowing|Shadowing]]
 
 > [[#2.2 Statistical Multipath Channel Models]] → [[Module 2/Statistical Multipath Channel Models|Channel Models]]

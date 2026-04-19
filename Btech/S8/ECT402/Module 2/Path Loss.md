@@ -10,8 +10,10 @@ dg-publish: true
 ---
 
 # Path Loss
-- [[2 Ray Model]]
+
 **Path Loss** = Signal attenuation as it travels from transmitter to receiver through free space.
+
+*See:* [[Module 2/2 Ray Model|Two-Ray Model]]
 
 ---
 

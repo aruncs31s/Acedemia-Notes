@@ -1235,7 +1235,7 @@ $$d_{bp} = \frac{4h_t h_r}{\lambda}$$
 - **Far distance (d > d_bp):** Fast power falloff (d⁴) — worse than free space
 - The ground reflection causes additional phase cancellation
 
-See: [[Module 2/Path Loss#two-ray-model|Two-Ray Model]]
+See: [[Module 2/2 Ray Model|Two-Ray Model]]
 
 ---
 
