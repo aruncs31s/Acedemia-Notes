@@ -558,6 +558,69 @@ The original carrier frequency is **2.7 GHz**.
 
 ---
 
+## Compute received power using Friis equation (5 Marks)
+
+***Assume a receiver is located 10km away from a 50W transmitter. Given f = 900 MHz, Gt = 1 and Gr = 2. Find the power at receiver and RMS voltage at receiver antenna matched with 50 Ω resistor***
+
+### Given
+
+- $P_t = 50$ W (transmit power)
+- $d = 10$ km = 10,000 m (distance)
+- $f = 900$ MHz (frequency)
+- $G_t = 1$ (transmit antenna gain)
+- $G_r = 2$ (receive antenna gain)
+- $R = 50\ \Omega$ (load resistance)
+
+### Step 1: Calculate Wavelength
+
+$$\lambda = \frac{c}{f} = \frac{3 \times 10^8}{900 \times 10^6} = 0.333 \text{ m}$$
+
+### Step 2: Friis Equation
+
+$$P_r = P_t G_t G_r \left(\frac{\lambda}{4\pi d}\right)^2$$
+
+Calculate factor:
+
+$$\frac{\lambda}{4\pi d} = \frac{0.333}{4\pi \times 10000} = \frac{0.333}{125663.7} = 2.65 \times 10^{-6}$$
+
+$$\left(\frac{\lambda}{4\pi d}\right)^2 = (2.65 \times 10^{-6})^2 = 7.02 \times 10^{-12}$$
+
+### Step 3: Calculate Received Power
+
+$$P_r = 50 \times 1 \times 2 \times 7.02 \times 10^{-12}$$
+
+$$P_r = 100 \times 7.02 \times 10^{-12} = 7.02 \times 10^{-10} \text{ W}$$
+
+$$\boxed{P_r = 0.702 \text{ nW}}$$
+
+### Step 4: In dBm
+
+$$P_r(dBm) = 10 \log_{10}\left(\frac{7.02 \times 10^{-10}}{1 \times 10^{-3}}\right)$$
+
+$$P_r(dBm) = 10 \log_{10}(7.02 \times 10^{-7}) = 10(-6.154) = \boxed{-61.54 \text{ dBm}}$$
+
+### Step 5: RMS Voltage
+
+$$P = \frac{V_{rms}^2}{R}$$
+
+$$V_{rms} = \sqrt{P_r \times R} = \sqrt{7.02 \times 10^{-10} \times 50}$$
+
+$$V_{rms} = \sqrt{3.51 \times 10^{-8}}$$
+
+$$\boxed{V_{rms} = 5.93 \times 10^{-4} \text{ V} = 0.593 \text{ mV}}$$
+
+---
+
+### Summary
+
+| Parameter | Value |
+|-----------|-------|
+| Received Power | 0.702 nW |
+| Received Power (dBm) | -61.54 dBm |
+| RMS Voltage | 0.593 mV |
+
+---
+
 ## Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)
 
 See: [[Module 2/Shannon Capacity|Shannon Capacity Note]]
