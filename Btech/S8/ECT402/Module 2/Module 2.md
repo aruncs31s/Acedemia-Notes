@@ -36,7 +36,18 @@ dg-publish: true
 
 ---
 
+## Important Topics
+
+- **Fading Types:** Be able to clearly differentiate between Flat Fading vs. Frequency-Selective Fading,, and Fast Fading vs. Slow Fading,.
+- **Channel Parameters:** Understand Doppler spread, Coherence time, Delay spread, and Coherence bandwidth,. Know the inverse relationships (e.g., Doppler spread inversely relates to Coherence time).
+- **Shadowing:** Discuss the impact of shadowing on wireless channel performance and how it causes power fluctuations,.
+- **Information Theory:** Define the Shannon capacity theorem and how it sets the upper limit for data transmission in an AWGN channel
+
+
+
 ## Path Loss
+
+See: [[Module 2/Path Loss]]
 
 **Formula:**
 

@@ -118,6 +118,8 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 ### What is Fading?
 
+See: [[Fading]]
+
 **Fading** is the time variation of received signal power caused by changes in the transmission medium or propagation paths. In wireless systems, fading is broadly categorized into:
 
 1. **Large-Scale Fading**
@@ -159,6 +161,9 @@ Represents the variation of signal strength over **large distances** (typically 
 | Type | Cause | Impact |
 |------|-------|--------|
 | **Path Loss** | Signal spreads over larger area with distance | Continuous, predictable drop in average received power |
+
+See: [[Path Loss]]
+
 | **Shadowing Effect** | Obstructed by buildings, hills, mountains | Long-term fluctuations depending on position |
 
 **Distribution:** Log-normal
@@ -506,10 +511,12 @@ graph LR
 
 ### Comparison: Path Loss vs Shadowing
 
+See: [[Path Loss]]
+
 | Property | Path Loss | Shadowing |
 |----------|----------|-----------|
 | **Scale** | Deterministic with distance | Random position-dependent |
-| **Variations** | Predictable (dⁿ law) | Unpredictable (log-normal) |
+| **Variations** | Predictable (d^n law) | Unpredictable (log-normal) |
 | **Rate** | Slow, gradual | Rapid position changes |
 | **Solution** | Cell planning | Margin + diversity |
 
@@ -664,7 +671,9 @@ In practice, real systems operate **below** this limit due to:
 
 ## How does fading occur? Derive the expression for Doppler shift.
 
-**Fading** is the random variation in a signal's amplitude, phase, or angle of arrival as it travels through a wireless communication channel. It occurs primarily due to two physical phenomena:
+**Fading** is the random variation in a signal's amplitude, phase, or angle of arrival as it travels through a wireless communication channel.
+
+It occurs primarily due to two physical phenomena:
 
 ### 1. Multipath Propagation
 

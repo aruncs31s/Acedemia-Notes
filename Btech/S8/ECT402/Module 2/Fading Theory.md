@@ -11,6 +11,8 @@ dg-publish: true
 
 # Fading in Wireless Communications - Theory
 
+See: [[Fading]]
+
 ---
 
 ## What is Fading?

@@ -196,55 +196,10 @@ Where $T_s$ = symbol duration
 ### Combined Classification
 
 | | Flat Fading | Frequency-Selective |
-|---|-------------|---------------------|
-| **Slow** | Slow flat fading | Slow frequency-selective fading |
-| **Fast** | Fast flat fading | Fast frequency-selective fading |
+
+See also: [[Fading]]
 
 ---
-
-## Discrete-Time Channel Model
-
-For digital communication, discrete-time representation:
-
-$$
-y[n] = \sum_{k=0}^{L-1} h_k[n] \cdot x[n-k] + w[n]
-$$
-
-Where:
-- $h_k[n]$ = $k^{th}$ tap gain at time $n$
-- $L$ = number of taps (channel length)
-- $x[n]$ = transmitted symbol
-- $w[n]$ = noise
-
-### Tap-Decorrelation Time
-
-Taps become uncorrelated after approximately $T_c$ seconds.
-
-### Tapped-Delay-Line Model
-
-For frequency-selective channel:
-
-```
-x[n] -->|h0|---> + ---> y[n]
-        |h1|---> +
-        |h2|---> +
-         ...    +
-```
-
----
-
-## Important Relationships
-
-### Summary Table
-
-| Parameter | Symbol | Formula | Inverse Parameter |
-|-----------|--------|---------|-------------------|
-| Coherence Bandwidth | $B_c$ | $\approx \frac{1}{5\sigma_\tau}$ | Delay Spread |
-| Coherence Time | $T_c$ | $\approx \frac{0.423}{f_m}$ | Doppler Spread |
-| Max Doppler | $f_m$ | $\frac{v}{\lambda}$ | Velocity/Wavelength |
-
-See also: [[Doppler Shift]]
-| RMS Delay | $\sigma_\tau$ | $\sqrt{\bar{\tau^2} - \bar{\tau}^2}$ | Coherence BW |
 
 ### Fading Classification Summary
 

@@ -149,4 +149,5 @@ $$B_c \approx \frac{1}{5 \times 3 \times 10^{-6}} = 66.7 \text{ kHz}$$
 
 - [[Module 2/Module 2 PYQ]]
 - [[Module 2/Fading Theory]]
+- [[Fading]]
 - [[Module 2/Statistical Multipath Channel Models]]
