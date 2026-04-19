@@ -26,17 +26,11 @@ dg-publish: true
      - [B. Based on Doppler Spread (Time Domain Effects)](#b-based-on-doppler-spread-time-domain-effects)
      - [Impact Summary](#impact-summary)
      - [Classification Matrix](#classification-matrix)
-4. [What is diversity and how does it reduce fading?](#what-is-diversity-and-how-does-it-reduce-fading)
-   - [Types of Diversity](#types-of-diversity)
-5. [Compare selection combining and maximal ratio combining techniques.](#compare-selection-combining-and-maximal-ratio-combining-techniques)
-6. [Discuss the impact of shadowing on wireless channel performance. (7 Marks)](#discuss-the-impact-of-shadowing-on-wireless-channel-performance-7-marks)
-   - [Detailed Impact on Wireless Channel Performance](#detailed-impact-on-wireless-channel-performance)
-   - [Statistical Modeling](#statistical-modeling)
-   - [Mitigation Techniques](#mitigation-techniques)
-7. [A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)](#a-wireless-signal-has-a-doppler-shift-of-150-hz-when-moving-at-60-kmh-determine-the-original-frequency-of-the-signal-7-marks)
-8. [Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)](#define-the-shannon-capacity-theorem-in-the-context-of-wireless-communication-how-does-it-set-the-upper-limit-for-data-transmission-in-a-given-channel-7-marks)
-   - [The Channel Capacity Limit](#the-channel-capacity-limit)
-   - [Key Implications](#key-implications)
+4. [What is diversity and how does it reduce fading?](#what-is-diversity-and-how-does-it-reduce-fading) → [[Module 2/Diversity|Diversity]]
+5. [Compare selection combining and maximal ratio combining techniques.](#compare-selection-combining-and-maximal-ratio-combining-techniques) → [[Module 2/Diversity|SC/MRC]]
+6. [Discuss the impact of shadowing on wireless channel performance. (7 Marks)](#discuss-the-impact-of-shadowing-on-wireless-channel-performance-7-marks) → [[Module 2/Path Loss|Shadowing]]
+7. [A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)](#a-wireless-signal-has-a-doppler-shift-of-150-hz-when-moving-at-60-kmh-determine-the-original-frequency-of-the-signal-7-marks) → [[Module 2/Doppler Shift|Doppler Calc]]
+8. [Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)](#define-the-shannon-capacity-theorem-in-the-context-of-wireless-communication-how-does-it-set-the-upper-limit-for-data-transmission-in-a-given-channel-7-marks) → [[Module 2/Shannon Capacity| capacity]]
 9. [How does fading occur? Derive the expression for Doppler shift.](#how-does-fading-occur-derive-the-expression-for-doppler-shift)
    - [Multipath Propagation](#multipath-propagation-1)
    - [Derivation of the Doppler Shift Expression](#derivation-of-the-doppler-shift-expression)
@@ -565,6 +559,8 @@ The original carrier frequency is **2.7 GHz**.
 ---
 
 ## Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)
+
+See: [[Module 2/Shannon Capacity|Shannon Capacity Note]]
 
 **Answer:** [[October 2023 PYQ.md#14. (b) Inference of AWGN channel capacity]]
 

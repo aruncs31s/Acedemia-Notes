@@ -79,4 +79,5 @@ See: [[Fading]] - Large-scale fading
 - [[Important Topics/Path loss and Shadowing]] - Brief overview
 - [[Module 2 PYQ]] - PYQs on path loss
 - [[Fading]] - Large-scale fading
-- [[Doppler Shift]] - Time variation (Module 2)
+- [[Doppler Shift]] - Time variation
+- [[Shannon Capacity]] - Capacity theorem

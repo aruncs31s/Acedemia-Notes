@@ -83,6 +83,9 @@ graph TD
 
 - [[Fading Theory]] - Detailed theory
 - [[Multipath Propagation]] - Cause of fading
+- [[Diversity]] - Diversity techniques
+- [[Path Loss]] - Large-scale fading
+- [[Shannon Capacity]] - Capacity theorem
 - [[Multipath Propagation]] - Cause of fading
 - [[Doppler Shift]] - Time variation cause
 - [[Statistical Multipath Channel Models]] - Channel models
