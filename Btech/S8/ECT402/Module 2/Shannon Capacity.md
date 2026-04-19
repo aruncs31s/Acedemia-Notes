@@ -103,3 +103,4 @@ $$C = E[\log_2(1 + \text{SNR} \cdot |h|^2)]$$
 
 - [[Module 2/Module 2 PYQ]] - PYQs on capacity
 - [[Module 2/Path Loss]] - Path loss affects SNR
+- [[Module 2/Outage Probability]] - Capacity with outage

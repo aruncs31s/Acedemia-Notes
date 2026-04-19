@@ -31,6 +31,9 @@ dg-publish: true
 6. [Discuss the impact of shadowing on wireless channel performance. (7 Marks)](#discuss-the-impact-of-shadowing-on-wireless-channel-performance-7-marks) → [[Module 2/Path Loss|Shadowing]]
 7. [A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)](#a-wireless-signal-has-a-doppler-shift-of-150-hz-when-moving-at-60-kmh-determine-the-original-frequency-of-the-signal-7-marks) → [[Module 2/Doppler Shift|Doppler Calc]]
 8. [Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)](#define-the-shannon-capacity-theorem-in-the-context-of-wireless-communication-how-does-it-set-the-upper-limit-for-data-transmission-in-a-given-channel-7-marks) → [[Module 2/Shannon Capacity| capacity]]
+10. [How is the outage probability computed for a wireless channel?](#how-is-the-outage-probability-computed-for-a-wireless-channel) → [[Module 2/Outage Probability|Outage]]
+11. [Capacity with custom path loss model](#capacity-with-custom-path-loss-model-7-marks)
+12. [Derive the expression for the impulse response model of a multipath channel. (7 Marks)](#derive-the-expression-for-the-impulse-response-model-of-a-multipath-channel-07-marks)
 9. [How does fading occur? Derive the expression for Doppler shift.](#how-does-fading-occur-derive-the-expression-for-doppler-shift)
    - [Multipath Propagation](#multipath-propagation-1)
    - [Derivation of the Doppler Shift Expression](#derivation-of-the-doppler-shift-expression)
@@ -849,3 +852,101 @@ Where:
 - [[May 2024.md#3. Multipath causing small-scale fading (3 Marks)]]
 - [[October 2023 PYQ.md#3. How does fading occur? Derive the expression for doppler shift.]]
 - [[Module 2/Statistical Multipath Channel Models]]
+
+---
+
+## How is the outage probability computed for a wireless channel?
+
+See: [[Module 2/Outage Probability|Outage Probability Note]]
+
+**Outage** = Event when channel quality drops below threshold ($\rho_{min}$), making reliable communication impossible.
+
+$$P_{outage} = P(SNR < \rho_{min})$$
+
+### For Rayleigh Fading
+
+$$P_{outage} = 1 - \exp\left(-\frac{\rho_{min}}{\bar{\rho}}\right)$$
+
+### For Rician Fading
+
+$$P_{outage} = 1 - Q_1\left(\frac{A}{\sigma}, \sqrt{\frac{2\rho_{min}}{1+K}}\right)$$
+
+### Capacity with Outage
+
+$$C_{outage} = (1 - P_{outage}) W \log_2(1 + \rho_{min})$$
+
+Rate reliably supported in $(1-P_{outage})$% of time.
+
+### Example
+
+Given: ${\bar{\rho}} = 10$, $\rho_{min} = 1$ (Rayleigh)
+
+$$P_{outage} = 1 - \exp(-1/10) = 1 - 0.905 = \boxed{9.5\%}$$
+
+---
+
+## Capacity with Custom Path Loss Model (7 Marks)
+
+### Given
+
+- Path loss: $P(d) = P_t (d_0/d)^3$ where $d_0 = 50$ m
+- Bandwidth: $B = 50$ kHz = 50,000 Hz
+- Noise PSD: $N_0/2$, where $N_0 = 10^{-9}$ W/Hz
+- Transmit power: $P_t = 2$ W
+- Distances: $d_1 = 200$ m, $d_2 = 1$ km = 1000 m
+
+### Step 1: Calculate Noise Power
+
+$$N = N_0 \times B = 10^{-9} \times 50000 = 5 \times 10^{-5} \text{ W}$$
+
+### Step 2: Calculate Received Power at d = 200 m
+
+$$P(d) = P_t \left(\frac{d_0}{d}\right)^3 = 2 \times \left(\frac{50}{200}\right)^3 = 2 \times (0.25)^3 = 2 \times 0.015625$$
+
+$$P_r = \boxed{0.03125 \text{ W}}$$
+
+### Step 3: Calculate SNR at 200 m
+
+$$SNR = \frac{P_r}{N} = \frac{0.03125}{5 \times 10^{-5}} = 625$$
+
+### Step 4: Calculate Capacity at 200 m
+
+$$C = B \log_2(1 + SNR) = 50000 \times \log_2(626)$$
+
+$$\log_2(626) = \frac{\ln(626)}{\ln(2)} = \frac{6.438}{0.693} = 9.29$$
+
+$$C = 50000 \times 9.29 = \boxed{464,500 \text{ bits/s}}$$
+
+### Step 5: Calculate Received Power at d = 1000 m
+
+$$P(d) = 2 \times \left(\frac{50}{1000}\right)^3 = 2 \times (0.05)^3 = 2 \times 0.000125$$
+
+$$P_r = \boxed{0.00025 \text{ W}} = 0.25 \text{ mW}$$
+
+### Step 6: Calculate SNR at 1000 m
+
+$$SNR = \frac{0.00025}{5 \times 10^{-5}} = 5$$
+
+### Step 7: Calculate Capacity at 1000 m
+
+$$C = 50000 \times \log_2(6)$$
+
+$$\log_2(6) = \frac{\ln(6)}{\ln(2)} = \frac{1.792}{0.693} = 2.59$$
+
+$$C = 50000 \times 2.59 = \boxed{129,500 \text{ bits/s}}$$
+
+---
+
+### Summary
+
+| Distance | Received Power | SNR | Capacity |
+|----------|---------------|-----|----------|
+| 200 m | 31.25 mW | 625 | 464.5 kbps |
+| 1000 m | 0.25 mW | 5 | 129.5 kbps |
+
+### Conclusion
+
+- Capacity decreases **significantly** with distance: ~72% drop from 200m to 1km
+- The cubic path loss ($d^3$) causes faster attenuation than free space ($d^2$)
+- At 1km, channel can still support ~130 kbps reliably
+- Adaptive techniques needed to maintain QoS over distance
