@@ -723,6 +723,17 @@ $$x(t) = \cos(2\pi ft)$$
 **Step 3:** The signal experiences time-varying propagation delay $r(t)/c$:
 $$y(t) \propto \cos\left(2\pi f\left(t - \frac{r_0 + vt}{c}\right)\right)$$
 
+> [!callout] **Step 3→4 Expansion Explained**
+> $$= \cos\left(2\pi f t - \frac{2\pi f r_0}{c} - \frac{2\pi f v t}{c}\right)$$
+> $$= \cos\left(2\pi f \left(1 - \frac{v}{c}\right)t - \frac{2\pi f r_0}{c}\right)$$
+>
+> | Term | Meaning |
+> |-----|---------|
+> | $2\pi f t$ | Original signal component |
+> | $2\pi f r_0/c$ | Fixed phase offset (initial distance) |
+> | $2\pi f (v/c)t$ | **New term** from relative motion |
+> | $(1 - v/c)$ | Frequency scaling factor |
+
 **Step 4:** Expand:
 $$y(t) \propto \cos\left(2\pi f\left(1 - \frac{v}{c}\right)t - \frac{2\pi fr_0}{c}\right)$$
 
@@ -730,6 +741,15 @@ The new apparent frequency is $f\left(1 - \frac{v}{c}\right)$.
 
 **Step 5:** The Doppler shift is:
 $$f_d = -f\frac{v}{c}$$
+
+> [!callout] **What is f? Where did -ve sign go?**
+> **f** = original transmit frequency (carrier f_c)
+>
+> **-ve sign** indicates direction:
+> - **Negative** = moving **away** (frequency decreases)
+> - **Positive** = moving **toward** (frequency increases)
+>
+> **f_m = v/λ** is the **magnitude** (always positive) — we drop the sign to get max value.
 
 Using $c = f\lambda$:
 $$\boxed{f_m = \frac{v}{\lambda}}$$
@@ -739,10 +759,25 @@ $$\boxed{f_d = \frac{v}{\lambda}\cos\theta = f_m\cos\theta}$$
 
 Where:
 - $v$ = velocity (m/s)
-- $\lambda$ = wavelength
+- $\lambda$ = **wavelength** (m)
 - $f_c$ = carrier frequency
 - $c$ = speed of light (3×10⁸ m/s)
 - $f_m$ = maximum Doppler shift
+
+> [!callout] **What is λ (Lambda)?**
+> **Wavelength** = distance traveled by wave in one cycle.
+> $$\lambda = \frac{c}{f_c}$$
+>
+> Where **f_c** = **carrier frequency** of the transmitted signal (WiFi, 4G, 5G, etc.)
+>
+> | Application | f_c (carrier) | λ |
+> |-------------|--------------|-----|
+> | WiFi | 2.4 GHz | 12.5 cm |
+> | 4G LTE | 1.8 GHz | 16.7 cm |
+> | 5G | 3.5 GHz | 8.6 cm |
+> | FM Radio | 100 MHz | 3 m |
+>
+> **Key:** Higher carrier frequency → shorter λ → larger Doppler shift for same velocity.
 
 ---
 
