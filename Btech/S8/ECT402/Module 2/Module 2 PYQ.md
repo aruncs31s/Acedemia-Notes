@@ -686,9 +686,61 @@ Unlike signals in a wired channel, wireless signals bounce off various obstacles
 | In-phase (constructive) | Signal strength boosted |
 | Out-of-phase (destructive) | Signal fades |
 
+```mermaid
+graph LR
+    TX[TX] -->|"Path 1<br/>Direct"| P1[ ]
+    TX -->|"Path 2<br/>Building"| P2[ ]
+    TX -->|"Path 3<br/>Ground"| P3[ ]
+    
+    P1 -.->|"τ₁"| S[Σ]
+    P2 -.->|"τ₂"| S
+    S -.->|"Signal Sum"| RX[RX]
+    
+    P3 -.->|"τ₃"| S
+    
+    RX -->|"Constructive"| V1[Strong]
+    RX -->|"Destructive"| V2[Weak]
+    
+    style TX fill:#4ecdc4,color:#fff
+    style RX fill:#4ecdc4,color:#fff
+    style V1 fill:#4ecdc4,color:#fff
+    style V2 fill:#eb4d4b,color:#fff
+``` |
+
 ### 2. Relative Motion and Environmental Changes
 
 When the transmitter, receiver, or surrounding objects are in motion, the relative phases of the arriving multipath components change constantly. This continuous shifting causes the received signal's amplitude to fluctuate rapidly over short distances or time periods — **small-scale fading**. Large terrain features can physically block radio waves, causing slower fluctuations known as **shadowing** or **large-scale fading**.
+
+```mermaid
+graph LR
+    subgraph "Moving Receiver"
+    TX[TX] -->|"Signal"| A(( ))
+    A -->|"r(t) = r₀ + vt"| RX[RX<br/>Moving]
+    RX -->|"Phase shifts"| P[Signal<br/>Amplitude<br/>Fluctuates]
+    end
+    
+    P -->|"Rapid"| F[Fading]
+    P -->|"Slow"| S[Shadowing]
+    
+    style TX fill:#4ecdc4,color:#fff
+    style RX fill:#f0932b,color:#fff
+    style F fill:#eb4d4b,color:#fff
+    style S fill:#f9ca24,color:#fff
+```
+
+```mermaid
+graph TD
+    subgraph "Doppler Derivation"
+    A1["x(t) = cos(2πft)"] -->|"r(t) = r₀ + vt"| A2["y(t) ~ cos(2πf(t - r(t)/c))"]
+    A2 -->|"Expand"| A3["y(t) ~ cos(2πf(1 - v/c)t)"]
+    A3 -->|"Frequency shift"| A4["f_d = -f(v/c)"]
+    A4 -->|"Using c = fλ"| A5["f_d = v/λ"]
+    A5 -->|"Angle θ"| A6["f_d = f_m cosθ"]
+    
+    style A1 fill:#4ecdc4,color:#fff
+    style A4 fill:#f0932b,color:#fff
+    style A6 fill:#4ecdc4,color:#fff
+```
 
 ---
 
