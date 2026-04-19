@@ -43,6 +43,31 @@ When transmitter/receiver moves, each multipath component experiences different 
 
 ## Types of Fading
 
+```mermaid
+graph TD
+    FADING[Fading] --> LS[Large-Scale]
+    FADING --> SS[Small-Scale]
+
+    LS --> PL[Path Loss]
+    LS --> SH[Shadowing]
+
+    SS --> FREQ[Frequency Domain]
+    SS --> TIME[Time Domain]
+
+    FREQ --> FF[Flat Fading]
+    FREQ --> FSF[Frequency-Selective]
+
+    TIME --> SF[Slow Fading]
+    TIME --> FASTF[Fast Fading]
+
+    style LS fill:#4ecdc4,color:#000
+    style SS fill:#ff6b6b,color:#000
+    style FF fill:#45b7d1,color:#000
+    style FSF fill:#96ceb4,color:#000
+    style SF fill:#f7dc6f,color:#000
+    style FASTF fill:#e74c3c,color:#000
+```
+
 ### Large-Scale Fading
 
 | Feature | Description |
@@ -51,6 +76,9 @@ When transmitter/receiver moves, each multipath component experiences different 
 | **Cause** | Path loss + shadowing |
 | **Model** | Log-normal distribution |
 | **Example** | Signal weakening as you move from city to suburb |
+
+> [!callout] **Why "Large-Scale"?**
+> Because the signal variation happens over **large distances** — typically on the order of **hundreds of wavelengths** (meters to kilometers). You notice this when walking or driving across a city block or moving between cell coverage areas.
 
 **Applications:**
 - Cell radius planning
@@ -64,6 +92,9 @@ When transmitter/receiver moves, each multipath component experiences different 
 | **Cause** | Multipath interference |
 | **Model** | Rayleigh/Rician distribution |
 | **Example** | Signal fluctuating while standing in one spot |
+
+> [!callout] **Why "Small-Scale"?**
+> Because the signal variation happens over **very small distances** — typically on the order of **few wavelengths** (centimeters to meters). You notice this when standing in one spot; the signal fluctuates rapidly due to multipath as objects move around you.
 
 ---
 
@@ -272,6 +303,31 @@ Different frequency components see different channel gains because different mul
 
 ## Fading Classification Summary
 
+```mermaid
+graph TD
+    subgraph "Signal Bandwidth vs Coherence Bandwidth"
+    Bs[Signal Bandwidth<br/>Bs] -->|"Bs < Bc"| FLAT[Flat Fading]
+    Bs -->|"Bs > Bc"| FSF[Frequency<br/>Selective]
+    end
+
+    subgraph "Symbol Duration vs Coherence Time"
+    Ts[Symbol Duration<br/>Ts] -->|"Ts < Tc"| SLOW[Slow Fading]
+    Ts -->|"Ts > Tc"| FAST[Fast Fading]
+    end
+
+    FLAT -->|"Ts < Tc"| SF[Slow + Flat]
+    FLAT -->|"Ts > Tc"| FF[Fast + Flat]
+    FSF -->|"Ts < Tc"| SS[Slow + Freq-Selective]
+    FSF -->|"Ts > Tc"| FS[Fast + Freq-Selective]
+
+    SF -->|"Best Case"| BEST[Best Case:<br/>Slow + Flat]
+    FS -->|"Worst Case"| WORST[Worst Case:<br/>Fast + Freq-Selective]
+
+    style BEST fill:#27ae60,color:#fff
+    style WORST fill:#c0392b,color:#fff
+```
+
+**Text Summary:**
 ```
 Signal Bandwidth (Bs)
       │
