@@ -403,7 +403,73 @@ graph TD
 
 ---
 
-## A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)
+## Discuss the impact of shadowing on wireless channel performance. (7 Marks)
+
+### What is Shadowing?
+
+**Shadowing** is a **large-scale fading** effect caused by large obstacles (buildings, hills, trees) blocking the signal path between transmitter and receiver.
+
+Unlike path loss which is deterministic with distance, shadowing is **random** due to varying obstacle positions.
+
+### Impact on Wireless Channel Performance
+
+| Aspect | Impact |
+|--------|--------|
+| **Signal Strength** | Random attenuation beyond path loss predictions |
+| **Coverage** | Cell edges experience unpredictable coverage holes |
+| **SINR** | Reduced signal-to-interference-plus-noise ratio |
+| **Capacity** | Reduced in shadowed areas |
+| **Handoff** | Triggers unnecessary handoffs |
+
+### Distribution
+
+Shadowing follows **log-normal distribution**:
+$$P_{dB} \sim \mathcal{N}(\mu, \sigma^2)$$
+
+In dB scale, signal power = mean path loss + Gaussian random variable.
+
+### Visual Representation
+
+```mermaid
+graph LR
+    TX[TX] --> A[Direct Path]
+    TX -.->|Blocked| OB[Obstacle<br/>Building/Hill]
+    OB -.->|Shadowed| RX[RX]
+    
+    A -->|"Good Signal"| S1[Signal]
+    RX -->|"Weak Signal"| S2[Signal]
+    
+    style OB fill:#f0932b,color:#fff
+    style S2 fill:#f0932b,color:#fff
+```
+
+### Mitigation Techniques
+
+| Technique | How it Helps |
+|-----------|-------------|
+| **Link Budget Margin** | Extra power to overcome shadow fades |
+| **Diversity** | Multiple antennas/paths average out effects |
+| **Power Control** | Increase power in shadowed areas |
+| **Microcells** | Smaller cells reduce blockage probability |
+
+### Comparison: Path Loss vs Shadowing
+
+| Property | Path Loss | Shadowing |
+|----------|----------|-----------|
+| **Scale** | Deterministic with distance | Random position-dependent |
+| **Variations** | Predictable (dⁿ law) | Unpredictable (log-normal) |
+| **Rate** | Slow, gradual | Rapid position changes |
+| **Solution** | Cell planning | Margin + diversity |
+
+### Key Takeaways
+
+1. Shadowing causes **random fluctuations** around path loss mean
+2. Creates **coverage holes** in shadowed regions
+3. Requires **link budget margin** (typically 10-20 dB) for reliable coverage
+4. Mitigated through **diversity** and **power control**
+5. Combined with path loss → determines overall cell coverage
+
+---
 
 ### Given
 
