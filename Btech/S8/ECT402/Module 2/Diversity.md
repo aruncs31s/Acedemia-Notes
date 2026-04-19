@@ -17,9 +17,28 @@ dg-publish: true
 
 ## How It Reduces Fading
 
-- If one path is in fade, another may have good signal
-- Statistical averaging reduces outage probability
-- Provides **diversity gain** without increasing power
+### 1. Path Independence
+- Wireless signals travel through multiple paths due to reflection, scattering, diffraction
+- Each path experiences independent fading
+- When one path is in a deep fade (weak signal), another path may have strong signal
+
+### 2. Statistical Averaging
+- By combining multiple independent paths, the overall signal is averaged
+- Probability that ALL paths are in fade simultaneously is very low
+- Reduces **outage probability** (chance of signal dropping below threshold)
+
+### 3. Diversity Gain
+- The SNR gain obtained is called "diversity gain"
+- Does not require increasing transmit power
+- Error probability decreases as: P_e ∝ (SNR)^(-G_d)
+- G_d = diversity order (number of independent branches)
+
+### Example:
+
+| Without Diversity | With Diversity (3 branches) |
+|------------------|---------------------------|
+| If 1 path fades → signal lost | If 1 path fades → 2 other paths still work |
+| High outage probability | Low outage probability |
 
 ---
 
