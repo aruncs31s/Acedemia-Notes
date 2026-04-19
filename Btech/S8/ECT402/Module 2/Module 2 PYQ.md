@@ -280,11 +280,50 @@ graph TD
 
 ### How It Reduces Fading
 
+```mermaid
+graph LR
+    subgraph "Without Diversity"
+    TX1[TX] -->|Path 1| R1[RX]
+    R1 -->|Signal| OUT1[Output]
+    end
+    
+    subgraph "With Diversity"
+    TX2[TX] -->|Path 1| D1[Branch 1]
+    TX2 -->|Path 2| D2[Branch 2]
+    TX2 -->|Path 3| D3[Branch 3]
+    D1 --> COMB[Combine]
+    D2 --> COMB
+    D3 --> COMB
+    COMB --> OUT2[Output]
+    end
+    
+    style OUT1 fill:#eb4d4b,color:#fff
+    style OUT2 fill:#4ecdc4,color:#fff
+```
+
 - If one path is in fade, another may have good signal
 - Statistical averaging reduces overall outage probability
 - Provides **diversity gain** without increasing power
 
 ### Types of Diversity
+
+```mermaid
+graph TD
+    DIV[Diversity] --> TD[Time Diversity]
+    DIV --> FD[Frequency Diversity]
+    DIV --> SD[Space Diversity]
+    DIV --> PD[Polarization]
+    
+    TD -->|"Interleaving"| C1[Coding]
+    FD -->|"Multiple"| C2[Carriers]
+    SD -->|"MIMO"| C3[Antennas]
+    PD -->|"Dual Pol"| C4[Polarizations]
+    
+    style TD fill:#4ecdc4,color:#fff
+    style FD fill:#4ecdc4,color:#fff
+    style SD fill:#4ecdc4,color:#fff
+    style PD fill:#4ecdc4,color:#fff
+```
 
 | Type | Description |
 |------|-------------|
@@ -297,25 +336,60 @@ graph TD
 
 ## Compare selection combining and maximal ratio combining techniques.
 
-| Aspect | Selection Combining (SC) | Maximal Ratio Combining (MRC) |
-|--------|---------------------------|-------------------------------|
-| **Principle** | Pick the branch with highest SNR | Weight and combine all branches |
-| **Complexity** | Low (one RF chain) | High (all branches) |
-| **Performance** | Moderate | Optimal |
-| **SNR Output** | $\gamma = \max(\gamma_1, \gamma_2, ...)$ | $\gamma = \sum \gamma_i$ |
-| **Gain** | Lower diversity gain | Highest diversity gain |
-| **Implementation** | Simpler switches | Complex weighting |
-
 ### Selection Combining (SC)
+
+```mermaid
+graph TD
+    A[Signal] --> B[Branch 1<br/>SNR=10dB]
+    A --> C[Branch 2<br/>SNR=5dB]
+    A --> D[Branch 3<br/>SNR=15dB]
+    
+    B --> E[Selector]
+    C --> E
+    D --> E
+    
+    E -->|"Select Best"| F[Output<br/>15dB]
+    
+    style E fill:#f0932b,color:#fff
+```
+
 - Selects the antenna branch with **highest instantaneous SNR**
 - Uses only one branch for detection
 - **Simple, low cost**, but **suboptimal** (discard other branch energy)
 
 ### Maximal Ratio Combining (MRC)
+
+```mermaid
+graph TD
+    A[Signal] --> B[Branch 1<br/>g₁]
+    A --> C[Branch 2<br/>g₂]
+    A --> D[Branch 3<br/>g₃]
+    
+    B -->|"×g₁"| W1[Weight]
+    C -->|"×g₂"| W2[Weight]
+    D -->|"×g₃"| W3[Weight]
+    
+    W1 --> SUM[Sum]
+    W2 --> SUM
+    W3 --> SUM
+    
+    SUM --> F[Output<br/>Combined]
+    
+    style SUM fill:#4ecdc4,color:#fff
+```
+
 - Weights each branch by its channel gain
 - **Combines all branches** constructively
 - **Optimal performance** but **higher complexity**
 - Provides maximum diversity gain
+
+| Aspect | Selection Combining (SC) | Maximal Ratio Combining (MRC) |
+|--------|---------------------------|-------------------------------|
+| **Principle** | Pick the highest SNR | Weight and combine all |
+| **Complexity** | Low (one RF chain) | High (all branches) |
+| **Performance** | Moderate | Optimal |
+| **SNR Output** | $\gamma = \max(\gamma_1, \gamma_2, ...)$ | $\gamma = \sum \gamma_i$ |
+| **Gain** | Lower diversity gain | Highest diversity gain |
 
 ### Comparison Table
 
@@ -324,8 +398,44 @@ graph TD
 | SNR Improvement | Moderate | Maximum |
 | Complexity | Lowest | Highest |
 | RF Chains | 1 (switched) | All active |
-| Diversity Order | N (but suboptimal) | N (optimal) |
+| Diversity Order | N (suboptimal) | N (optimal) |
 | Use Case | Simple receivers | Advanced systems |
+
+---
+
+## A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)
+
+### Given
+
+- Doppler shift: $f_d = 150$ Hz
+- Velocity: $v = 60$ km/h
+
+### Formula
+
+Doppler shift:
+$$f_d = \frac{v}{\lambda} \cos\theta = f_m \cos\theta$$
+
+For maximum Doppler (θ = 0°):
+$$f_d = f_m = \frac{v}{\lambda} = \frac{v f_c}{c}$$
+
+Rearranging:
+$$f_c = \frac{f_d \cdot c}{v}$$
+
+Where:
+- $c = 3 \times 10^8$ m/s (speed of light)
+- $v = 60$ km/h = $16.67$ m/s
+
+### Calculation
+
+$$f_c = \frac{150 \times 3 \times 10^8}{16.67}$$
+
+$$f_c = \frac{150 \times 3\times 10^8}{16.67} = \frac{4.5 \times 10^{10}}{16.67}$$
+
+$$f_c = 2.7 \times 10^9 \text{ Hz} = 2.7 \text{ GHz}$$
+
+### Answer
+
+The original carrier frequency is **2.7 GHz**.
 
 ---
 
