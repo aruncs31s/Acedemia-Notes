@@ -413,13 +413,11 @@ graph TD
 ### Formula
 
 Doppler shift:
-$$f_d = \frac{v}{\lambda} \cos\theta = f_m \cos\theta$$
-
+  $$f_d = \frac{v}{\lambda} \cos\theta = f_m \cos\theta$$
 For maximum Doppler (θ = 0°):
-$$f_d = f_m = \frac{v}{\lambda} = \frac{v f_c}{c}$$
+  $$f_d = f_m = \frac{v}{\lambda} = \frac{vf_c}{c}$$
 
-Rearranging:
-$$f_c = \frac{f_d \cdot c}{v}$$
+$$\boxed{f_c = \frac{f_d \cdot c}{v}}$$
 
 Where:
 - $c = 3 \times 10^8$ m/s (speed of light)
