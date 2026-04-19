@@ -22,6 +22,15 @@ $$f_d = \frac{v}{\lambda} \cos\theta = f_m \cos\theta$$
 For maximum Doppler (θ = 0°):
 $$f_m = \frac{v}{\lambda} = \frac{v f_c}{c}$$
 
+> [!callout] **What is f? Where did -ve sign go?**
+> **f** = original transmit frequency (carrier f_c)
+>
+> **-ve sign** indicates direction:
+> - **Negative** = moving **away** (frequency decreases)
+> - **Positive** = moving **toward** (frequency increases)
+>
+> **f_m = v/λ** = **magnitude** (always positive)
+
 Where:
 - $v$ = velocity (m/s)
 - $\lambda$ = **wavelength** = c/f_c (m)

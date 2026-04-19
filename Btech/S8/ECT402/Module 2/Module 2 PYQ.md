@@ -742,6 +742,15 @@ The new apparent frequency is $f\left(1 - \frac{v}{c}\right)$.
 **Step 5:** The Doppler shift is:
 $$f_d = -f\frac{v}{c}$$
 
+> [!callout] **What is f? Where did -ve sign go?**
+> **f** = original transmit frequency (carrier f_c)
+>
+> **-ve sign** indicates direction:
+> - **Negative** = moving **away** (frequency decreases)
+> - **Positive** = moving **toward** (frequency increases)
+>
+> **f_m = v/λ** is the **magnitude** (always positive) — we drop the sign to get max value.
+
 Using $c = f\lambda$:
 $$\boxed{f_m = \frac{v}{\lambda}}$$
 
