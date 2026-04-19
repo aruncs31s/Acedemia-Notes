@@ -170,7 +170,8 @@ Handoff procedures rely on continuous monitoring of the Received Signal Strength
 2. **Dynamic Channel Allocation (DCA):** Channels are pooled together at the Mobile Switching Center (MSC) rather than assigned permanently to cells. When a cell needs a channel, the MSC assigns one dynamically based on a cost-function algorithm (evaluating reuse distance, future blocking probability, etc.). This maximizes channel utilization but requires heavy computational resources.
 3. **Hybrid Channel Allocation:** A combination of both fixed and dynamic allocation methods to balance simplicity and efficiency.
 
-### **Q12 b) Enumerate the features of 4G wireless network.** The 4G (IMT-Advanced) wireless network features include:
+### **Q12 b) Enumerate the features of 4G wireless network.**
+The 4G (IMT-Advanced) wireless network features include:
 
 1. **High Data Rates:** Provides bandwidth higher than 100 Mbps, up to 1 Gbps, enough to support high-quality streaming multimedia content.
 2. **All IP Network:** It utilizes an all-packet, IP-based network architecture.
@@ -191,4 +192,22 @@ Handoff procedures rely on continuous monitoring of the Received Signal Strength
 
 - **The Concept:** Instead of dividing the cell geographically, this technique replaces a single omnidirectional antenna at the base station with several directional antennas. This divides the cell into "sectors" (typically 120° or 60°).
 - **The Impact:** It improves capacity by significantly reducing co-channel interference, which increases the Signal-to-Interference Ratio (SIR). Because the directional antennas only radiate in specific directions, interference from surrounding co-channel cells is drastically cut down.
+
+
+### Calculate available channels for a 7-cell reuse system.
+
+
+**1. Identify the given values:**
+
+- Total Bandwidth = $33 \text{ MHz} = 33,000 \text{ kHz}$
+- Simplex Channel Bandwidth = $25 \text{ kHz}$
+- Cluster Size ($N$) = $7$
+
+**2. Calculate Duplex Channel Bandwidth:** Since the system uses two simplex channels to provide a full-duplex voice and control link, the bandwidth per duplex channel is: $$25 \text{ kHz} \times 2 = \mathbf{50 \text{ kHz} \text{ per channel}}$$
+
+**3. Calculate Total Available Channels:** $$ \text{Total Channels} = \frac{\text{Total Bandwidth}}{\text{Duplex Channel Bandwidth}} = \frac{33,000 \text{ kHz}}{50 \text{ kHz}} = \mathbf{660 \text{ channels}} $$
+
+**4. Calculate Channels Per Cell:** For a 7-cell reuse system, divide the total channels by the cluster size: $$ \text{Channels per cell} = \frac{660}{7} \approx \mathbf{94.28} $$ Therefore, there are **94 channels available per cell**.
+
+_(Note: Your textbook/notes contain a mathematical typo at the very end of this specific problem, incorrectly stating that $660/7 \approx 123$. The correct arithmetic yields 94 channels)._
 
