@@ -7,8 +7,14 @@
 
 Based on the text, wireless networks are set up in two primary modes (topologies):
 
-- **Infrastructure Network Mode:** Communication takes place indirectly through a central access point, which acts as a bridge and handles medium access control.
+- **Infrastructure Network Mode:** Communication takes place **indirectly through a central access point**, **which acts as a bridge and handles medium access control**.
 - **Ad-Hoc Network (Peer-to-Peer) Mode:** A decentralized network that does not rely on pre-existing infrastructure. Nodes communicate directly with each other and participate in routing by forwarding data for other nodes dynamically.
+> [!info]- What is Ad-Hoc Mode?
+> **Simple explanation:** No central router needed. Devices talk directly to each other.
+> - **Decentralized:** No access point/router control
+> - **No infrastructure:** Works without any pre-existing network
+> - **Dynamic routing:** Each device can relay messages for others
+> **Example:** You and friends in a remote area can connect phones directly without WiFi. If your phone can't reach someone far away, a friend in between can pass your message along.
 
 ### **Describe the different types of handoff schemes used in cellular networks?**
 
@@ -19,7 +25,7 @@ Handoffs are broadly classified into two categories:
 
 **Part B**
 
-### **Q11 a) Explain the concept of soft handoff and hard handoff in cellular networks. How do they differ and what are their advantages and disadvantages?**
+###  **Explain the concept of soft handoff and hard handoff in cellular networks. How do they differ and what are their advantages and disadvantages?**
 
 - **Hard Handoff:** Operates on a **"break-before-make"** principle. The connection to the existing base station is terminated before connecting to the new one. It is used when handing off between different frequency assignments or disjointed radio systems (like intracellular and intercellular handoffs). **Disadvantage:** If the signal threshold margin (Δ) is too small, there might be insufficient time to complete the handoff, leading to a dropped or lost call.
 - **Soft Handoff:** Operates on a **"make-before-break"** principle. The mobile unit connects to the new base station before disconnecting from the old one, ensuring seamless connectivity. **Advantage:** Soft handoff allows multiple base-stations to simultaneously decode the mobile's data, providing an extra level of diversity to the users and reducing the chance of dropped calls.
