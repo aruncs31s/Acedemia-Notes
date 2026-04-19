@@ -545,47 +545,64 @@ The original carrier frequency is **2.7 GHz**.
 
 ### Definition
 
-The **Shannon Capacity Theorem** (also called the Shannon-Hartley theorem) defines the **theoretical maximum data rate** at which information can be transmitted **reliably** over a communication channel with arbitrarily small error probability, given certain constraints.
+**Shannon's capacity theorem** characterizes the **fundamental limits** of reliable communication over a noisy channel.
 
-### The Theorem (AWGN Channel)
+**Historical Context:** Before Shannon formulated information theory in 1948, it was widely believed that the only way to achieve reliable communication (making error probability as small as desired) was to drastically reduce data rate (e.g., repeating the same message over and over). **Shannon proved this incorrect** - through intelligent coding, a system can communicate at a strictly positive data rate while maintaining an arbitrarily small error probability.
+
+### The Channel Capacity Limit
+
+The theorem establishes a **maximal rate**, known as the **channel capacity (C)**, at which highly reliable communication can occur:
 
 $$\boxed{C = B \log_2(1 + \text{SNR})}$$
 
-Where:
-- $C$ = Channel capacity (bits per second)
-- $B$ = Channel bandwidth (Hz)
-- $\text{SNR}$ = Signal-to-Noise Power Ratio
+**Key Principle:** If a system attempts to transmit data at a rate **exceeding** channel capacity, it becomes **fundamentally impossible** to drive error probability to zero. The channel capacity serves as the **absolute upper limit** for reliable data transmission.
 
-### Interpretation in Wireless Context
+### Relationship to Bandwidth and Power
+
+For a standard **Additive White Gaussian Noise (AWGN)** wireless channel:
+
+$$C = W \log_2\left(1 + \frac{\bar{P}}{N_0 W}\right)$$
+
+Where:
+- $W$ = Channel bandwidth (Hz)
+- $\bar{P}$ = Average received power
+- $N_0$ = Noise power spectral density
 
 | Parameter | Physical Meaning |
 |-----------|--------------|
-| $B$ | Available spectrum for transmission |
-| $\text{SNR}$ | Signal strength relative to noise floor |
+| $W$ or $B$ | Available spectrum |
+| $\bar{P}$ | Signal power |
+| $N_0$ | Noise floor |
 | $C$ | Maximum achievable data rate |
+
+### Spectral Efficiency
+
+The limit can be expressed as **maximum achievable spectral efficiency** based on SNR:
+
+$$\eta = \log_2(1 + \text{SNR}) \text{ bits/s/Hz}$$
 
 ### Key Implications
 
-#### 1. Bandwidth Tradeoff
-- **Doubling bandwidth** roughly **doubles capacity** (linear relationship with B)
-- Each additional 3 dB SNR adds approximately $B$ bits/s at high SNR
+1. **Bandwidth Tradeoff**
+   - Doubling bandwidth roughly doubles capacity (linear relationship with B)
+   - Each additional 3 dB SNR adds approximately $B$ bits/s at high SNR
 
-#### 2. Power Tradeoff
-- Capacity **grows logarithmically** with power (diminishing returns)
-- At high SNR: need 3 dB more power to increase capacity by $B$ bits/s
-- At low SNR: $\text{SNR} \ll 1$, so $C \approx \frac{B}{\ln 2}\text{SNR}$ (nearly linear!)
+2. **Power Tradeoff**
+   - Capacity grows logarithmically with power (diminishing returns)
+   - At high SNR: need 3 dB more power to increase capacity by $B$ bits/s
+   - At low SNR: $C \approx \frac{B}{\ln 2}\text{SNR}$ (nearly linear!)
 
-#### 3. Sets Upper Bound
-- $C$ is the **absolute theoretical limit**
-- No practical system can exceed this without errors
-- Guides modulation/coding design
+3. **Fundamental Limit**
+   - $C$ is the absolute theoretical limit
+   - No practical system can exceed this without errors
+   - Guides modulation/coding design
 
 ### Visual Representation
 
 ```mermaid
 graph LR
     subgraph "Shannon Capacity"
-    B[Bandwidth<br/>B] -->|"Input"| CAP[Capacity Formula]
+    B[Bandwidth<br/>W] -->|"Input"| CAP[Capacity Formula]
     SNR[SNR] --> CAP
     CAP -->|"Output"| C[Max Data Rate<br/>C bits/s]
     end
@@ -604,7 +621,7 @@ $$C \approx 6.66 \text{ Mbps}$$
 
 ### Limitations
 
-The Shannon capacity assumes:
+Shannon capacity assumes:
 - Perfect channel coding (optimal codes)
 - AWGN (only white Gaussian noise)
 - Perfect knowledge of channel at transmitter/receiver
@@ -621,6 +638,7 @@ In practice, real systems operate **below** this limit due to:
 3. **Power-limited**: Capacity grows logarithmically with SNR
 4. **Guides design**: Determines tradeoff between B, power, and rate
 5. **Practical goal**: Get as close as possible to Shannon limit
+6. **Coding enables** reliable communication at rates approaching limit
 
 ---
 
