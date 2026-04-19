@@ -11,6 +11,8 @@ dg-publish: true
 
 # Fading in Wireless Communications - Theory
 
+See: [[Fading]]
+
 ---
 
 ## What is Fading?
@@ -25,22 +27,11 @@ Unlike wired channels, wireless signals don't travel along a single clean path. 
 
 ### 1. Multipath Propagation
 
-The transmitted signal reaches the receiver via multiple paths, each with different:
-
-- **Path length** → different time delays
-- **Phase** → constructive or destructive interference
-- **Amplitude** → due to reflection, diffraction, scattering
-
-```
-Transmitter
-     │
-     ├─── Path 1 (Direct) ──────────┐
-     ├─── Path 2 (Building bounce) ──┼──> Receiver
-     ├─── Path 3 (Ground reflection)─┤
-     └─── Path 4 (Tree scatter) ────┘
-```
+See: [[Multipath Propagation]]
 
 ### 2. Relative Motion (Doppler Effect)
+
+See: [[Doppler Shift]]
 
 When transmitter/receiver moves, each multipath component experiences different Doppler shifts based on the angle of arrival.
 

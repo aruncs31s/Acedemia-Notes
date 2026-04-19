@@ -13,6 +13,30 @@ dg-publish: true
 
 ---
 
+## Table of Contents
+
+1. [Differentiate between flat fading and frequency selective fading](#differentiate-between-flat-fading-and-frequency-selective-fading-1)
+2. [Explain how Doppler spread affects wireless communication performance parameters](#explain-how-doppler-spread-affects-wireless-communication-performance-parameters)
+3. [Describe the different types of fading in a wireless system. How do they impact signal reception?](#describe-the-different-types-of-fading-in-a-wireless-system-how-do-they-impact-signal-reception)
+   - [What is Fading?](#what-is-fading)
+   - [Classification of Fading Types](#classification-of-fading-types)
+   - [1. Large-Scale Fading](#1-large-scale-fading)
+   - [2. Small-Scale Fading](#2-small-scale-fading)
+     - [A. Based on Multipath Time Delay Spread (Frequency Domain Effects)](#a-based-on-multipath-time-delay-spread-frequency-domain-effects)
+     - [B. Based on Doppler Spread (Time Domain Effects)](#b-based-on-doppler-spread-time-domain-effects)
+     - [Impact Summary](#impact-summary)
+     - [Classification Matrix](#classification-matrix)
+4. [What is diversity and how does it reduce fading?](#what-is-diversity-and-how-does-it-reduce-fading) → [[Module 2/Diversity|Diversity]]
+5. [Compare selection combining and maximal ratio combining techniques.](#compare-selection-combining-and-maximal-ratio-combining-techniques) → [[Module 2/Diversity|SC/MRC]]
+6. [Discuss the impact of shadowing on wireless channel performance. (7 Marks)](#discuss-the-impact-of-shadowing-on-wireless-channel-performance-7-marks) → [[Module 2/Path Loss|Shadowing]]
+7. [A wireless signal has a Doppler shift of 150 Hz when moving at 60 km/h. Determine the original frequency of the signal. (7 Marks)](#a-wireless-signal-has-a-doppler-shift-of-150-hz-when-moving-at-60-kmh-determine-the-original-frequency-of-the-signal-7-marks) → [[Module 2/Doppler Shift|Doppler Calc]]
+8. [Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)](#define-the-shannon-capacity-theorem-in-the-context-of-wireless-communication-how-does-it-set-the-upper-limit-for-data-transmission-in-a-given-channel-7-marks) → [[Module 2/Shannon Capacity| capacity]]
+9. [How does fading occur? Derive the expression for Doppler shift.](#how-does-fading-occur-derive-the-expression-for-doppler-shift)
+   - [Multipath Propagation](#multipath-propagation-1)
+   - [Derivation of the Doppler Shift Expression](#derivation-of-the-doppler-shift-expression)
+
+---
+
 ## Differentiate between flat fading and frequency selective fading
 
 **Answer:** [[May 2024.md#13. (a) Small scale fading: definition, types, flat vs frequency-selective (6 Marks)]]
@@ -88,6 +112,8 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 ### What is Fading?
 
+See: [[Fading]]
+
 **Fading** is the time variation of received signal power caused by changes in the transmission medium or propagation paths. In wireless systems, fading is broadly categorized into:
 
 1. **Large-Scale Fading**
@@ -95,19 +121,7 @@ Doppler spread $B_D$ (or maximum Doppler frequency $f_m$) directly impacts wirel
 
 ### Multipath Propagation ( Causes of Fading)
 
-```mermaid
-graph LR
-    TX[TX] -->|Path 1 Direct| RX
-    TX -->|Path 2 Building| RX
-    TX -->|Path 3 Ground| RX
-    TX -->|Path 4 Trees| RX
-    
-    RX -->|Signal Sum| FADE[Fading]
-    
-    style FADE fill:#ff6b6b,color:#fff
-```
-
-Multiple signal paths arrive at receiver with different delays and phases → constructive/destructive interference → fading.
+See: [[Multipath Propagation]]
 
 ### Classification of Fading Types
 
@@ -141,6 +155,9 @@ Represents the variation of signal strength over **large distances** (typically 
 | Type | Cause | Impact |
 |------|-------|--------|
 | **Path Loss** | Signal spreads over larger area with distance | Continuous, predictable drop in average received power |
+
+See: [[Path Loss]]
+
 | **Shadowing Effect** | Obstructed by buildings, hills, mountains | Long-term fluctuations depending on position |
 
 **Distribution:** Log-normal
@@ -405,28 +422,62 @@ graph TD
 
 ## Discuss the impact of shadowing on wireless channel performance. (7 Marks)
 
-### What is Shadowing?
+### Definition
 
-**Shadowing** is a **large-scale fading** effect caused by large obstacles (buildings, hills, trees) blocking the signal path between transmitter and receiver.
+**Shadowing** is the **deviation** of a received electromagnetic signal's power from its expected average value. It is a form of **large-scale fading** that occurs when large terrain features or obstacles—such as buildings, hills, mountains, or trees—block or obstruct the direct propagation path between the transmitter and the receiver.
 
-Unlike path loss which is deterministic with distance, shadowing is **random** due to varying obstacle positions.
+Unlike path loss which varies **predictably** with distance (following a dⁿ law), shadowing is **random** and depends on the specific obstacles in the environment.
 
-### Impact on Wireless Channel Performance
+---
 
-| Aspect | Impact |
-|--------|--------|
-| **Signal Strength** | Random attenuation beyond path loss predictions |
-| **Coverage** | Cell edges experience unpredictable coverage holes |
-| **SINR** | Reduced signal-to-interference-plus-noise ratio |
-| **Capacity** | Reduced in shadowed areas |
-| **Handoff** | Triggers unnecessary handoffs |
+### Detailed Impact on Wireless Channel Performance
 
-### Distribution
+#### 1. Signal Strength Reduction
+- Acts as a primary form of **large-scale fading**
+- Causes significant reduction in overall signal strength when the direct path is blocked
+- Additional attenuation beyond what path loss models predict
+- Can cause 10-20+ dB of signal loss
 
-Shadowing follows **log-normal distribution**:
+#### 2. Power Fluctuations
+- Received signal power experiences **large fluctuations** depending on:
+  - Geographical position of the receiver
+  - Radio frequency being used
+  - Size and density of obstructing obstacles
+- These fluctuations are experienced on **local-mean powers** (short-term averages used to separate shadowing from rapid multipath fading)
+
+#### 3. Slow Fading
+- Shadowing is the direct cause of **slow fading**
+- Unlike multipath fading which happens rapidly (fractions of a second), shadow fading **lasts for multiple seconds or minutes**
+- This is a much **slower time-scale phenomenon**
+
+#### 4. Loss of Signal-to-Noise Ratio (SNR)
+- The ultimate performance impact of slow fading induced by shadowing is a **loss of SNR**
+- This **degrades the reliability** of the communication link
+- Can lead to call drops, data errors, or connection loss
+
+#### 5. Coverage Issues
+- Creates **coverage holes** or dead zones in shadowed regions
+- Cell edges become unpredictable
+- Harder to plan cell boundaries
+
+#### 6. Impact on System Design
+- Must design **link budget margins** to combat shadowing (typically 10-20 dB)
+- Affects handoff decisions - may trigger unnecessary handoffs
+- Reduces effective cell capacity in shadowed areas
+
+---
+
+### Statistical Modeling
+
+Because the mean envelope level of the signal becomes a **random variable** due to these shadow variations, channel performance models must account for it:
+
 $$P_{dB} \sim \mathcal{N}(\mu, \sigma^2)$$
 
-In dB scale, signal power = mean path loss + Gaussian random variable.
+Where:
+- $\mu$ = mean path loss (dB)
+- $\sigma$ = standard deviation (typically 4-12 dB for urban environments)
+
+**Distribution**: Log-normal (based on empirical observations)
 
 ### Visual Representation
 
@@ -454,10 +505,12 @@ graph LR
 
 ### Comparison: Path Loss vs Shadowing
 
+See: [[Path Loss]]
+
 | Property | Path Loss | Shadowing |
 |----------|----------|-----------|
 | **Scale** | Deterministic with distance | Random position-dependent |
-| **Variations** | Predictable (dⁿ law) | Unpredictable (log-normal) |
+| **Variations** | Predictable (d^n law) | Unpredictable (log-normal) |
 | **Rate** | Slow, gradual | Rapid position changes |
 | **Solution** | Cell planning | Margin + diversity |
 
@@ -502,6 +555,194 @@ $$f_c = 2.7 \times 10^9 \text{ Hz} = 2.7 \text{ GHz}$$
 ### Answer
 
 The original carrier frequency is **2.7 GHz**.
+
+---
+
+## Define the Shannon capacity theorem in the context of wireless communication. How does it set the upper limit for data transmission in a given channel? (7 Marks)
+
+See: [[Module 2/Shannon Capacity|Shannon Capacity Note]]
+
+**Answer:** [[October 2023 PYQ.md#14. (b) Inference of AWGN channel capacity]]
+
+### Definition
+
+**Shannon's capacity theorem** characterizes the **fundamental limits** of reliable communication over a noisy channel.
+
+**Historical Context:** Before Shannon formulated information theory in 1948, it was widely believed that the only way to achieve reliable communication (making error probability as small as desired) was to drastically reduce data rate (e.g., repeating the same message over and over). **Shannon proved this incorrect** - through intelligent coding, a system can communicate at a strictly positive data rate while maintaining an arbitrarily small error probability.
+
+### The Channel Capacity Limit
+
+The theorem establishes a **maximal rate**, known as the **channel capacity (C)**, at which highly reliable communication can occur:
+
+$$\boxed{C = B \log_2(1 + \text{SNR})}$$
+
+**Key Principle:** If a system attempts to transmit data at a rate **exceeding** channel capacity, it becomes **fundamentally impossible** to drive error probability to zero. The channel capacity serves as the **absolute upper limit** for reliable data transmission.
+
+### Relationship to Bandwidth and Power
+
+For a standard **Additive White Gaussian Noise (AWGN)** wireless channel:
+
+$$C = W \log_2\left(1 + \frac{\bar{P}}{N_0 W}\right)$$
+
+Where:
+- $W$ = Channel bandwidth (Hz)
+- $\bar{P}$ = Average received power
+- $N_0$ = Noise power spectral density
+
+| Parameter | Physical Meaning |
+|-----------|--------------|
+| $W$ or $B$ | Available spectrum |
+| $\bar{P}$ | Signal power |
+| $N_0$ | Noise floor |
+| $C$ | Maximum achievable data rate |
+
+### Spectral Efficiency
+
+The limit can be expressed as **maximum achievable spectral efficiency** based on SNR:
+
+$$\eta = \log_2(1 + \text{SNR}) \text{ bits/s/Hz}$$
+
+### Key Implications
+
+1. **Bandwidth Tradeoff**
+   - Doubling bandwidth roughly doubles capacity (linear relationship with B)
+   - Each additional 3 dB SNR adds approximately $B$ bits/s at high SNR
+
+2. **Power Tradeoff**
+   - Capacity grows logarithmically with power (diminishing returns)
+   - At high SNR: need 3 dB more power to increase capacity by $B$ bits/s
+   - At low SNR: $C \approx \frac{B}{\ln 2}\text{SNR}$ (nearly linear!)
+
+3. **Fundamental Limit**
+   - $C$ is the absolute theoretical limit
+   - No practical system can exceed this without errors
+   - Guides modulation/coding design
+
+### Visual Representation
+
+```mermaid
+graph LR
+    subgraph "Shannon Capacity"
+    B[Bandwidth<br/>W] -->|"Input"| CAP[Capacity Formula]
+    SNR[SNR] --> CAP
+    CAP -->|"Output"| C[Max Data Rate<br/>C bits/s]
+    end
+    
+    style CAP fill:#4ecdc4,color:#fff
+```
+
+### Practical Example
+
+For a channel with $B = 1$ MHz and $\text{SNR} = 100$ (20 dB):
+
+$$C = 1 \times 10^6 \times \log_2(1 + 100)$$
+$$C = 1 \times 10^6 \times \log_2(101)$$
+$$C = 1 \times 10^6 \times 6.658$$
+$$C \approx 6.66 \text{ Mbps}$$
+
+### Limitations
+
+Shannon capacity assumes:
+- Perfect channel coding (optimal codes)
+- AWGN (only white Gaussian noise)
+- Perfect knowledge of channel at transmitter/receiver
+
+In practice, real systems operate **below** this limit due to:
+- Practical coding limitations
+- Implementation complexity
+- Other interference
+
+### Key Takeaways
+
+1. **Fundamental limit** - no system can exceed without errors
+2. **Bandwidth-limited**: Capacity grows linearly with B
+3. **Power-limited**: Capacity grows logarithmically with SNR
+4. **Guides design**: Determines tradeoff between B, power, and rate
+5. **Practical goal**: Get as close as possible to Shannon limit
+6. **Coding enables** reliable communication at rates approaching limit
+
+---
+
+---
+
+## How does fading occur? Derive the expression for Doppler shift.
+
+**Fading** is the random variation in a signal's amplitude, phase, or angle of arrival as it travels through a wireless communication channel.
+
+It occurs primarily due to two physical phenomena:
+
+### 1. Multipath Propagation
+
+See: [[Multipath Propagation]]
+
+### 2. Relative Motion and Environmental Changes
+
+When the transmitter, receiver, or surrounding objects are in motion, the relative phases of the arriving multipath components change constantly. This continuous shifting causes the received signal's amplitude to fluctuate rapidly over short distances or time periods — **small-scale fading**. Large terrain features can physically block radio waves, causing slower fluctuations known as **shadowing** or **large-scale fading**.
+
+```mermaid
+graph LR
+    TX[TX] -->|"Signal"| A
+    A -->|"r(t) = r0 + vt"| RX[RX<br/>Moving]
+    RX -->|"Phase shifts"| P[Signal<br/>Amplitude<br/>Fluctuates]
+    
+    P -->|"Rapid"| F[Fading]
+    P -->|"Slow"| S[Shadowing]
+    
+    style TX fill:#4ecdc4,color:#fff
+    style RX fill:#f0932b,color:#fff
+    style F fill:#eb4d4b,color:#fff
+    style S fill:#f9ca24,color:#fff
+```
+
+```mermaid
+graph TD
+    A1["x(t) = cos(2πft)"] -->|"r(t) = r0 + vt"| A2["y(t) ~ cos(2πf(t - r/c))"]
+    A2 -->|"Expand"| A3["y(t) ~ cos(2πf(1 - v/c)t)"]
+    A3 -->|"Frequency shift"| A4["fd = -f(v/c)"]
+    A4 -->|"Using c = fλ"| A5["fd = v/λ"]
+    A5 -->|"Angle θ"| A6["fd = fmax cosθ"]
+    
+    style A1 fill:#4ecdc4,color:#fff
+    style A4 fill:#f0932b,color:#fff
+    style A6 fill:#4ecdc4,color:#fff
+```
+
+---
+
+### Derivation of the Doppler Shift Expression
+
+See: [[Doppler Shift]]
+
+The Doppler shift arises because the relative motion between the transmitter and receiver changes the apparent frequency of the signal over time.
+
+**Step 1:** Assume a fixed transmit antenna sends a sinusoidal signal with frequency $f$:
+$$x(t) = \cos(2\pi ft)$$
+
+**Step 2:** A receive antenna moves away from the transmitter at velocity $v$. The distance is $r(t) = r_0 + vt$.
+
+**Step 3:** The signal experiences time-varying propagation delay $r(t)/c$:
+$$y(t) \propto \cos\left(2\pi f\left(t - \frac{r_0 + vt}{c}\right)\right)$$
+
+**Step 4:** Expand:
+$$y(t) \propto \cos\left(2\pi f\left(1 - \frac{v}{c}\right)t - \frac{2\pi fr_0}{c}\right)$$
+
+The new apparent frequency is $f\left(1 - \frac{v}{c}\right)$.
+
+**Step 5:** The Doppler shift is:
+$$f_d = -f\frac{v}{c}$$
+
+Using $c = f\lambda$:
+$$\boxed{f_m = \frac{v}{\lambda}}$$
+
+**Step 6:** For a signal path at angle $\theta$ relative to direction of motion:
+$$\boxed{f_d = \frac{v}{\lambda}\cos\theta = f_m\cos\theta}$$
+
+Where:
+- $v$ = velocity (m/s)
+- $\lambda$ = wavelength
+- $f_c$ = carrier frequency
+- $c$ = speed of light (3×10⁸ m/s)
+- $f_m$ = maximum Doppler shift
 
 ---
 
