@@ -503,11 +503,21 @@ where $x[n]$ is the OFDM signal after IFFT.
 ### Important Relationships
 
 - Bandwidth efficiency with CP: $\eta = \frac{N}{N+N_{cp}}$
-- For 25% CP overhead: $\eta = 80%$
+- For 25% CP overhead: $\eta$ = 80%$
 - Typical subcarrier spacing: 10-100 kHz
 - Typical CP duration: 1-4 μs
 
 
+### Determine the required average SNR ($\overline{\gamma}_b$) for BPSK modulation in slow Rayleigh fading such that for 95% of the time, the probability of error $P_b < 10^{-4}$:
 
+**1. Find the target SNR threshold ($\gamma_0$)** For BPSK modulation in an AWGN channel, a target bit error rate (BER) of $10^{-4}$ is achieved at an SNR of approximately $8.5 \text{ dB}$. Converting this to a linear scale: $\gamma_0 = 10^{0.85}$.
+
+**2. Determine the Outage Probability ($P_{out}$)** Since the system must maintain this error rate for 95% of the time, the acceptable outage probability is 5%. $P_{out} = 0.05$.
+
+**3. Calculate the Average SNR ($\overline{\gamma}_b$)** Using the outage probability formula for Rayleigh fading ($P_{out} = 1 - e^{-\gamma_0/\overline{\gamma}_b}$), we rearrange to solve for the average SNR: $$\overline{\gamma}_b = \frac{\gamma_0}{-\ln(1 - P_{out})}$$ $$\overline{\gamma}_b = \frac{10^{0.85}}{-\ln(1 - 0.05)}$$ $$\overline{\gamma}_b \approx 138 \text{ (linear scale)}$$ Converting back to decibels, the required average SNR is **$21.4 \text{ dB}$**.
+
+_(Note: Your October 2023 exam features this exact problem but asks for 90% of the time instead of 95%, so you would just swap $0.05$ for $0.10$ in the final equation)._
+
+Since we've hit the major concepts in Module 3, are you ready to jump into Module 4? We can start by looking at **Multiple Access Techniques (FDMA/TDMA/CDMA)** or the difference between **Diversity and Equalization**.
 
 
