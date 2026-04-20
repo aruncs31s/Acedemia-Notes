@@ -1345,3 +1345,48 @@ Here is the comparison between the two combining techniques for your 7-mark answ
 - **How it works:** It weights each branch by its channel gain and constructively combines the signals from all branches together.
 - **Pros & Cons:** It provides the maximum possible diversity gain and optimal performance. The downside is high complexity, as all RF chains must remain active to process the signals.
 
+---
+
+## Differentiate between ionospheric and space wave propagation. (7 Marks)
+
+**Answer:** [[Module 5/Module 5 PYQ]] (Note: This is from Module 5 - Propagation)
+
+### Ionospheric (Sky Wave) vs Space Wave Propagation
+
+| Aspect | Space Wave Propagation | Ionospheric (Sky Wave) Propagation |
+|--------|----------------------|-----------------------------------|
+| **Atmosphere Layer** | Troposphere (~16 km) | Ionosphere (50-400 km) |
+| **Frequency Band** | > 30 MHz (VHF, UHF) | 2-30 MHz (HF) |
+| **Range** | Limited to optical horizon (~100 km) | Global (thousands of km) |
+| **Mechanism** | Direct LOS + ground reflection | Refraction from ionospheric layers |
+| **Dependence** | Antenna height, atmospheric conditions | Time of day, season, solar activity |
+| **Applications** | FM, TV, Radar, Microwave links | Long-distance radio communication |
+
+### Visual
+
+```mermaid
+graph TD
+    subgraph "Space Wave"
+    TX1[TX] -->|LOS| RX1[RX]
+    TX1 -->|Ground Ref| RX1
+    end
+    
+    subgraph "Ionospheric"
+    TX2[TX] -->|Up to Ionosphere| ION[Ionosphere]
+    ION -->|Refract back| RX2[RX]
+    end
+    
+    TX1 -.- TX2
+    RX1 -.- RX2
+```
+
+### Summary
+
+| Feature | Space Wave | Ionospheric |
+|---------|-----------|--------------|
+| **Propagation mode** | Line-of-sight | Sky wave reflection |
+| **Frequency** | VHF, UHF (>30 MHz) | HF (2-30 MHz) |
+| **Distance** | ~100 km (horizon) | Thousands of km |
+| **Dielectric** | Troposphere | Ionosphere (charged particles) |
+| **Day/night** | No effect | Major effect (ionization)
+
