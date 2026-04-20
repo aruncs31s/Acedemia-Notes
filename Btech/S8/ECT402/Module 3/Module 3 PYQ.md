@@ -1,6 +1,9 @@
 ---
 banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 banner_y: 0.116
+tags:
+  - pyq
+  - ect402
 ---
 # Module 3 PYQ - OFDM Systems
 
@@ -525,6 +528,8 @@ where $x[n]$ is the OFDM signal after IFFT.
 
 
 ### Determine the required average SNR ($\overline{\gamma}_b$) for BPSK modulation in slow Rayleigh fading such that for 95% of the time, the probability of error $P_b < 10^{-4}$:
+
+- [ ] Practice this 📅 2026-04-20 
 
 **1. Find the target SNR threshold ($\gamma_0$)** For BPSK modulation in an AWGN channel, a target bit error rate (BER) of $10^{-4}$ is achieved at an SNR of approximately $8.5 \text{ dB}$. Converting this to a linear scale: $\gamma_0 = 10^{0.85}$.
 
