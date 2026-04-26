@@ -26,3 +26,10 @@ tags:
 	- If $f''(x) < 0$ (negative), the point is a **local maximum**.
 	- If $f''(x) = 0$, it could be a point of inflection (neither maximum nor minimum), meaning you must check the next non-zero higher-order derivative.
 
+## KKT (Karush-Kuhn-Tucker) Conditions
+For constrained optimization problems, the KKT conditions provide a way to find optimal solutions. They are a generalization of the method of Lagrange multipliers and include both necessary and sufficient conditions for optimality. The KKT conditions are as follows:
+- **Stationarity:** The gradient of the Lagrangian must be zero at the optimal point.
+- **Primal Feasibility:** The constraints must be satisfied at the optimal point.
+- **Dual Feasibility:** The Lagrange multipliers associated with the inequality constraints must be non-negative.
+- **Complementary Slackness:** For each inequality constraint, either the constraint is active (equal to zero) or the corresponding Lagrange multiplier is zero.
+
