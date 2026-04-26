@@ -6,13 +6,12 @@ tags:
 # ALL PYQ
 
 ### Q1
-- Explain the necessary and sufficient conditions for identifying **local maxima** and **minima** of a function with a single input variable and no constraints
+- Explain the necessary and sufficient conditions for identifying **local maxima** and **minima** of a function with **a single input variable and no constraints**
 
 To identify the local maxima and minima of a function $f(x)$ with a single input variable and no constraints, you evaluate the **necessary and sufficient conditions** using calculus.
 
-Here is the step-by-step mathematical explanation:
 
-**1. The Necessary Condition** The necessary condition states that if a function has a relative maximum or minimum at a point $x^*$, its first derivative evaluated at that point must be zero.
+**1. The Necessary Condition** The necessary condition states that if a function has a relative maximum or minimum at a point $x^*$, **its first derivative evaluated at that point must be zero**.
 
 - **Step:** Find the first derivative of the objective function $\frac{df(x)}{dx}$ (or $f'(x)$).
 - **Step:** Set the first derivative to zero ($f'(x) = 0$) and solve for $x$ to find your stationary point(s), denoted as $x^*$.
