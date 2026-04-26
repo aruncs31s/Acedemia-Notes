@@ -9,7 +9,7 @@ tags:
 
 
 **1. Formulating an Optimization Problem** The goal of optimization is to find the conditions that give the maximum or minimum value of a function. To formulate a problem, you must follow these steps:
-
+***steps:***
 - **Define the Design Variables ($X$):** These are the quantities that you can change or control in the design process.
 - **Define the Objective Function ($f(x)$):** This is the scalar criterion you want to optimize—such as maximizing mechanical efficiency or profit, or minimizing distance, cost, or weight.
 - **Define the Constraints:** These are the restrictions that must be satisfied for the design to be acceptable. Constraints can be _behavioral_ (functional limitations on the system's performance) or _geometric/side constraints_ (physical limitations on the variables themselves, like material availability or transportability).
