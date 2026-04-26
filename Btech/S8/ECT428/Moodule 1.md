@@ -6,7 +6,11 @@ tags:
 ---
 
 # Module 1
-
+  - [ ] Engineering applications of optimization
+  - [ ] Formulating design problems as mathematical programming
+  - [ ] Classifying problems (linear, convex, non-convex)
+  - [ ] Classical optimization for unconstrained (single & multivariable)
+  - [ ] Constrained problems & KKT conditions
 
 **1. Formulating an Optimization Problem** The goal of optimization is to **find the conditions that give the maximum or minimum value of a function**. **To formulate a problem**, you must follow these steps:
 - **Define the Design Variables ($X$):** These are the quantities that you can change or control in the design process.
