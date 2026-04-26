@@ -7,7 +7,7 @@ tags:
 
 ## Semester 8
 - [[Secure Communication]]
-- [[Hill Cypher]]
+- [[Hill Cypher]] A
 
 ## Semester 7
 - [[ISE]]

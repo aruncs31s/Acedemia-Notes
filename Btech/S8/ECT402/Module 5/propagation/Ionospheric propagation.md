@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 tags:
   - ect402
   - propagation
@@ -86,4 +88,3 @@ The ionosphere consists of several layers:
 1. **Solar Activity**: Sunspots and solar flares affect ionosphere density
 2. **Time of Day**: D layer disappears at night, E/F layers change
 3. **Season**: Atmospheric conditions vary with seasons
-4. **Geographic Location**: Magnetic fields affect propagation paths

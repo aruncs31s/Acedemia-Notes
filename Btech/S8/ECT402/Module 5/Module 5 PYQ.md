@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 tags:
   - ect402
   - propagation
@@ -16,6 +18,8 @@ date: 2026-04-17
 ---
 
 # Module 5 - Previous Year Questions
+
+> See: [[PYQ Index]] | [[most_asked_questions]]
 
 > 📚 Related: [[Ionospheric propagation|Ionospheric Propagation]] | [[Space wave and surface wave|Space Wave]] | [[Ground wave propagation|Ground Wave]] | [[Critical Frequency|Critical Frequency]] | [[Maximum Usable Frequency|MUF]]
 
@@ -222,4 +226,3 @@ $$f_{cr} \approx 10.02 \times 10^7 \text{ Hz} = \boxed{100.2 \text{ MHz}}$$
 > - [[Critical Frequency|Critical Frequency]]
 > - [[Maximum Usable Frequency|MUF]]
 > - [[Virtual Height|Virtual Height]]
-> - [[Ionosphere Layers|Ionosphere Layers]]

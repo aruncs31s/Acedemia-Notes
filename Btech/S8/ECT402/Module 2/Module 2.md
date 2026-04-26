@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Module_2
 aliases: []
 tags:
@@ -6,83 +8,65 @@ tags:
   - btech
   - s8
   - ect402
+  - module
 dg-publish: true
 ---
 # Module 2
 
 ## Module 2 Syllabus
 
-> [[#2.1 Path Loss and Shadowing]]
-- [ ] Free space path loss
-- [ ] Two-Ray model
-- [ ] Shadowing
-> [[#2.2 Statistical Multipath Channel Models]]
-- [ ] Time-varying channel impulse response
-- [ ] Narrowband fading
-- [ ] Wideband fading models
-- [ ] Delay spread and coherence bandwidth
-- [ ] Doppler spread and coherence time
-- [ ] Flat fading vs frequency selective fading
-- [ ] Slow fading vs fast fading
-- [ ] Discrete-time model
+> [[#2.1 Path Loss and Shadowing]] → [[Module 2/Path Loss|Path Loss Note]]
+- [ ] Free space path loss → [[Module 2/Path Loss#free-space-path-loss-fspl|FSPL]]
+- [ ] Two-Ray model → [[Module 2/2 Ray Model|Two-Ray]]
+- [ ] Shadowing → [[Module 2/Path Loss#shadowing|Shadowing]]
 
-> [[#2.3 Capacity of Wireless Channels]]
-- [ ] Review of capacity in AWGN
-- [ ] Capacity of flat fading channel – Ergodic capacity
-- [ ] Capacity with outage
-- [ ] Capacity with CSI-R
+> [[#2.2 Statistical Multipath Channel Models]] → [[Module 2/Statistical Multipath Channel Models|Channel Models]]
+- [ ] Time-varying channel impulse response → [[Module 2/Statistical Multipath Channel Models|time-varying]]
+- [ ] Narrowband fading → [[Module 2/Fading|Narrowband]]
+- [ ] Wideband fading models → [[Module 2/Statistical Multipath Channel Models#wideband|wideband]]
+- [ ] Delay spread and coherence bandwidth → [[Module 2/Coherence#delay-spread|Delay Spread]]
+- [ ] Doppler spread and coherence time → [[Module 2/Doppler Shift|Doppler]] → [[Module 2/Coherence#coherence-time|Coherence Time]]
+- [ ] Flat fading vs frequency selective fading → [[Module 2/Fading#flat-vs-frequency-selective|Flat vs Freq-Selective]]
+- [ ] Slow fading vs fast fading → [[Module 2/Fading#classification-matrix|Slow vs Fast]]
+- [ ] Discrete-time model → [[Module 2/Statistical Multipath Channel Models#discrete-time|Discrete-Time]]
+
+> [[#2.3 Capacity of Wireless Channels]] → [[Module 2/Shannon Capacity|Capacity]]
+- [ ] Review of capacity in AWGN → [[Module 2/Shannon Capacity#formula|AWGN]]
+- [ ] Capacity of flat fading channel – Ergodic capacity → [[Module 2/Shannon Capacity|ergodic]]
+- [ ] Capacity with outage → [[Module 2/Shannon Capacity|outage]]
+- [ ] Capacity with CSI-R → [[Module 2/Shannon Capacity|csi-r]]
 > Derivations of capacity formulae are not required; only expressions, computations, and significance required.
 
 ---
 
-## Path Loss
+## Important Topics
 
-**Formula:**
+- **Fading Types:** → [[Module 2/Fading|Fading Types]]
+- **Channel Parameters:** → [[Module 2/Coherence|Channel Parameters]] (Doppler, Delay spread, Coherence BW/Time)
+- **Shadowing:** → [[Module 2/Path Loss#shadowing|Shadowing]]
+- **Information Theory:** → [[Module 2/Shannon Capacity|Shannon Capacity]]
 
-$$
-PL(dB) = 20\log_{10}\left( \frac{4\pi d}{\lambda} \right)
-$$
-
-### Friis Transmission Formula
-
-$$
-P_{r} = P_{t} G_{t} G_{r} \left( \frac{\lambda}{4 \pi d} \right)^2
-$$
-
-**With loss factor:**
-$$
-P_{r} = \frac{P_{t} G_{t} G_{r} \lambda^2}{(4 \pi d)^2 L}
-$$
 
 ---
 
 ## Free Space Propagation Model
 
-Electromagnetic signals traveling through wireless channels experience fading due to various effects. However, in some cases, transmission occurs with a direct line of sight, such as in satellite communication.
+See: [[Module 2/Path Loss#free-space-path-loss-fspl|Free Space Path Loss]]
 
-**Key Points:**
-- Used to predict received signal strength when the transmitter and receiver have a clear, unobstructed line-of-sight path between them.
-- Satellite communication systems and microwave line-of-sight radio links typically undergo free space propagation.
-
----
+- Used to predict received signal strength with clear line-of-sight
+- Satellite communication and microwave LOS links
 
 ## Basic Methods of Propagation
-- **Reflection:** Occurs when a signal bounces off a surface.
-- **Diffraction:** Occurs when a signal bends around obstacles.
-- **Scattering:** Occurs when a signal is dispersed due to small objects or rough surfaces.
-- These phenomena, along with line-of-sight (LoS) communication, are fundamental to mobile communication systems.
+
+See: [[Module 2/Path Loss|Path Loss]]
+
+- **Reflection:** Signal bounces off surfaces
+- **Diffraction:** Signal bends around obstacles
+- **Scattering:** Signal dispersed by small objects/rough surfaces
+
+These + LoS are fundamental to mobile communication.
 
 ---
-
-### Reflection
-- If the medium on which the electromagnetic wave is incident is a dielectric, some energy is reflected back and some is transmitted.
-- If the medium is a perfect conductor, all energy is reflected back to the first medium.
-- The amount of energy reflected depends on the polarization of the electromagnetic wave.
-
 
 ## 2.1 Path Loss and Shadowing
 
-*signal gets weaker the further it travels from the transmitter to the receiver*
-
-#### **Free Space Path Loss (FSPL)**
-describes the absolute best-case scenario for how a signal fades when it travels through a ***perfect vacuum with absolutely nothing in its way***—no buildings, no trees, and no air interference
