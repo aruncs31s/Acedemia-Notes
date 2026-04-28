@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 tags:
   - ect402
   - propagation
@@ -28,7 +30,7 @@ alias: [MUF, Maximum Usable Frequency]
 - Frequencies **above MUF** will pass through the ionosphere into space (no reflection)
 - Frequencies **below MUF** will be reflected back to Earth
 - [Effect:: **Signal loss beyond MUF**]
-  If a signal is transmitted at a frequency higher than the MUF, it will not reflect back to Earth; instead, it will pass straight through the ionospheric layer into the next layer or out into outer space, resulting in a loss of communication.
+  If a signal is hitransmitted at a frequency higher than the MUF, it will not reflect back to Earth; instead, it will pass straight through the ionospheric layer into the next layer or out into outer space, resulting in a loss of communication.
 
 ## Relationship to Critical Frequency
 
@@ -110,4 +112,3 @@ Where:
 - [[Critical Frequency|Critical Frequency]]
 - [[Ionosphere Layers|Ionosphere Layers]]
 - Virtual Height
-- Skip Distance

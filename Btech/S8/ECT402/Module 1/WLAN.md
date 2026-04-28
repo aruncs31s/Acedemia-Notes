@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 tags:
   - wireless_communication
   - wlan
@@ -25,4 +27,3 @@ tags:
 
 - **Mobility:** You can move around freely without losing your connection.
 - **Scalability:** Adding a new device to the network is as simple as typing in a password, rather than running a new physical cable through the walls.
-- **Device Support:** Many modern devices (especially mobile phones and small electronics) don't even have ports for wired connections anymore

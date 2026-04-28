@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Path Loss
 tags:
   - academics
@@ -13,13 +15,28 @@ dg-publish: true
 
 **Path Loss** = Signal attenuation as it travels from transmitter to receiver through free space.
 
+*See:* [[Module 2/2 Ray Model|Two-Ray Model]]
+
 ---
 
 ## Free Space Path Loss (FSPL)
 
+This model predicts the received signal strength when there is a **clear,** **unobstructed line-of-sight path between the transmitter and receiver**, such as in satellite communications.
+- It describes the absolute best-case scenario for how a signal travels through a perfect vacuum without any obstacles like buildings or trees.
+
+In this model, the signal's power decreases proportionally to the square of the distance ($d^2$) and the square of the frequency ($f^2$). The standard Friis transmission formula for calculating received power ($P_r$) is:
+
+$$P_r = \frac{P_t G_t G_r \lambda^2}{(4\pi d)^2 L}$$
+
+_(Where $P_t$ is transmit power, $G_t$ and $G_r$ are the antenna gains, $\lambda$ is the wavelength, $d$ is distance, and $L$ is the system loss factor)_.
+
+---
+Calculating path loss in decibels (dB):
+
 $$PL_{dB} = 20\log_{10}\left(\frac{4\pi d}{\lambda}\right)$$
 
 Or in terms of frequency:
+
 $$PL_{dB} = 20\log_{10}(d) + 20\log_{10}(f) - 147.55$$
 
 ---
@@ -42,24 +59,6 @@ Where:
 
 ---
 
-## Two-Ray Model
-
-For ground-reflected signals (near ground):
-
-$$P_r = P_t G_t G_r \frac{h_t^2 h_r^2}{d^4}$$
-
-- $h_t$ = Transmit antenna height
-- $h_r$ = Receive antenna height
-
-**Breakpoint distance:**
-$$d_{bp} = \frac{4 h_t h_r}{\lambda}$$
-
-| Region | Path Loss Exponent |
-|--------|-------------------|
-| Free space (d < d_bp) | 2 |
-| Two-ray (d > d_bp) | 4 |
-
----
 
 ## Shadowing
 
@@ -68,16 +67,14 @@ $$d_{bp} = \frac{4 h_t h_r}{\lambda}$$
 - **Distribution:** Log-normal
 - **σ (typical):** 4-12 dB (urban)
 
-See: [[Fading]] - Large-scale fading
+See: [[Fading Theory]] - Large-scale fading
 
 ---
 
 ## Related Notes
 
 - [[Module 2/Module 2]] - Syllabus
-- [[Module 2/Fading]] - Large-scale fading (shadowing)
+- [[Fading Theory]] - Large-scale fading (shadowing)
 - [[Important Topics/Path loss and Shadowing]] - Brief overview
 - [[Module 2 PYQ]] - PYQs on path loss
-- [[Fading]] - Large-scale fading
 - [[Doppler Shift]] - Time variation
-- [[Shannon Capacity]] - Capacity theorem

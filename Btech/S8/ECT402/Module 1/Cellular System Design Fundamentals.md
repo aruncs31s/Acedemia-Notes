@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 tags:
   - wireless_communication
   - cellular
@@ -104,4 +106,3 @@ To overcome this spectrum limitation, technocrats and engineers sub-divide the a
 - **Adjacent Cell Allocation:** To further minimize interference, neighboring base stations are always assigned completely different groups of channels.
 - **Frequency Reuse Ratio:** The required distance between co-channel cells (D) relative to the radius of the cells (R) is defined as the frequency reuse ratio (q=D/R). This distance depends on several factors, including the geographical terrain, antenna height, transmitted signal strength, and the number of co-channel cells in the vicinity.
 
-**The primary advantage of frequency reuse is a massive increase in user capacity.** By systematically spacing base stations and reusing the same frequencies over and over again across a geographic region, a cellular system can use a fixed, limited number of channels to serve an arbitrarily large number of subscribers without needing any additional radio spectrum

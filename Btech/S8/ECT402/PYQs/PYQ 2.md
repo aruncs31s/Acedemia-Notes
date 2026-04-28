@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: PYQ_2
 aliases: []
 tags:
@@ -278,4 +280,3 @@ WPAN standards include Bluetooth (IEEE 802.15.1), ZigBee (IEEE 802.15.4), Infrar
 [^20]: **PTS**: Partial Transmit Sequences - PAPR reduction technique using phase rotation of data sub-blocks
 [^21]: **SLM**: Selected Mapping - technique that generates multiple signal representations and selects the best one
 [^22]: **Tone Reservation**: Method reserving specific subcarriers exclusively for PAPR reduction
-[^23]: **Active Constellation Extension**: Technique that extends constellation points outward to reduce signal peaks

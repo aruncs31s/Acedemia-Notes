@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Module_2
 aliases: []
 tags:
@@ -6,6 +8,7 @@ tags:
   - btech
   - s8
   - ect402
+  - module
 dg-publish: true
 ---
 # Module 2
@@ -14,7 +17,7 @@ dg-publish: true
 
 > [[#2.1 Path Loss and Shadowing]] → [[Module 2/Path Loss|Path Loss Note]]
 - [ ] Free space path loss → [[Module 2/Path Loss#free-space-path-loss-fspl|FSPL]]
-- [ ] Two-Ray model → [[Module 2/Path Loss#two-ray-model|Two-Ray]]
+- [ ] Two-Ray model → [[Module 2/2 Ray Model|Two-Ray]]
 - [ ] Shadowing → [[Module 2/Path Loss#shadowing|Shadowing]]
 
 > [[#2.2 Statistical Multipath Channel Models]] → [[Module 2/Statistical Multipath Channel Models|Channel Models]]
@@ -67,4 +70,3 @@ These + LoS are fundamental to mobile communication.
 
 ## 2.1 Path Loss and Shadowing
 
-See: [[Module 2/Path Loss|Path Loss]]

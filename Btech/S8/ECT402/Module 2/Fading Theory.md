@@ -1,4 +1,6 @@
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 id: Fading Theory
 aliases: []
 tags:
@@ -10,8 +12,6 @@ dg-publish: true
 ---
 
 # Fading in Wireless Communications - Theory
-
-See: [[Fading]]
 
 ---
 
@@ -45,6 +45,31 @@ When transmitter/receiver moves, each multipath component experiences different 
 
 ## Types of Fading
 
+```mermaid
+graph TD
+    FADING[Fading] --> LS[Large-Scale]
+    FADING --> SS[Small-Scale]
+
+    LS --> PL[Path Loss]
+    LS --> SH[Shadowing]
+
+    SS --> FREQ[Frequency Domain]
+    SS --> TIME[Time Domain]
+
+    FREQ --> FF[Flat Fading]
+    FREQ --> FSF[Frequency-Selective]
+
+    TIME --> SF[Slow Fading]
+    TIME --> FASTF[Fast Fading]
+
+    style LS fill:#4ecdc4,color:#000
+    style SS fill:#ff6b6b,color:#000
+    style FF fill:#45b7d1,color:#000
+    style FSF fill:#96ceb4,color:#000
+    style SF fill:#f7dc6f,color:#000
+    style FASTF fill:#e74c3c,color:#000
+```
+
 ### Large-Scale Fading
 
 | Feature | Description |
@@ -53,6 +78,9 @@ When transmitter/receiver moves, each multipath component experiences different 
 | **Cause** | Path loss + shadowing |
 | **Model** | Log-normal distribution |
 | **Example** | Signal weakening as you move from city to suburb |
+
+> [!callout] **Why "Large-Scale"?**
+> Because the signal variation happens over **large distances** — typically on the order of **hundreds of wavelengths** (meters to kilometers). You notice this when walking or driving across a city block or moving between cell coverage areas.
 
 **Applications:**
 - Cell radius planning
@@ -66,6 +94,9 @@ When transmitter/receiver moves, each multipath component experiences different 
 | **Cause** | Multipath interference |
 | **Model** | Rayleigh/Rician distribution |
 | **Example** | Signal fluctuating while standing in one spot |
+
+> [!callout] **Why "Small-Scale"?**
+> Because the signal variation happens over **very small distances** — typically on the order of **few wavelengths** (centimeters to meters). You notice this when standing in one spot; the signal fluctuates rapidly due to multipath as objects move around you.
 
 ---
 
@@ -274,6 +305,31 @@ Different frequency components see different channel gains because different mul
 
 ## Fading Classification Summary
 
+```mermaid
+graph TD
+    subgraph "Signal Bandwidth vs Coherence Bandwidth"
+    Bs[Signal Bandwidth<br/>Bs] -->|"Bs < Bc"| FLAT[Flat Fading]
+    Bs -->|"Bs > Bc"| FSF[Frequency<br/>Selective]
+    end
+
+    subgraph "Symbol Duration vs Coherence Time"
+    Ts[Symbol Duration<br/>Ts] -->|"Ts < Tc"| SLOW[Slow Fading]
+    Ts -->|"Ts > Tc"| FAST[Fast Fading]
+    end
+
+    FLAT -->|"Ts < Tc"| SF[Slow + Flat]
+    FLAT -->|"Ts > Tc"| FF[Fast + Flat]
+    FSF -->|"Ts < Tc"| SS[Slow + Freq-Selective]
+    FSF -->|"Ts > Tc"| FS[Fast + Freq-Selective]
+
+    SF -->|"Best Case"| BEST[Best Case:<br/>Slow + Flat]
+    FS -->|"Worst Case"| WORST[Worst Case:<br/>Fast + Freq-Selective]
+
+    style BEST fill:#27ae60,color:#fff
+    style WORST fill:#c0392b,color:#fff
+```
+
+**Text Summary:**
 ```
 Signal Bandwidth (Bs)
       │
@@ -298,16 +354,30 @@ Signal Bandwidth (Bs)
 
 ### 1. Diversity
 
-Send multiple copies via different:
-- **Time** (interleaving, coding)
-- **Frequency** (OFDM, frequency hopping)
-- **Space** (MIMO, antenna switching)
+Send multiple copies via different paths. When one path fades, others likely have strong signal.
+
+| Type | How It Works |
+|------|-------------|
+| **Selection Combining** | Monitor all branches, select highest SNR |
+| **Maximal Ratio Combining (MRC)** | Weight & combine all branches (optimal) |
+| **Alamouti (Space-Time Coding)** | 2x2 MIMO with orthogonal encoding |
+| **Frequency Diversity** | Transmit on multiple frequencies (OFDM, FH) |
+| **Time Diversity** | Interleaving, ARQ |
+
+See [[Module 4/4.1 Diversity]] for detailed explanation.
 
 ### 2. Equalization
 
-Compensate for ISI in frequency-selective channels:
-- Linear: Zero-Forcing, MMSE
-- Nonlinear: DFE, MLSE
+Compensate for ISI (caused by multipath) via inverse filtering:
+
+| Type | Description |
+|------|-------------|
+| **Zero Forcing (ZF)** | Inverts channel response (amplifies noise) |
+| **MMSE** | Balances noise & ISI removal |
+| **DFE** | Decision feedback equalizer |
+| **MLSE** | Maximum likelihood sequence estimation (Viterbi) |
+
+See [[Module 4/4.2 Equalization]] for details.
 
 ### 3. Adaptive Techniques
 
@@ -345,4 +415,3 @@ Compensate for ISI in frequency-selective channels:
 
 5. **Practical values**:
    - Urban delay spread: 1-10 μs
-   - Vehicle at 60 km/h @ 2 GHz: $f_m$ ≈ 111 Hz, $T_c$ ≈ 3.8 ms
