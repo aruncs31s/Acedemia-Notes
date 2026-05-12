@@ -1,3 +1,11 @@
+---
+cssclasses:
+  - wide-page
+tags:
+  - microwave
+  - module_1
+---
+
 # Module 1
 
 ## Task List
@@ -24,12 +32,23 @@
 
 ## Basic Antenna Parameters
 
+| Parameter            | Meaning                                                  |
+| -------------------- | -------------------------------------------------------- |
+| Gain                 | Ability to radiate power in a direction including losses |
+| Directivity          | Degree of concentration of radiation                     |
+| Beam Width           | Angular width of main lobe                               |
+| Effective Aperture   | Receiving capability                                     |
+| Effective Height     | Voltage induced per unit electric field                  |
+| Polarization         | Orientation of electric field                            |
+| Radiation Resistance | Equivalent resistance for radiated power                 |
+| Radiation Efficiency | Ratio of radiated power to input power                   |
+| Field Zones          | Regions around antenna based on field behavior           |
 Antennas are devices that convert electrical signals into electromagnetic waves and vice versa. Basic parameters characterize their performance, helping engineers design and evaluate antenna systems for various applications like wireless communication, radar, and satellite systems.
 
 ### Gain
 The gain of an antenna is the ratio of the power radiated in a particular direction to the power radiated by an isotropic antenna (which radiates equally in all directions). It accounts for both directivity and efficiency losses.
 
-**Formula:** $ G = \frac{4\pi U(\theta, \phi)}{P_{rad}} $, where $ U $ is radiation intensity, $ P_{rad} $ is total radiated power.
+**Formula:** $G = \frac{4\pi U(\theta, \phi)}{P_{rad}}$, where $ U $ is radiation intensity, $ P_{rad} $ is total radiated power.
 
 **Detailed Explanation:**
 - **Isotropic Antenna:** A hypothetical antenna that radiates power equally in all directions. It has a gain of 1 (0 dB) and directivity of 1.

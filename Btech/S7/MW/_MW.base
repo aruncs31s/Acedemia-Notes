@@ -1,0 +1,9 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.path.startsWith("Btech/S7/MW/MW")
+    order:
+      - file.name
+      - file.ctime
