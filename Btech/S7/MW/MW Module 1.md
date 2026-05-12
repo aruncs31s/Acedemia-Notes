@@ -86,6 +86,7 @@ The beam width is the angular width of the main lobe of the radiation pattern, t
 - **Importance:** Narrower beam width means higher directivity but requires precise pointing.
 - **Example:** For a dipole, HPBW is about 78 degrees in E-plane.
 
+If the antenna radiates maximum power along one direction, HPBW measures how wide the main beam is before the power drops to 50% on both sides.
 ### Effective Aperture
 The effective aperture $A_e$ is the equivalent area that would intercept the same power as the antenna from an incident plane wave.
 
