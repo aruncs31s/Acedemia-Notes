@@ -3,7 +3,7 @@ views:
     name: Table
     filters:
       and:
-        - file.path.startsWith("Btech/S7/MW/MW")
+        - file.tags.contains("ECT401")
     groupBy:
       property: module
       direction: ASC
