@@ -4,6 +4,9 @@ cssclasses:
 tags:
   - microwave
   - module_1
+  - ECT401
+image: https://w.wallhaven.cc/full/je/wallhaven-jekjr5.jpg
+module: "1"
 ---
 
 # Module 1
