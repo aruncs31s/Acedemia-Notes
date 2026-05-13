@@ -2,6 +2,7 @@
 tags:
   - ECT401
 module: 1
+image: https://www.tutorialspoint.com/antenna_theory/images/half_power_point.jpg
 ---
 
 # Beam Width

@@ -3,6 +3,7 @@ tags:
   - ECT401
 Created: 2026-05-14
 module: "1"
+image: https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Antenna_directive_gain_diagram.svg/1920px-Antenna_directive_gain_diagram.svg.png
 ---
 
 # Directivity

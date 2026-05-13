@@ -2,6 +2,7 @@
 tags:
   - ECT401
 module: 1
+image: https://electronicsdesk.com/wp-content/uploads/2020/07/horn-antenna-aperture.jpg
 ---
 # Effective Aperture
 The effective aperture $A_e$ is the equivalent area that would intercept the same power as the antenna from an incident plane wave.

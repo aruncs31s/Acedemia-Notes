@@ -11,4 +11,5 @@ views:
       - file.name
       - file.ctime
     image: note.image
-    imageAspectRatio: 1.15
+    imageAspectRatio: 0.85
+    cardSize: 220
