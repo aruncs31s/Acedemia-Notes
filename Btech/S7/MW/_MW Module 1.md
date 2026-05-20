@@ -4,6 +4,9 @@ cssclasses:
 tags:
   - microwave
   - module_1
+  - ECT401
+image: https://w.wallhaven.cc/full/je/wallhaven-jekjr5.jpg
+module: "1"
 ---
 
 # Module 1
@@ -11,7 +14,7 @@ tags:
 ## Task List
 
 - [ ] Basic Antenna Parameters
-  - [ ] Gain
+  - [x] Gain ✅ 2026-05-14
   - [ ] Directivity
   - [ ] Beam Width
   - [ ] Effective Aperture
