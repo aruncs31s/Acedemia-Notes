@@ -10,7 +10,7 @@ module: "1"
 ---
 
 # Module 1
-
+- [ ] Check if i have already moved the note about the gain and directivity and all to seperate files so i did not have to keep all the notes here . The notes are here from the merge conflict.
 ## Task List
 
 - [ ] Basic Antenna Parameters

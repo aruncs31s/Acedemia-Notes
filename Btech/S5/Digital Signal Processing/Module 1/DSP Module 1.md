@@ -395,9 +395,9 @@ For long sequences, process in blocks:
 
 ### Overlap-Save and Overlap-Add Methods
 
-What it is: Two block-based FFT convolution methods:
-- Overlap-Add: partition input into non-overlapping blocks, pad, filter, then add overlapping outputs.
-- Overlap-Save: partition with overlap, filter each block, discard invalid start samples, keep valid tail — preferred for streaming.
+What it is: Two ==block-based FFT convolution methods==:
+- ==Overlap-Add==: partition input into ==non-overlapping== blocks, pad, filter, then add overlapping outputs.
+- ==Overlap-Save==: partition with ==overlap==, filter each block, discard invalid start samples, keep valid tail — preferred for streaming.
 
 Where it's used:
 - Real-time digital audio processing (effects, filters).
