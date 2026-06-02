@@ -16,7 +16,7 @@ source: "Digital Signal Processing by Proakis and Manolakis"
 
 # 🔊 Linear Phase Filters
 
-![[Pasted image 20251114113902.png]]
+![[attachments/Pasted image 20251114113902.png]]
 
 
 ## 📖 What is a Linear Phase Filter?
@@ -176,3 +176,51 @@ plt.show()
 > - Proakis & Manolakis, Chapter 7
 > - Oppenheim & Schafer, Discrete-Time Signal Processing
 > - MATLAB: fir1, firpm functions for linear phase design
+
+---
+
+# 🛠️ FIR Filter Design Using Windows
+
+## 📖 Introduction to the Windowing Method
+The windowing method is a simple and common technique for designing linear-phase FIR filters. The basic idea is to start with an ideal impulse response $h_d[n]$ (which is usually infinitely long and non-causal) and truncate it using a finite-duration window function $w[n]$ to make it finite and causal.
+
+The designed filter impulse response is:
+$$h[n] = h_d[n] \cdot w[n]$$
+
+### 📝 Design Procedure
+1. **Define the desired frequency response** $H_d(e^{j\omega})$ of the target filter.
+2. **Find the ideal impulse response** $h_d[n]$ by taking the Inverse Discrete-Time Fourier Transform (IDTFT) of $H_d(e^{j\omega})$:
+   $$h_d[n] = \frac{1}{2\pi} \int_{-\pi}^{\pi} H_d(e^{j\omega}) e^{j\omega n} \, d\omega$$
+3. **Choose a suitable window function** $w[n]$ of length $N$.
+4. **Multiply the ideal impulse response by the window function** to get the finite impulse response $h[n]$:
+   $$h[n] = h_d[n] \cdot w[n]$$
+5. **Shift the response (if necessary)** to make the filter causal:
+   $$h_{causal}[n] = h[n - (N-1)/2]$$
+6. **Obtain the system transfer function** $H(z)$ by taking the Z-transform of $h[n]$.
+
+---
+
+## 🪟 Common Window Functions
+
+### 1. Rectangular Window
+The rectangular window is the simplest window, corresponding to simple abrupt truncation.
+
+#### Non-Causal Form
+$$
+w_R[n] = \begin{cases} 
+1, & -\frac{N-1}{2} \le n \le \frac{N-1}{2} \\ 
+0, & \text{otherwise} 
+\end{cases}
+$$
+
+#### Causal Form
+$$
+w_R[n] = \begin{cases} 
+1, & 0 \le n \le N-1 \\ 
+0, & \text{otherwise} 
+\end{cases}
+$$
+
+#### Characteristics
+* **Main lobe width:** $4\pi / N$
+* **Minimum stopband attenuation:** $-21\text{ dB}$ (poor stopband performance, causing significant ripple).

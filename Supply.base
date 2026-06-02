@@ -1,0 +1,14 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.tags.contains("supply")
+    order:
+      - file.name
+      - ExamDate
+      - passed
+      - file.tags
+      - status
+    columnSize:
+      note.passed: 208

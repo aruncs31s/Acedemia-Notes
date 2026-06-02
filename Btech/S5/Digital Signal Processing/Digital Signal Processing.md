@@ -5,7 +5,6 @@ tags:
   - academics
   - btech
   - s5
-  - digital_signal_processing
 Attendance: 86%
 ExamDate: 2025-11-15
 Internal: 27

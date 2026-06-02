@@ -31,7 +31,7 @@ graph TB
     A --> Out[Output y[n]]
 ```
 
-![[Overlap-Add Method.png]]
+![[attachments/Overlap-Add Method.png]]
 
 The Overlap-Add method involves the following steps:
 1. **Segment the Input**: ==Divide the long input sequence== $x[n]$ into smaller, manageable segments of length $L$.
