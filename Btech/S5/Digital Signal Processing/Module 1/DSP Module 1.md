@@ -190,7 +190,9 @@ Where it's used:
 
 Exam tip: State the DFT formula and mention complexity; if asked about computation, reference FFT (O(N log N)).
 
-![[Discrete Fourier Tranform#^32d1f3]]
+$$
+X[k] = \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi}{N} kn}, \quad 0 \le k \le N-1
+$$
 
 ### IDFT
 
@@ -203,7 +205,9 @@ Where it's used:
 
 Exam tip: Always include the 1/N factor in IDFT; forgetting it is a common mistake.
 
-![[Discrete Fourier Tranform#^cf415f]]
+$$
+x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{j \frac{2\pi}{N} kn}, \quad 0 \le n \le N-1
+$$
 
 > [!important] Important Relations
 $$

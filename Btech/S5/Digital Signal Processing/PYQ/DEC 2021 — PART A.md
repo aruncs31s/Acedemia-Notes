@@ -1,5 +1,5 @@
 
-# ✅ **DEC 2021 — PART A**
+#  **DEC 2021 — PART A**
 
 ECT303 DIGITAL SIGNAL PROCESSIN…
 ### **1) Methods of filtering long sequences**
