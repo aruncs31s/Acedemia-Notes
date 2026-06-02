@@ -10,5 +10,9 @@ views:
       - passed
       - file.tags
       - status
+      - file.backlinks
     columnSize:
-      note.passed: 208
+      file.name: 188
+      note.passed: 130
+      file.tags: 132
+      note.status: 202
