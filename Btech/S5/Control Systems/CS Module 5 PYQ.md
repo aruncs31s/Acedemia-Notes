@@ -140,3 +140,83 @@ Thus, the state model parameters are:
 ---
 > [!TIP]
 > **Exam Strategy:** Memorizing this conversion procedure is highly beneficial since converting differential equations into state equations is a staple question for KTU setters. Pay special attention to the signs in the bottom row of matrix $A$ (they are the coefficients of the differential equation in reverse order with negative signs).
+
+
+### Derivation to obtain the transfer function from a set of state-space equations, as requested in Question 19(b) of the December 2023 paper
+
+
+
+### 1. Define the State-Space Equations
+
+For a linear time-invariant (LTI) continuous system, the standard state model is given by two equations:
+
+**The State Equation:**
+
+$$\dot{x}(t) = Ax(t) + Bu(t)$$
+
+**The Output Equation:**
+
+$$y(t) = Cx(t) + Du(t)$$
+
+Where:
+
+- $x(t)$ is the state vector.
+    
+- $u(t)$ is the input vector.
+    
+- $y(t)$ is the output vector.
+    
+- $A$ is the system matrix.
+    
+- $B$ is the input matrix.
+    
+- $C$ is the output matrix.
+    
+- $D$ is the feedthrough (or direct transmission) matrix.
+    
+
+### 2. Apply the Laplace Transform
+
+By definition, a transfer function assumes **zero initial conditions** ($x(0) = 0$). Taking the Laplace transform of both sides of the state equation yields:
+
+$$sX(s) - x(0) = AX(s) + BU(s)$$
+
+Applying the zero initial conditions:
+
+$$sX(s) = AX(s) + BU(s)$$
+
+### 3. Solve for the State Vector $X(s)$
+
+Group the $X(s)$ terms on the left side to isolate the state vector:
+
+$$sX(s) - AX(s) = BU(s)$$
+
+To factor out $X(s)$, introduce the identity matrix $I$ (since we cannot directly subtract a matrix $A$ from a scalar $s$). The identity matrix $I$ has the same dimensions as $A$:
+
+$$(sI - A)X(s) = BU(s)$$
+
+Multiply both sides by the inverse of $(sI - A)$ to solve for $X(s)$:
+
+$$X(s) = (sI - A)^{-1}BU(s)$$
+
+### 4. Transform the Output Equation
+
+Next, take the Laplace transform of the output equation:
+
+$$Y(s) = CX(s) + DU(s)$$
+
+### 5. Substitute $X(s)$ into the Output Equation
+
+Substitute the expression for $X(s)$ derived in Step 3 into the transformed output equation:
+
+$$Y(s) = C[(sI - A)^{-1}BU(s)] + DU(s)$$
+
+Factor out $U(s)$ on the right side:
+
+$$Y(s) = [C(sI - A)^{-1}B + D]U(s)$$
+
+### 6. Define the Transfer Function
+
+The transfer function, $T(s)$, is the ratio of the Laplace transform of the output $Y(s)$ to the Laplace transform of the input $U(s)$. Dividing both sides by $U(s)$ provides the final formula:
+
+$$T(s) = \frac{Y(s)}{U(s)} = C(sI - A)^{-1}B + D$$
