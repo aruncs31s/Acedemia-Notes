@@ -76,5 +76,5 @@ See: [[Fading Theory]] - Large-scale fading
 - [[Module 2/Module 2]] - Syllabus
 - [[Fading Theory]] - Large-scale fading (shadowing)
 - [[Important Topics/Path loss and Shadowing]] - Brief overview
-- [[Module 2 PYQ]] - PYQs on path loss
+- [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] - PYQs on path loss
 - [[Doppler Shift]] - Time variation

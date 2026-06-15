@@ -2,7 +2,8 @@
 alias: analog communication module 1
 tags:
   - btech
-  - supply
+  - ect305
+  - adc
 ---
 # AC Module 1
 

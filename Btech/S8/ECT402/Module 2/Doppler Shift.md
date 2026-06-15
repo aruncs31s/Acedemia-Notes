@@ -66,4 +66,4 @@ Where:
 - [[Statistical Multipath Channel Models]] - Doppler spread & coherence time
 - [[Fading Theory]] - Doppler effects on fading
 - [[Coherence]] - Coherence time related to Doppler
-- [[Module 2 PYQ]] - PYQs on Doppler shift
+- [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] - PYQs on Doppler shift

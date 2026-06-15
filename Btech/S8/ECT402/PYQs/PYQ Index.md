@@ -21,7 +21,7 @@ tags:
 | Module | Topic | Questions |
 |--------|-------|----------|
 | [[Module 1 PYQ]] | Wireless Communications & Cellular Systems | 10 |
-| [[Module 2 PYQ]] | Wireless Channel & Fading | 15 |
+| [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | Wireless Channel & Fading | 15 |
 | [[Module 3 PYQ]] | OFDM Systems | 11 |
 | [[Module 4 PYQ]] | Diversity & Equalization | 2 |
 | [[Module 5 PYQ]] | Radio Wave Propagation | 8 |
@@ -49,21 +49,21 @@ tags:
 
 | #    | Question                                                                                        | Marks                           | Source | Related          |                          |
 | ---- | ----------------------------------------------------------------------------------------------- | ------------------------------- | ------ | ---------------- | ------------------------ |
-| 2.1  | [[Module 2 PYQ#Differentiate between flat fading and frequency selective fading                 | Flat vs Freq-Selective Fading]] | -      | [[Module 2 PYQ]] | [[May 2024#13. (a)]]     |
-| 2.2  | [[Module 2 PYQ#Explain how Doppler spread affects wireless communication performance parameters | Doppler Spread Effects]]        | -      | [[Module 2 PYQ]] | [[October 2023#14. (c)]] |
-| 2.3  | [[Module 2 PYQ#Describe the different types of fading in a wireless system                      | Fading Types]]                  | -      | [[Module 2 PYQ]] | [[May 2024#13. (a)]]     |
-| 2.4  | [[Module 2 PYQ#What is diversity and how does it reduce fading                                  | Diversity]]                     | -      | [[Module 2 PYQ]] | [[Module 4 PYQ]]         |
-| 2.5  | [[Module 2 PYQ#Compare selection combining and maximal ratio combining techniques               | SC vs MRC]]                     | -      | [[Module 2 PYQ]] | [[Module 4 PYQ]]         |
-| 2.6  | [[Module 2 PYQ#Discuss the impact of shadowing on wireless channel performance                  | Shadowing]]                     | 7      | [[Module 2 PYQ]] |                          |
-| 2.7  | [[Module 2 PYQ#A wireless signal has a Doppler shift of 150 Hz                                  | Doppler Calculation]]           | 7      | [[Module 2 PYQ]] | [[October 2023#3]]       |
-| 2.8  | [[Module 2 PYQ#Define the Shannon capacity theorem]]                                            | Shannon Capacity]]              | 7      | [[Module 2 PYQ]] | [[October 2023#14. (b)]] |
-| 2.9  | [[Module 2 PYQ#How is the outage probability computed                                           | Outage Probability]]            | -      | [[Module 2 PYQ]] | [[October 2023#5]]       |
-| 2.10 | [[Module 2 PYQ#Explain the effect of multipath propagation using 2-ray model                    | 2-Ray Model]]                   | 7      | [[Module 2 PYQ]] |                          |
-| 2.11 | [[Module 2 PYQ#Narrowband fading statistical characterisation                                   | I/Q Rayleigh]]                  | 7      | [[Module 2 PYQ]] |                          |
-| 2.12 | [[Module 2 PYQ#Derive time-varying impulse response                                             | Time-Varying CIR]]              | 7      | [[Module 2 PYQ]] |                          |
-| 2.13 | [[Module 2 PYQ#Free Space Path Loss                                                             | Path Loss]]                     | 7      | [[Module 2 PYQ]] | [[October 2023#14. (a)]] |
-| 2.14 | [[Module 2 PYQ#AWGN channel capacity capacity inference                                         | AWGN Capacity]]                 | 4      | [[Module 2 PYQ]] | [[October 2023#14. (b)]] |
-| 2.15 | [[Module 2 PYQ#Time selective fading                                                            | Time Selective Fading]]         | 4      | [[Module 2 PYQ]] | [[October 2023#14. (c)]] |
+| 2.1  | [[Module 2 PYQ#Differentiate between flat fading and frequency selective fading                 | Flat vs Freq-Selective Fading]] | -      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[May 2024#13. (a)]]     |
+| 2.2  | [[Module 2 PYQ#Explain how Doppler spread affects wireless communication performance parameters | Doppler Spread Effects]]        | -      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[October 2023#14. (c)]] |
+| 2.3  | [[Module 2 PYQ#Describe the different types of fading in a wireless system                      | Fading Types]]                  | -      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[May 2024#13. (a)]]     |
+| 2.4  | [[Module 2 PYQ#What is diversity and how does it reduce fading                                  | Diversity]]                     | -      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[Module 4 PYQ]]         |
+| 2.5  | [[Module 2 PYQ#Compare selection combining and maximal ratio combining techniques               | SC vs MRC]]                     | -      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[Module 4 PYQ]]         |
+| 2.6  | [[Module 2 PYQ#Discuss the impact of shadowing on wireless channel performance                  | Shadowing]]                     | 7      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] |                          |
+| 2.7  | [[Module 2 PYQ#A wireless signal has a Doppler shift of 150 Hz                                  | Doppler Calculation]]           | 7      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[October 2023#3]]       |
+| 2.8  | [[Btech/S8/ECT402/Module 2/Module 2 PYQ#Define the Shannon capacity theorem]]                                            | Shannon Capacity]]              | 7      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[October 2023#14. (b)]] |
+| 2.9  | [[Module 2 PYQ#How is the outage probability computed                                           | Outage Probability]]            | -      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[October 2023#5]]       |
+| 2.10 | [[Module 2 PYQ#Explain the effect of multipath propagation using 2-ray model                    | 2-Ray Model]]                   | 7      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] |                          |
+| 2.11 | [[Module 2 PYQ#Narrowband fading statistical characterisation                                   | I/Q Rayleigh]]                  | 7      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] |                          |
+| 2.12 | [[Module 2 PYQ#Derive time-varying impulse response                                             | Time-Varying CIR]]              | 7      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] |                          |
+| 2.13 | [[Module 2 PYQ#Free Space Path Loss                                                             | Path Loss]]                     | 7      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[October 2023#14. (a)]] |
+| 2.14 | [[Module 2 PYQ#AWGN channel capacity capacity inference                                         | AWGN Capacity]]                 | 4      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[October 2023#14. (b)]] |
+| 2.15 | [[Module 2 PYQ#Time selective fading                                                            | Time Selective Fading]]         | 4      | [[Btech/S8/ECT402/Module 2/Module 2 PYQ]] | [[October 2023#14. (c)]] |
 
 ### Module 3: OFDM Systems
 

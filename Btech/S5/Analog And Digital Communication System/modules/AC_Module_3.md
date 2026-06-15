@@ -28,7 +28,7 @@ title: callout
 >Quantization is simply the act of replacing ==infinite-precision== amplitude with an ==index==. Every digital communication system starts here, so it’s a core definition question.
 
 > **step size $\Delta$**.
-![[Pasted image 20251118000321.png]]
+![[quantization.png]]
 
 
 

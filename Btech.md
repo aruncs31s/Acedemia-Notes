@@ -5,6 +5,12 @@ tags:
 ---
 # B Tech Notes
 
+```
+LKNR21EC105
+D@123
+```
+
+
 ## Semester 8
 - [[Secure Communication]]
 - [[Hill Cypher]] A
@@ -23,4 +29,4 @@ tags:
 - [[DM]]
 - [[Analog and Digital Communication]]
 - [[Control Systems]]
-- [[Digital Signal Processing]]
+- [ ] [[Digital Signal Processing]]
