@@ -56,3 +56,30 @@ _when_ $q = 3$, $Angles = \frac{\pm 180^\circ(7)}{3} = \pm 420^\circ$
 $$Centroid = \frac{\text{sum of poles } - \text{ sum of zeros}}{n - m}$$
 
 $$= \frac{0 - 2 + j3 - 2 - j3 - 0}{3 - 0} = -\frac{4}{3} = -1.33$$
+
+
+## **Step 4: To find the break away and break in points**
+
+- **Closed loop TF** $= \frac{C(s)}{R(s)} = \frac{G(s)}{1 + G(s)H(s)}$
+    
+    $= \frac{\frac{K}{s(s^2 + 4s + 13)}}{1 + \frac{K}{s(s^2 + 4s + 13)} * 1} = \frac{K}{s(s^2 + 4s + 13) + K}$
+    
+- **Characteristic equation is** $\rightarrow s(s^2 + 4s + 13) + K = 0$
+    
+    $K = -s^3 - 4s^2 - 13s$
+    
+- **Differentiating the equation w.r.t. s and equate to zero we get,**
+    
+    $\frac{dK}{ds} = -(3s^2 + 8s + 13) = 0$
+    
+    $3s^2 + 8s + 13 = 0$
+    
+    $s = \frac{-8 \pm \sqrt{8^2 - 4 * 3 * 13}}{2 * 3} = -1.33 \pm j1.6$
+    
+- **Lets check for the value of K**
+    
+    - when $s = -1.33 + j1.6, K = -(-1.33 + j1.6)^3 - 4(-1.33 + j1.6)^2 - 13(-1.33 + j1.6) \neq$ positive & real
+        
+    - when $s = -1.33 - j1.6, K = -(-1.33 - j1.6)^3 - 4(-1.33 - j1.6)^2 - 13(-1.33 - j1.6) \neq$ positive & real
+        
+- **Conclusion:** Since the value of K for s values, are not real & positive. The root locus has neither break away or break in point.
