@@ -119,3 +119,6 @@ Let us consider the complex pole $P_2$
 ||$K = 4 * 13 = 52$|
 
 - **Conclusion:** The crossing point of root locus is $\pm j3.6$. The value of K at this crossing point is $K=52$ (limiting value of K for the stability of the system).
+
+
+![[Root Locus.png]]
