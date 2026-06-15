@@ -1,0 +1,12 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.folder.startsWith("Btech/S5/Digital Signal Processing")
+    order:
+      - file.name
+      - status
+      - file.tags
+    columnSize:
+      note.status: 276

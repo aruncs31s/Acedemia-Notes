@@ -54,6 +54,6 @@ graph LR
 
 ## Related Topics
 
-- [[Module 2 PYQ#how-does-fading-occur-derive-the-expression-for-doppler-shift|Fading & Doppler]]
-- [[Module 2 PYQ|Module 2 PYQ - Fading Types]]
+- [[Btech/S8/ECT402/Module 2/Module 2 PYQ#how-does-fading-occur-derive-the-expression-for-doppler-shift|Fading & Doppler]]
+- [[Btech/S8/ECT402/Module 2/Module 2 PYQ|Module 2 PYQ - Fading Types]]
 - [[Fading Theory]]
