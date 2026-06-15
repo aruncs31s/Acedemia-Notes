@@ -122,3 +122,82 @@ Let us consider the complex pole $P_2$
 
 
 ![[Root Locus.png]]
+
+
+
+# Problem 2
+
+To sketch the root locus for the open-loop transfer function $G(s) = \frac{K}{s(s+2)(s+4)}$, we will follow the standard step-by-step procedure.
+
+### Step 1: Locate Poles and Zeros
+
+The open-loop poles are the roots of the denominator $s(s+2)(s+4) = 0$.
+
+- **Poles:** $s = 0, -2, -4$ ($n=3$)
+    
+- **Zeros:** No finite zeros ($m=0$)
+    
+
+### Step 2: Root Locus on the Real Axis
+
+A point on the real axis is part of the root locus if the sum of poles and zeros to its right is an odd number.
+
+- Between $0$ and $-2$: 1 pole to the right (odd) $\rightarrow$ **Part of Root Locus**
+    
+- Between $-2$ and $-4$: 2 poles to the right (even) $\rightarrow$ **Not part of Root Locus**
+    
+- To the left of $-4$: 3 poles to the right (odd) $\rightarrow$ **Part of Root Locus**
+    
+
+### Step 3: Number of Asymptotes and Angles
+
+Since $n=3$ and $m=0$, there are $n-m=3$ branches, all going to infinity.
+
+- **Number of asymptotes:** $n-m = 3$
+    
+- **Angles of asymptotes:** $\phi_q = \frac{180^\circ(2q+1)}{n-m}$ for $q = 0, 1, 2$
+    
+    - $q=0: \phi_0 = 60^\circ$
+        
+    - $q=1: \phi_1 = 180^\circ$
+        
+    - $q=2: \phi_2 = 300^\circ$ (or $-60^\circ$)
+        
+
+### Step 4: Centroid of Asymptotes
+
+The asymptotes intersect the real axis at the centroid ($\sigma_A$):
+
+$$\sigma_A = \frac{\sum \text{Poles} - \sum \text{Zeros}}{n-m} = \frac{(0 - 2 - 4) - 0}{3} = \frac{-6}{3} = -2$$
+
+### Step 5: Breakaway/Break-in Points
+
+We use the characteristic equation: $1 + G(s) = 0 \rightarrow s(s+2)(s+4) + K = 0$
+
+$$s^3 + 6s^2 + 8s + K = 0 \rightarrow K = -(s^3 + 6s^2 + 8s)$$
+
+Differentiate $K$ with respect to $s$ and set to zero:
+
+$$\frac{dK}{ds} = -(3s^2 + 12s + 8) = 0$$
+
+Using the quadratic formula:
+
+$$s = \frac{-12 \pm \sqrt{144 - 4(3)(8)}}{6} = \frac{-12 \pm \sqrt{48}}{6} = -2 \pm 1.154$$
+
+- **$s_1 = -0.845$** (This is between $0$ and $-2$, so it is a **valid breakaway point**)
+    
+- **$s_2 = -3.154$** (This is to the left of $-4$, but the root locus is only to the left of $-4$ for $s \to -\infty$; however, checking the region, this is also a valid break-in point from the asymptotes).
+    
+
+### Summary for Sketching
+
+1. Mark poles at $0, -2, -4$.
+    
+2. Draw the locus between $0$ to $-2$ and to the left of $-4$.
+    
+3. Draw asymptotes originating from the centroid at $-2$ with angles $\pm 60^\circ$ and $180^\circ$.
+    
+4. The locus breaks away at $s = -0.845$.
+    
+
+Would you like me to explain how to calculate the exact gain $K$ at the breakaway point, or are you comfortable with sketching it from here?
