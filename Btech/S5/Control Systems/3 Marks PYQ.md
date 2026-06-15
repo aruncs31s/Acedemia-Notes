@@ -399,4 +399,4 @@ Here are the concise, exam-ready answers for all the 3-mark Part A questions fro
     
 - Apply Kirchhoff's Current Law (KCL) at nodes connecting to capacitors to solve for $\frac{dv_c}{dt}$.
     
-- Formulate these differential equations into the standard $\dot{x} = Ax + Bu$ matrix format.
+- Formulate these differential equations into the standard $\dot{x} = Ax + Bu$ matrix format. 
