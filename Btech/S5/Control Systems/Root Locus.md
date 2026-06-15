@@ -83,3 +83,39 @@ $$= \frac{0 - 2 + j3 - 2 - j3 - 0}{3 - 0} = -\frac{4}{3} = -1.33$$
     - when $s = -1.33 - j1.6, K = -(-1.33 - j1.6)^3 - 4(-1.33 - j1.6)^2 - 13(-1.33 - j1.6) \neq$ positive & real
         
 - **Conclusion:** Since the value of K for s values, are not real & positive. The root locus has neither break away or break in point.
+
+
+**Step 5: To find the angle of departure**
+
+Let us consider the complex pole $P_2$
+
+- $\theta_1 = 123^\circ$ (or _another method_ $\theta_1 = 180^\circ - \tan^{-1}\frac{3}{2} = 123.7^\circ$)
+    
+- $\theta_2 = 90^\circ$
+    
+- **Angle of departure from complex pole $P_2$** $= 180^\circ - (\theta_1 + \theta_2)$
+    
+    $= 180^\circ - (123^\circ + 90^\circ)$
+    
+    $= -33^\circ$
+    
+- **Angle of departure from complex pole $P_3$** $= +33^\circ$
+
+
+
+## **Step 6: To find the crossing point on imaginary axis**
+
+- **Characteristic equation is** $\rightarrow s^3 + 4s^2 + 13s + K = 0$
+    
+- **Substitute** $s = j\omega$
+    
+    $-j\omega^3 - 4\omega^2 + 13j\omega + K = 0$
+    
+
+|**On equating imaginary part to zero we get**|**On equating real part to zero we get**|
+|---|---|
+|$-\omega^3 + 13\omega = 0$|$-4\omega^2 + K = 0$|
+|$\omega = \pm \sqrt{13} = \pm 3.6$|$K = 4\omega^2$|
+||$K = 4 * 13 = 52$|
+
+- **Conclusion:** The crossing point of root locus is $\pm j3.6$. The value of K at this crossing point is $K=52$ (limiting value of K for the stability of the system).
