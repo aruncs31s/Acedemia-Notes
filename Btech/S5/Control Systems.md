@@ -28,4 +28,7 @@ tags:
 - **Design of Compensators:** Need of compensators, design of lag and lead compensators using Bode plots.
 
 - https://www.youtube.com/watch?v=bxRVJO1DO9g&t=1578s
-- 
+- https://www.youtube.com/watch?v=Uxel9jEA2jE: Observability
+
+
+# Module 1
