@@ -7,7 +7,7 @@ tags:
 
 ## Important topics
 
-- [ ] Open vs Closed Loop [[3 Marks PYQ#^8e6cb3]]
+- [ ] Open vs Closed Loop [[3 Marks PYQ#^e74fd2]]
 - [ ] Transfer Function
 - [ ] Block Diagram Reduction
 - [ ] Signal Flow Graph + Mason's Formula
