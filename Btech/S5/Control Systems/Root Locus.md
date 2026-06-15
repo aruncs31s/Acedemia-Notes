@@ -27,3 +27,32 @@ _If right side of test points have odd numbers of zeros & poles – root locus e
 
 _If right side of test points have even numbers of zeros & poles – root locus does not exist_
 
+
+
+## **Step 3: To find angles of asymptotes and centroid**
+
+Since there are 3 poles, the number of root locus branches are three
+
+$$Angle\ of\ asymptotes = \frac{\pm 180^\circ(2q + 1)}{n - m}$$
+
+_Where,_
+
+$n = \text{number of poles}$
+
+$m = \text{number of zeros}$
+
+$q = 0, 1, 2, \dots n-m$
+
+_Here_ $n = 3$, $m = 0$
+
+_when_ $q = 0$,  $Angles = \frac{\pm 180^\circ(1)}{3} = \pm 60^\circ$
+
+_when_ $q = 1$, $Angles = \frac{\pm 180^\circ(3)}{3} = \pm 180^\circ$
+
+_when_ $q = 2$,  $Angles = \frac{\pm 180^\circ(5)}{3} = \pm 300^\circ$
+
+_when_ $q = 3$, $Angles = \frac{\pm 180^\circ(7)}{3} = \pm 420^\circ$
+
+$$Centroid = \frac{\text{sum of poles } - \text{ sum of zeros}}{n - m}$$
+
+$$= \frac{0 - 2 + j3 - 2 - j3 - 0}{3 - 0} = -\frac{4}{3} = -1.33$$
