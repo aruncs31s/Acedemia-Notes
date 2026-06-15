@@ -179,11 +179,11 @@ Here are the concise, exam-ready answers for all the 3-mark Part A questions fro
 **1. Compare open-loop and closed-loop systems:**
 
 - **Open-Loop:** No feedback, simpler, less accurate. (Example: Electric Toaster).
-    
+     ^e74fd2
 - **Closed-Loop:** Feedback mechanism present, more accurate, corrects for disturbances. (Example: Air conditioner with a thermostat).
-    
 
-**2. Impulse response of a series RL high pass filter:**
+
+**2. Impulse response of a series RL high pass filter:** ^87bf95
 
 - Transfer function: $H(s) = \frac{sL}{R+sL} = \frac{s}{s + (R/L)} = 1 - \frac{R/L}{s + (R/L)}$
     
@@ -252,7 +252,7 @@ Here are the concise, exam-ready answers for all the 3-mark Part A questions fro
 
 ### **December 2021 (2019 Scheme)**
 
-**1. Compare open and closed loop systems:**
+**1. Compare open and closed loop systems:** ^8e6cb3
 
 - (Refer to Dec 2022, Q1).
     

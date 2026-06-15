@@ -26,3 +26,11 @@ tags:
 - **Nyquist stability criterion:** Fundamentals and analysis.
 - **Relative stability:** Gain margin and phase margin. Stability analysis with Bode plot.
 - **Design of Compensators:** Need of compensators, design of lag and lead compensators using Bode plots.
+
+- https://www.youtube.com/watch?v=bxRVJO1DO9g&t=1578s
+- https://www.youtube.com/watch?v=Uxel9jEA2jE: Observability
+
+
+# Module 1
+- https://www.youtube.com/watch?v=ERPxSje-Feg&list=PLU9qGTRXUDklIwccKB7lYIAz85Jjepq3w&index=13 : voltage current analogy problem.
+- https://www.youtube.com/watch?v=ur3oybYEkI8&list=PLU9qGTRXUDklIwccKB7lYIAz85Jjepq3w&index=19: Masons Gain Fromula
