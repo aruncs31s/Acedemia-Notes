@@ -26,3 +26,6 @@ tags:
 - **Nyquist stability criterion:** Fundamentals and analysis.
 - **Relative stability:** Gain margin and phase margin. Stability analysis with Bode plot.
 - **Design of Compensators:** Need of compensators, design of lag and lead compensators using Bode plots.
+
+- https://www.youtube.com/watch?v=bxRVJO1DO9g&t=1578s
+- 
