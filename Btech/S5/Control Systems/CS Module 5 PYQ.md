@@ -1,5 +1,16 @@
 # Module 5: State Space Analysis
 
+- **State space from differential equation** ⭐⭐⭐⭐⭐
+- **State space from transfer function** ⭐⭐⭐⭐
+- **State transition matrix** ⭐⭐⭐⭐
+- **Controllability & Observability** ⭐⭐⭐⭐
+- **Transfer function from state equations** ⭐⭐⭐
+
+
+Imp:
+- https://youtu.be/NbxYeWael1c?si=Ay8Bqrk8tTTt_3zk: for the second state variable question
+
+
 ## Important Recurring Questions
 Questions of the form **"Obtain the state-space representation / state model"** appear repeatedly in Module 5.
 
