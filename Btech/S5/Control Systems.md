@@ -32,3 +32,5 @@ tags:
 
 
 # Module 1
+- https://www.youtube.com/watch?v=ERPxSje-Feg&list=PLU9qGTRXUDklIwccKB7lYIAz85Jjepq3w&index=13 : voltage current analogy problem.
+- 
