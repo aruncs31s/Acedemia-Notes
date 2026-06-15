@@ -5,7 +5,7 @@ tags:
 ---
 
 
-### Question 13 a): Define position, velocity, and acceleration error constants for a unity feedback control system
+## Question 13 a): Define position, velocity, and acceleration error constants for a unity feedback control system
 In a unity feedback control system, the steady-state error (the difference between the desired input and the actual output as time approaches infinity) depends on the type of input applied and the system's open-loop transfer function, denoted as $G(s)$.
 
 To quantify this, control theory uses three static error constants: position, velocity, and acceleration.
