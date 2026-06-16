@@ -4,3 +4,13 @@ views:
     filters:
       and:
         - file.tags.contains("ect307")
+    order:
+      - file.name
+      - file.tags
+      - status
+      - practice
+    sort:
+      - property: practice
+        direction: DESC
+    columnSize:
+      file.name: 139
