@@ -1,0 +1,15 @@
+views:
+  - type: cards
+    name: Table
+    filters:
+      and:
+        - file.tags.contains("ECT401")
+    groupBy:
+      property: module
+      direction: ASC
+    order:
+      - file.name
+      - file.ctime
+    image: note.image
+    imageAspectRatio: 0.85
+    cardSize: 220

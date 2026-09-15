@@ -1,3 +1,16 @@
+---
+tags:
+  - btech
+  - exam
+---
+
+| Slot | Course                              | Valuation Type          | Appearing chance | Eligible for fee concession | Amount     |
+| ---- | ----------------------------------- | ----------------------- | ---------------- | --------------------------- | ---------- |
+| A    | MICROWAVES AND ANTENNAS(ECT401)     | Valuation by university | 2                | Yes                         | INR 210.00 |
+| B    | OPTICAL FIBER COMMUNICATION(ECT413) | Valuation by university | 2                | Yes                         | INR 210.00 |
+
+
+
 ### 🧠 First principles
 
 You’ve got **30 days**, **6 exams**, and **zero full days off**. So we can’t rely on long study marathons — we’ll go for **short, high-focus bursts**, supported by structure and rest.

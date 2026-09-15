@@ -1,0 +1,1 @@
+**Thevenin’s Theorem** states that “_Any linear circuit containing several voltages and resistances can be replaced by just one single voltage in series with a single resistance connected across the load_“.

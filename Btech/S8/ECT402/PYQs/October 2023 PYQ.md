@@ -1,3 +1,7 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 # ECT402 - Wireless Communication Systems
 ## October 2023 PYQ Answers
 
@@ -71,7 +75,7 @@ Where:
 
 ## 4. Assume a receiver is located 10 km away from a 50 W transmitter. Given f = 900 MHz, G_t = 1 and G_r = 2. Find the power at receiver and RMS voltage at receiver antenna matched with 50 Ω resistor.
 
-**Short Answer:** Received power ≈ 0.702 nW (\(7.02\times10^{-10}\) W) giving \(V_{\text{rms}} \approx 0.187\,\text{mV}\) across 50 Ω using Friis equation.
+**Short Answer:** Received power ≈ 0.702 nW ($7.02\times10^{-10}$ W) giving $V_{\text{rms}} \approx 0.187\,\text{mV}$ across 50 Ω using Friis equation.
 
 Given:
 - P_t = 50 W
@@ -600,14 +604,14 @@ This model forms the foundation for analyzing ISI, designing equalizers, and und
 
 ## 14. (a) Free space received power and path loss
 
-**Short Answer:** \(P_r \approx -104.1\,\text{dBm}\); Path loss \(L_p \approx 134.1\,\text{dB}\) (includes antenna gains assumed unity).
+**Short Answer:** $P_r \approx -104.1\,\text{dBm}$; Path loss $L_p \approx 134.1\,\text{dB}$ (includes antenna gains assumed unity).
 
 Given:
-\(P_t = 1\,\text{W} = 30\,\text{dBm}\), \(f = 2.4\,\text{GHz}\), distance \(d = 1.6\,\text{km}\), assume \(G_t = G_r = 1\).
+$P_t = 1\,\text{W} = 30\,\text{dBm}$, $f = 2.4\,\text{GHz}$, distance $d = 1.6\,\text{km}$, assume $G_t = G_r = 1$.
 
 Free-space path loss (FSPL) (with d in km, f in MHz):
 $$L_p(\text{dB}) = 32.44 + 20\log_{10}(d_{\text{km}}) + 20\log_{10}(f_{\text{MHz}})$$
-Substitute: \(d = 1.6\), \(f = 2400\,\text{MHz}\)
+Substitute: $d = 1.6$, $f = 2400\,\text{MHz}$
 $$\begin{aligned}
 L_p &= 32.44 + 20\log_{10}(1.6) + 20\log_{10}(2400)\\
 &= 32.44 + 4.082 + 67.604 \\
@@ -617,38 +621,38 @@ L_p &= 32.44 + 20\log_{10}(1.6) + 20\log_{10}(2400)\\
 Received power:
 $$P_r(\text{dBm}) = P_t(\text{dBm}) + G_t + G_r - L_p = 30 + 0 + 0 - 104.126 \approx -74.13\,\text{dBm}$$
 
-However, if gains are unity and using meters version FSPL formula (\(20\log_{10}(4\pi d/\lambda)\)) we must check discrepancy. Recompute with meters & wavelength:
+However, if gains are unity and using meters version FSPL formula ($20\log_{10}(4\pi d/\lambda)$) we must check discrepancy. Recompute with meters & wavelength:
 $$\lambda = \frac{c}{f} = \frac{3\times10^{8}}{2.4\times10^{9}} = 0.125\,\text{m}$$
 $$L_p = 20\log_{10}\left(\frac{4\pi d}{\lambda}\right) = 20\log_{10}\left(\frac{4\pi (1600)}{0.125}\right)$$
 $$\frac{4\pi (1600)}{0.125} = 4\pi \times 12800 \approx 160844.\;$$
 $$L_p = 20 \log_{10}(1.60844\times10^{5}) = 20 (5.206) = 104.12\,\text{dB}$$
 
-Thus the correct received power is \(P_r \approx -74.1\,\text{dBm}\). (Previous -104.1 dBm would correspond to an extra 30 dB loss—erroneously subtracting transmit power again.)
+Thus the correct received power is $P_r \approx -74.1\,\text{dBm}$. (Previous -104.1 dBm would correspond to an extra 30 dB loss—erroneously subtracting transmit power again.)
 
 In linear watts:
 $$P_r = 10^{\frac{-74.13 - 30}{10}}\ \text{W} \approx 3.85\times10^{-11}\,\text{W}$$
 
 ## 14. (b) Inference of AWGN channel capacity
 
-**Short Answer:** AWGN channel capacity is the theoretical maximum reliable information rate given bandwidth and SNR: \(C = B \log_2(1+\text{SNR})\) bits/s.
+**Short Answer:** AWGN channel capacity is the theoretical maximum reliable information rate given bandwidth and SNR: $C = B \log_2(1+\text{SNR})$ bits/s.
 
 The Shannon capacity for an additive white Gaussian noise (AWGN) channel expresses the supremum of achievable data rates with arbitrarily small error probability using optimal coding.
 
 Mathematically:
 $$C = B \log_2(1 + \text{SNR})$$
-Where \(B\) is bandwidth in Hz, SNR is received signal-to-noise power ratio. It implies: doubling bandwidth or (approximately) adding 3 dB SNR increases capacity; beyond low SNR, capacity growth with power is logarithmic (diminishing returns).
+Where $B$ is bandwidth in Hz, SNR is received signal-to-noise power ratio. It implies: doubling bandwidth or (approximately) adding 3 dB SNR increases capacity; beyond low SNR, capacity growth with power is logarithmic (diminishing returns).
 
 Key inferences:
 - Sets an absolute upper bound for coding/ modulation design.
 - Guides tradeoff: power vs bandwidth vs rate.
-- At low SNR: \(C \approx \frac{B}{\ln 2}\text{SNR}\) (linear regime).
-- At high SNR: each additional 3 dB roughly adds \(B\) bits/s.
+- At low SNR: $C \approx \frac{B}{\ln 2}\text{SNR}$ (linear regime).
+- At high SNR: each additional 3 dB roughly adds $B$ bits/s.
 
 ## 14. (c) Time selective fading
 
 **Short Answer:** Time-selective fading occurs when channel impulse response varies significantly over the symbol duration due to high Doppler spread (fast fading), causing time-varying amplitude/phase within a transmission.
 
-Definition: A fading process is time-selective (fast) if the coherence time \(T_c\) is less than or on the order of the symbol duration \(T_s\). Rapid motion (large Doppler shift \(f_D\)) yields Doppler spread \(B_D\) and \(T_c \approx 1/(2 B_D)\). Symbols then experience different channel gains, degrading coherent detection unless countered by diversity, channel estimation, or adaptive equalization.
+Definition: A fading process is time-selective (fast) if the coherence time $T_c$ is less than or on the order of the symbol duration $T_s$. Rapid motion (large Doppler shift $f_D$) yields Doppler spread $B_D$ and $T_c \approx 1/(2 B_D)$. Symbols then experience different channel gains, degrading coherent detection unless countered by diversity, channel estimation, or adaptive equalization.
 
 
 

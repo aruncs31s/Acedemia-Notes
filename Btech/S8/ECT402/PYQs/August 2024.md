@@ -1,7 +1,13 @@
+---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
+---
 ## 1. Channel capacity per cluster & total system capacity (3 Marks)
 **Answer:** Channels per cluster = 7 cells × 10 channels = 70. Total deployed channel instances = 70 × 10 clusters = 700 (only 70 unique reused 10×). Spatial reuse multiplies capacity without extra spectrum.
 
 ---
+banner: "https://images.unsplash.com/photo-1583602621722-cbd1130b210b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+banner_y: 0.116
 ## 2. Cell splitting & performance improvement (3 Marks)
 **Answer:** Divides a large congested cell into smaller low-power cells reducing reuse distance so frequencies are reassigned more often. Benefits: higher capacity (more Erlangs/km²), lower blocking, improved SINR[^SINR], reduced handset Tx power. Trade-offs: more handoffs, higher site/backhaul/optimization cost.
 
@@ -510,4 +516,3 @@ Check without k-factor (geometric Earth): constant ≈ 3.57 already incorporates
 [^CQI]: Channel Quality Indicator feedback (quantized SINR info in LTE/NR).
 [^PMI]: Precoding Matrix Indicator (preferred precoder index feedback).
 [^RI]: Rank Indicator (preferred MIMO layer count feedback).
-[^HARQ]: Hybrid Automatic Repeat reQuest combining FEC with retransmissions.

@@ -8,16 +8,9 @@
 **Problem (picked):** Filter a long sequence $x[n]$ of length 7 by a short FIR $h[n]$ of length 3 using overlap–save.  
 Use $x=[1,2,3,4,5,6,7]$, $h=[1,1,1]$.
 
-### Steps (point form)
-
-1. Let filter length $M$ and choose FFT size $N$ (common choice: power of 2, $N\ge M$).
-2. Compute block useful-length $L = N-M+1$.
-3. Partition $x$ into blocks of length $L$. For each block, form an $N$-length vector by **prepending** the previous $M-1$ samples (first block uses zeros).
-4. Compute $X_{\text{blk}} = \text{FFT}_N(\text{block})$, $H = \text{FFT}_N(h\text{ padded to }N)$.
-5. Multiply: $Y_{\text{blk}} = X_{\text{blk}}\cdot H$. IFFT $\Rightarrow$ circular convolution result.
-6. **Discard first $M-1$** samples of the IFFT result; remaining $L$ samples are the block output.
-7. Concatenate block outputs; append final tail (last $M-1$ linear convolution samples) if needed.
-    
+> [!info] Theory & Steps
+> The theoretical explanation and general steps of the **Overlap-Save Method** are covered in detail in the main notes:
+> - **Concepts & Steps:** See [[Filtering Long Sequences#Overlap-Save Method]].
 
 * * *
 
